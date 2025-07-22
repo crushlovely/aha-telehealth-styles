@@ -31,18 +31,18 @@ jobs:
       - name: Run build
         run: pnpm build
 
-      - name: Create dist directory
-        run: mkdir -p dist
+      - name: Create latest-styles directory
+        run: mkdir -p latest-styles
 
-      - name: Copy compiled CSS to dist
+      - name: Copy compiled CSS to latest-styles
         run: |
           CSS_FILE=$(ls .next/static/css/*.css)
-          cp $CSS_FILE dist/styles.css
+          cp $CSS_FILE latest-styles/styles.css
 
       - name: Commit compiled CSS
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add dist/styles.css
+          git add latest-styles/styles.css
           git diff --staged --quiet || git commit -m "Auto-compile CSS styles [skip ci]"
           git push
