@@ -1,0 +1,60 @@
+.c-benefits {
+  @include container;
+  @include block;
+
+  @include small {
+    display: flex;
+    align-items: flex-start;
+    gap: 10rem;
+    padding-top: 8rem;
+    padding-bottom: 7rem;
+  }
+
+  &__info {
+    flex: 0 0 40%;
+    p {
+      @include body-md;
+      color: $grey-medium;
+    }
+
+    &-subtitle,
+    h3 {
+      @include heading-xs--alt;
+      color: $red !important;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      @include heading-xxl;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding-top: 3rem;
+
+    @include small {
+      padding-top: 2.2rem;
+    }
+
+    li {
+      margin-bottom: 2.7rem;
+    }
+    p {
+      @include body-md;
+    }
+    h3,
+    h4 {
+      @include heading-lg--alt;
+      color: $red;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.6rem;
+
+      img {
+        width: 3.2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# The manifest for the "css" service.
+# Read the full specification for the "Static Site" type at:
+# https://aws.github.io/copilot-cli/docs/manifest/static-site/
+
+# Your service name will be used in naming your resources like S3 buckets, etc.
+name: css
+type: Static Site
+files:
+  - source: ./deploy/
+    recursive: true    
+    exclude:
+      - copilot/
+
+# Distribute traffic to your service.
+http:
+  alias: 'css.wbwb.crushops.website'
+
+# You can override any of the values defined above by environment.
+# environments:
+#   test:
+#     files:
+#       - source: './blob'
+#         recursive: true
+#         destination: 'assets'
+#         exclude: '*'
+#         reinclude:
+#           - '*.txt'
+#           - '*.png'

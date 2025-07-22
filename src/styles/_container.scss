@@ -1,0 +1,38 @@
+@mixin container() {
+  margin: 0 auto;
+  padding-inline: 2rem;
+  @include small {
+    padding-inline: 5rem;
+    max-width: 120rem;
+  }
+  @media print {
+    padding-inline: 0;
+    max-width: 100%;
+  }
+}
+
+@mixin container-lg() {
+  margin: 0 auto;
+  padding-inline: 2rem;
+  @include small {
+    padding-inline: 5rem;
+    max-width: 134.5rem;
+  }
+  @media print {
+    padding-inline: 0;
+    max-width: 100%;
+  }
+}
+
+@mixin container-sm() {
+  margin: 0 auto;
+  padding-inline: 2rem;
+  @include small {
+    padding-inline: 5rem;
+    max-width: 80rem;
+  }
+  @media print {
+    padding-inline: 0;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,231 @@
+.wbwb-header {
+  display: block;
+  ul {
+    list-style-type: none !important;
+  }
+}
+
+// Logo
+.wbwb-header__logo {
+  margin: 1rem auto 2rem 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 17.3rem;
+
+    @include small {
+      max-width: 59rem;
+    }
+  }
+}
+
+// Main container
+.wbwb-header__container {
+  @include container-lg;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+// Burger
+.wbwb-header__nav-toggle {
+  border-radius: 5px;
+  height: 3.5rem;
+  width: 3.5rem;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $grey-extra-light;
+    outline: 2px solid $grey-light;
+    outline-offset: 3px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $red;
+    outline-offset: 3px;
+  }
+
+  .wbwb-header__nav-toggle-icon {
+    display: block;
+    height: 3.5rem;
+    width: 3.5rem;
+    @include bg-hamburger;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &[aria-expanded="true"] {
+    .wbwb-header__nav-toggle-icon {
+      @include bg-red-close;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $grey-extra-light;
+      border-radius: 50%;
+      outline: 2px solid $red;
+      outline-offset: 3px;
+    }
+  }
+
+  @include medium {
+    display: none;
+  }
+}
+
+// Nav
+.wbwb-header__main-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 2rem;
+  background: $white;
+  min-height: calc(100vh - 4rem);
+
+  @include medium {
+    min-height: auto;
+    display: flex !important;
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    padding: 0;
+    background: transparent;
+  }
+}
+
+// Menu (ul)
+.wbwb-header__prime-menu {
+  display: grid;
+  gap: 1rem;
+  li {
+    position: relative;
+    padding: 1rem 0;
+    @include medium {
+      &:hover {
+        .wbwb-header__sub-menu {
+          display: block !important;
+        }
+      }
+    }
+  }
+  @include medium {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+// Nav Links
+.wbwb-header__prime-link {
+  @include topnav-text;
+  color: $grey-dark;
+  display: flex;
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &[aria-expanded] {
+    &:after {
+      content: "";
+      display: inline-block;
+      aspect-ratio: 1 / 1;
+      line-height: 1;
+      width: 0.35em;
+      height: 0.35em;
+      margin-inline-start: 0.65rem;
+      transform: rotate(45deg) translateY(-50%);
+      border-right: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $red;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $red;
+    outline-offset: 6px 2px;
+  }
+  // Recognized
+  &[href*="recognized"] {
+    color: $red;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    &::before {
+      content: "";
+      width: 2.2rem;
+      height: 2.2rem;
+      @include bg-trophy;
+      background-size: cover;
+    }
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Button Link
+.wbwb-header__button-link {
+  @include button-primary;
+}
+
+// Nav Link Dropdown
+.wbwb-header__sub-menu {
+  display: none;
+  min-width: 10rem;
+  background: $white;
+  margin: 0;
+  padding: 1rem 0 0;
+  li {
+    display: block;
+  }
+  @include medium {
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    border: 1px solid $grey-light-alt;
+    min-width: 10rem;
+    border-radius: 2px;
+    padding: 0.75rem 0;
+    li {
+      padding: 0 1rem;
+    }
+  }
+}
+
+.wbwb-header__sub-link {
+  color: $grey-dark;
+  text-decoration: none;
+  font-size: 1.6rem;
+  display: block;
+  white-space: nowrap;
+  padding: 0.25rem 0;
+  @include medium {
+    padding: 0.75rem 1rem;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $red;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,49 @@
+.c-testimonial {
+  background-color: $red;
+  overflow: hidden;
+  .c-testimonial__container {
+    position: relative;
+    @include container;
+    @include block;
+    // spiral background
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: -20%;
+      bottom: -85%;
+      margin-inline-end: -15rem;
+      right: 100%;
+      @include bg-spiral;
+      background-repeat: no-repeat;
+      background-size: contain;
+      aspect-ratio: 736/798;
+    }
+  }
+  img {
+    display: none;
+  }
+  .c-testimonial__content {
+    position: relative;
+    blockquote {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 2.5rem;
+      color: $white;
+      .h3,
+      span {
+        &::before {
+          content: "- ";
+        }
+        @include body-md;
+        font-style: normal;
+      }
+      p {
+        @include blockquote;
+      }
+    }
+    .c-cta {
+      display: none;
+    }
+  }
+}

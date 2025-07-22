@@ -1,0 +1,110 @@
+.rich-text {
+  @include block;
+  .container {
+    @include container;
+  }
+  p,
+  ul,
+  ol {
+    @include body-md;
+    line-height: 1.63;
+    color: $grey-medium;
+    margin-bottom: 2.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      color: inherit;
+      text-decoration: underline;
+      font-weight: 700;
+      &:hover,
+      &:focus-visible {
+        color: $red;
+      }
+    }
+  }
+  li {
+    @include body-md;
+    line-height: 1.63;
+  }
+
+  ul,
+  ol {
+    padding-inline-start: 2.5rem;
+  }
+
+  * + h2 {
+    margin-top: 4rem;
+  }
+
+  h2,
+  .h2 {
+    @include heading-xl--alt-2;
+    margin-bottom: 2rem;
+    color: $black;
+  }
+  * + h2,
+  * + .h2 {
+    margin-top: 1.5rem;
+  }
+
+  h3,
+  .h3 {
+    @include heading-md;
+    color: $red;
+    margin-bottom: 1.5rem;
+    em,
+    i {
+      font-style: italic;
+    }
+  }
+  * + h3,
+  * + .h3 {
+    margin-top: 1.5rem;
+  }
+
+  h4,
+  .h4 {
+    @include heading-lg;
+    margin-bottom: 1.5rem;
+    color: $black;
+  }
+  * + h4,
+  * + .h4 {
+    margin-top: 1.5rem;
+  }
+
+  h5,
+  .h5 {
+    @include heading-sm;
+    margin-bottom: 1.5rem;
+    em,
+    i {
+      font-style: italic;
+    }
+  }
+  * + h5,
+  * + .h5 {
+    margin-top: 1.5rem;
+  }
+
+  h6,
+  .h6 {
+    @include heading-sm;
+    color: $grey-dark;
+    margin-bottom: 1.5rem;
+    em,
+    i {
+      font-style: italic;
+    }
+  }
+  * + h6,
+  * + .h6 {
+    margin-top: 1.5rem;
+  }
+
+  &__quote {
+    padding: 0 6rem;
+    text-align: center;
+  }
+}

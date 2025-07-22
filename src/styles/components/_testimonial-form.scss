@@ -1,0 +1,83 @@
+// EMAIL NEWSLETTER PROMO
+.c-email-promo.h-theme--gray {
+  background: $offwhite;
+  color: $grey-dark;
+  input,
+  select,
+  textarea {
+    accent-color: $red;
+    border: 1px solid #737373 !important;
+    border-radius: 4px;
+  }
+  textarea {
+    min-height: 25rem !important;
+  }
+  div.row {
+    display: block;
+    @include medium {
+      display: block;
+    }
+    .btn,
+    input[type="submit"],
+    input[type="submit"].btn {
+      @include button-primary;
+      margin-bottom: 4rem;
+      &[disabled] {
+        background-color: $grey-dark;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .c-email-promo__container {
+    &::before {
+      display: none;
+    }
+  }
+
+  .c-email-promo__content {
+    h2,
+    h3 {
+      @include heading-xl--alt;
+      margin-block-end: 2rem;
+    }
+    p {
+      @include body-md;
+      & + p {
+        margin-block-start: 2rem;
+      }
+    }
+  }
+
+  .c-email-promo__form {
+    margin-top: 5rem;
+    display: grid;
+    gap: 2rem;
+    @include small {
+      gap: 4rem;
+      grid-template-columns: 1fr 1.3fr;
+      > *:nth-child(2) {
+        margin-block-start: 2rem;
+      }
+    }
+  }
+
+  label.custom-control-label {
+    @include body-md;
+    line-height: 2;
+    a {
+      color: $black !important;
+      text-decoration: underline;
+      &:hover,
+      &:focus {
+        color: $red !important;
+      }
+    }
+  }
+}
+
+// Jotform
+div:has(div#jotform-wrapper) {
+  padding: 0 !important;
+}

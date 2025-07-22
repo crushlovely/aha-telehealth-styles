@@ -1,0 +1,164 @@
+.c-testimonial-form {
+  background: $grey-extra-light;
+  @include block;
+  &__container {
+    @include container;
+  }
+  &__header {
+    @include block;
+    h2,
+    h3 {
+      @include heading-xl--alt;
+      margin-block-end: 2rem;
+    }
+    p {
+      @include body-md;
+      & + p {
+        margin-block-start: 2rem;
+      }
+    }
+  }
+  &__header--success {
+    display: none;
+  }
+  &__form {
+    display: grid;
+    gap: 2rem;
+    @include small {
+      gap: 4rem;
+      grid-template-columns: 1fr 1.3fr;
+    }
+  }
+  &__form-group {
+    & > * + * {
+      margin-block-start: 2rem;
+    }
+    @include small {
+      &:nth-child(2) {
+        padding-top: 2rem;
+      }
+    }
+  }
+  &__form-field {
+    p + label {
+      margin-block-start: 2rem;
+    }
+    .input-wrapper + .input-wrapper {
+      margin-block-start: 1rem;
+    }
+    label .required {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap; /* Added to prevent text wrapping */
+      border: 0;
+    }
+    label:has(.required) {
+      &::after {
+        display: inline-block;
+        content: "*";
+        margin-inline-start: 0.125rem;
+      }
+    }
+    label {
+      display: block;
+      margin-block-end: 0.5rem;
+      color: $black;
+      @include heading-xs;
+      font-weight: 600;
+      p {
+        display: inline;
+        letter-spacing: 0;
+        text-transform: none;
+        @include body-md;
+        a {
+          color: $black;
+          text-decoration: underline;
+          &:hover,
+          &:focus-visible {
+            color: $red;
+          }
+        }
+      }
+    }
+    .input-wrapper {
+      border: 1px solid $grey-light;
+      border-radius: 5px;
+      padding: 2px;
+      &:focus-within {
+        border-color: $red;
+        outline: none;
+      }
+    }
+    .input-wrapper--select {
+      position: relative;
+      &::after {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        margin-top: -0.25rem;
+        @include bg-caret;
+        background-size: cover;
+        border-bottom: 2px solid $black;
+        border-right: 2px solid $black;
+      }
+    }
+    .input-wrapper--checkbox {
+      border: none;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0;
+      align-items: top;
+      input[type="checkbox"] {
+        margin-right: 1rem;
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 1rem 1rem;
+      font: var(--body-lg);
+      color: $grey-dark;
+      border: none;
+      &:focus-visible,
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: $grey-medium;
+      }
+    }
+    textarea {
+      resize: vertical;
+      min-height: 17rem;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+      accent-color: $red;
+    }
+  }
+  &__form-actions {
+    margin-block-start: 2rem;
+    button {
+      @include button-primary;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@mixin button {
+  @include button-text;
+  border: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10000vw; // rounds only the ends
+  padding-block: 0.8rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  padding-inline: 2rem;
+  white-space: nowrap;
+  cursor: pointer;
+
+  @include small {
+    padding-inline: 3.6rem;
+  }
+  @media print {
+    text-align: left;
+    padding: 0 !important;
+    &:after {
+      display: block;
+    }
+  }
+}
+
+@mixin button-primary {
+  @include button;
+  background-color: $red;
+  color: $white;
+
+  &:hover,
+  &:focus-visible {
+    background-color: darken($red, 10%);
+  }
+
+  &:active {
+    background-color: darken($red, 15%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $red;
+    outline-offset: 3px;
+  }
+}
+
+@mixin button-secondary {
+  @include button;
+  background-color: $black;
+  color: $white;
+
+  &:hover,
+  &:focus-visible {
+    background-color: lighten($black, 20%);
+  }
+
+  &:active {
+    background-color: lighten($black, 25%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $black;
+    outline-offset: 3px;
+  }
+}
+
+@mixin button-tertiary {
+  @include button;
+  background-color: $white;
+  color: $black;
+
+  &:hover,
+  &:focus-visible {
+    background-color: darken($white, 10%);
+  }
+
+  &:active {
+    background-color: darken($white, 15%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $white;
+    outline-offset: 3px;
+  }
+}

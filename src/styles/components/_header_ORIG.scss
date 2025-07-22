@@ -1,0 +1,217 @@
+.l-header {
+  position: relative;
+
+  // we most likely won't use these elements
+  &__utility {
+    display: none;
+  }
+
+  &__main {
+    position: absolute;
+    top: 3.8rem;
+    right: 62rem;
+    // TODO: figure out & style dropdown elements
+    .c-nav-dropdown.dropdown-menu {
+      display: none;
+    }
+  }
+}
+
+.l-header__top {
+  @include container-lg;
+}
+
+// the main header elements that we use
+// the upper row from the component library example
+.c-top-nav {
+  padding-top: 2.8rem;
+  padding-bottom: 2.5rem;
+  position: relative;
+
+  // this is the mobile menu + button
+  // TODO: show at small sizes
+  > div {
+    display: none;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0.9rem;
+    display: block;
+    width: 25.9rem;
+    height: 5.91rem;
+    .sticky__logo {
+      display: none;
+    }
+
+    // for styling frontend demo pages only
+    &.frontend-demo {
+      @include bg-logo;
+      background-size: cover;
+      img {
+        display: none;
+      }
+    }
+  }
+
+  // this is the top section in the component library
+  &__nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3rem;
+    @include topnav-text;
+
+    a {
+      color: $grey-dark;
+      text-decoration: none;
+
+      &.h-theme--red,
+      &.h-color--red {
+        color: $red;
+        font-weight: 700;
+      }
+    }
+
+    // hides search buttons
+    li:has(.btn-secondary),
+    li.c-top-nav__search,
+    li:has(.global-search-section) {
+      display: none;
+    }
+  }
+
+  // ridiculousness to add icon to recognized orgs
+  // for frontend demo pages only
+  &__item:not(.c-top-nav__button) .h-theme--red span.c-underline-link,
+  &__item:not(.c-top-nav__button) .h-color--red span.c-underline-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+      display: none;
+    }
+    &::before {
+      content: "";
+      width: 2.2rem;
+      height: 2.2rem;
+      @include bg-trophy;
+      background-size: cover;
+    }
+  }
+
+  // handles red link for the actual sitecore markup
+  &__item:not(.c-top-nav__button) .h-color--red span.c-underline-link,
+  &__item:not(.c-top-nav__button) .h-color--red span.c-underline-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    // TODO: remove below when the trophy image has been added to sitecore markup
+    img {
+      display: none;
+    }
+    &::before {
+      content: "";
+      width: 2.2rem;
+      height: 2.2rem;
+      @include bg-trophy;
+      background-size: cover;
+    }
+  }
+
+  // donate / sign in button
+  // based on component examples, but not sitecore markup example
+  &__button {
+    &:has(.c-nav-dropdown__container) {
+      background: $red;
+      border-radius: 100px;
+      padding: 1rem 2rem;
+
+      button {
+        color: $white;
+      }
+    }
+
+    // based on sitecore markup example, if the login button is an a tag within c-top-nav__account
+    &:not(:has(.c-nav-dropdown__container)) {
+      display: none;
+    }
+  }
+
+  // login + sign up buttons for sitecore markup
+  &__account {
+    color: $white;
+    display: flex;
+
+    .c-underline-link {
+      @include button-primary;
+      display: inline-flex;
+      flex-direction: row-reverse;
+      gap: 1rem;
+      border-radius: 100px;
+      padding: 1rem 2rem;
+
+      img {
+        width: 1.8rem;
+      }
+    }
+    a:first-child .c-underline-link {
+      @include button-secondary;
+      display: inline-flex;
+      flex-direction: row-reverse;
+      gap: 1rem;
+      border-radius: 100px;
+      padding: 1rem 2rem;
+    }
+  }
+
+  // sign in button link w/ icon, for frontend demo only
+  .dropdown-toggle span.c-underline-link {
+    display: flex;
+    gap: 1rem;
+
+    img {
+      display: none;
+    }
+    &::after {
+      content: "";
+      width: 1.8rem;
+      height: 1.8rem;
+      @include bg-user;
+      background-size: cover;
+    }
+  }
+
+  // for now? or will we need these?
+  .c-nav-dropdown {
+    display: none;
+  }
+  .donate-btn--mobile {
+    display: none;
+  }
+}
+
+// the header elements with dropdowns that we use
+// the lower row from the component library example
+.c-main-nav {
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    @include topnav-text;
+
+    a {
+      color: $grey-dark;
+      text-decoration: none;
+
+      &.h-theme--red {
+        color: $red;
+        font-weight: 700;
+      }
+    }
+  }
+}

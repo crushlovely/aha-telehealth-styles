@@ -1,0 +1,493 @@
+.l-header__top {
+  // Logo
+  .c-top-nav__logo {
+    margin: 1rem 0 2rem;
+    display: block;
+    width: 100%;
+    max-width: 17.3rem;
+    @include medium {
+      min-width: 10rem;
+      max-width: 24rem;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .sticky__logo {
+    display: none !important;
+  }
+
+  // Main container
+  > .container {
+    @include container-lg;
+  }
+
+  ul {
+    list-style-type: none !important;
+  }
+
+  // Search
+  li:has(.global-search-section) {
+    display: none;
+    @include medium {
+      display: block;
+    }
+  }
+
+  .c-site-search-modal {
+    .global-search-section__search-text {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .modal {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: white;
+      padding: 2rem !important;
+    }
+    .modal-header {
+      position: absolute;
+      top: 0rem;
+      right: 2rem;
+      button.close {
+        height: 2rem;
+        font-size: 5rem;
+        line-height: 0.5;
+        &:hover,
+        &:focus-visible {
+          color: $grey-medium;
+        }
+        &:focus-visible {
+          outline: 2px solid $red;
+          outline-offset: 4px;
+        }
+      }
+    }
+    .magic-box-input {
+      position: relative;
+      input {
+        width: 100%;
+        padding: 1rem;
+      }
+    }
+    .magic-box-clear {
+      display: none !important;
+    }
+    .CoveoSearchButton.coveo-accessible-button {
+      position: absolute;
+      right: 0rem;
+      width: 6rem;
+      bottom: 0rem;
+      &:hover,
+      &:focus-visible {
+        background-color: $grey-light;
+      }
+      .coveo-search-button-loading {
+        display: none !important;
+      }
+    }
+    .coveo-search-button-svg {
+      color: black !important;
+      g {
+        fill: black !important;
+        path {
+          fill: black !important;
+        }
+      }
+    }
+    .magic-box-suggestions {
+      background: $offwhite;
+      border: 1px solid $grey-light-alt;
+      border-top: none;
+      padding: 1rem;
+      display: none;
+      visibility: hidden;
+      .magic-box-suggestion {
+        display: block;
+        padding: 1rem 0;
+        border-bottom: 1px solid $grey-light-alt;
+        &:last-child {
+          border-bottom: none;
+        }
+        .magic-box-suggestion-content {
+          display: block;
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: $grey-dark;
+          text-decoration: none;
+          &:hover,
+          &:focus-visible {
+            color: $red;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  // Burger
+  .c-top-nav__menu-trigger {
+    border-radius: 5px;
+    height: 3.5rem;
+    width: 3.5rem;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $grey-extra-light;
+      outline: 2px solid $grey-light;
+      outline-offset: 3px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $red;
+      outline-offset: 3px;
+    }
+
+    .c-top-nav__hamburger {
+      display: block;
+      height: 3.5rem;
+      width: 3.5rem;
+      @include bg-hamburger;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &[aria-expanded="true"] {
+      .c-top-nav__hamburger {
+        @include bg-red-close;
+      }
+
+      &:hover,
+      &:focus-visible {
+        background-color: $grey-extra-light;
+        border-radius: 50%;
+        outline: 2px solid $red;
+        outline-offset: 3px;
+      }
+    }
+
+    @include medium {
+      display: none;
+    }
+  }
+
+  // Nav
+  .c-top-nav {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  // Nav nav
+  .c-top-nav__nav {
+    margin-inline-start: auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: auto;
+    flex-wrap: wrap;
+  }
+
+  // Li
+  .c-top-nav__item {
+    display: none;
+    &:has(.c-top-nav__account) {
+      display: block;
+    }
+    @include medium {
+      display: block;
+      padding: 1rem 0;
+    }
+  }
+  // Nav Links
+  .c-top-nav__link {
+    @include topnav-text;
+    color: $grey-dark;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+
+    @include medium {
+      display: flex;
+    }
+
+    &.dropdown-toggle {
+      &:after {
+        content: "";
+        display: inline-block;
+        aspect-ratio: 1 / 1;
+        line-height: 1;
+        width: 0.35em;
+        height: 0.35em;
+        margin-inline-start: 0.65rem;
+        transform: rotate(45deg) translateY(-50%);
+        border-right: 1px solid currentColor;
+        border-bottom: 1px solid currentColor;
+      }
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $red;
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $red;
+      outline-offset: 6px 2px;
+    }
+  }
+
+  .h-theme--red,
+  .h-color--red {
+    color: $red;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+
+    span.c-underline-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+
+      // TODO: remove below when the trophy image has been added to sitecore markup
+      img {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        width: 2.2rem;
+        height: 2.2rem;
+        @include bg-trophy;
+        background-size: cover;
+      }
+    }
+  }
+
+  // Nav Link Dropdown
+  .c-nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10000;
+    padding: 2rem;
+    min-width: 10rem;
+    background: $white;
+    border: 1px solid $grey-light-alt;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    border-radius: 2px;
+    display: none;
+    visibility: hidden;
+
+    &.is-visible {
+      visibility: visible;
+    }
+
+    &.is-shown {
+      display: block;
+    }
+  }
+
+  .c-nav-dropdown__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .c-nav-dropdown__item {
+    display: block;
+    padding: 0 1rem;
+  }
+
+  .c-nav-dropdown__link {
+    color: $grey-dark;
+    text-decoration: none;
+    font-size: 1.6rem;
+    display: block;
+    padding: 0.5rem 1rem;
+
+    &:hover,
+    &:focus-visible {
+      color: $red;
+      text-decoration: underline;
+    }
+  }
+
+  // CTA Buttons in Account
+  .c-top-nav__account {
+    .c-cta {
+      @include button-primary;
+      img {
+        display: none !important;
+      }
+    }
+  }
+}
+
+// Mobile Nav
+// ========================================
+.c-mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: -2rem;
+  right: -2rem;
+  z-index: 1000;
+
+  @include small {
+    left: -5rem;
+    right: -5rem;
+  }
+
+  .modal {
+    display: none;
+
+    &.show {
+      height: calc(100vh - 6.5rem);
+      background-color: white;
+      overflow: auto;
+      display: block;
+
+      @include medium {
+        display: none !important;
+      }
+    }
+
+    padding: 0 3rem !important;
+
+    @include small {
+      padding: 3rem 6rem !important;
+    }
+  }
+}
+
+.c-mobile-nav__list {
+  li.c-mobile-nav__social {
+    display: none;
+  }
+
+  > li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $grey-extra-light;
+    &:has(.c-mobile-nav__search) {
+      border-bottom: none;
+    }
+    > a {
+      color: $black;
+      font-size: 1.6rem;
+      font-weight: 500;
+      display: block;
+      text-decoration: none;
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // dropdown wrapper
+  .collapse {
+    display: none;
+    visibility: hidden;
+
+    &.show {
+      display: block !important;
+      visibility: visible !important;
+    }
+  }
+}
+
+.c-mobile-nav__list-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 1rem 0;
+
+  &.btn-link-plain {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      aspect-ratio: 1 / 1;
+      line-height: 1;
+      width: 0.5em;
+      height: 0.5em;
+      margin-inline-start: 0.65rem;
+      transform: rotate(45deg) translateY(-50%);
+      border-right: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+  }
+}
+
+.c-mobile-nav__sub-list {
+  display: grid;
+  gap: 1rem;
+  padding-block-end: 2rem;
+
+  li {
+    a {
+      display: block;
+      color: $grey-dark;
+      text-decoration: none;
+      font-size: 1.6rem;
+      padding: 0.5rem 0;
+      &:hover,
+      &:focus-visible {
+        color: $red;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.c-mobile-nav__search {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  input {
+    padding: 1rem;
+    width: 100%;
+  }
+}
+
+// Body when mobile opened
+body {
+  &.modal-open {
+    overflow: hidden;
+
+    @include medium {
+      overflow: auto !important;
+    }
+  }
+}

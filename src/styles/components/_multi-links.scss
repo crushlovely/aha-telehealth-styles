@@ -1,0 +1,153 @@
+.c-multi-links {
+  background: $red;
+  color: $white;
+
+  &__container {
+    @include container;
+    padding-block-start: 3rem;
+    padding-block-end: 4rem;
+    @include small {
+      padding-block-start: 3rem;
+      padding-block-end: 6rem;
+    }
+  }
+
+  &__header {
+    border-bottom: 1px solid $white-50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include heading-xs;
+    padding-block-end: 0.5rem;
+    margin-block-end: 2rem;
+
+    @include small {
+      padding-block-end: 2rem;
+      margin-block-end: 2.15rem;
+    }
+  }
+
+  &__cta {
+    @include icon-link($white, $white);
+    &:empty {
+      display: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    a {
+      @include heading-xs;
+      color: $white;
+      line-height: 2.2rem;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        color: $black;
+      }
+    }
+  }
+
+  &__links {
+    list-style-type: none;
+    align-items: center;
+    display: grid;
+    gap: 2.5rem;
+
+    @include small {
+      justify-content: space-between;
+      display: flex;
+    }
+  }
+
+  &__link {
+    @include icon-link($white, $white);
+    display: inline-flex;
+    position: relative;
+    padding: 0 0.4rem;
+
+    @include small {
+      padding: 0 1.2rem 0.3rem 0.4rem;
+    }
+
+    // background shadowy element that grows on hover
+    &::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2.8rem;
+      border-radius: 1000vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $red-dark;
+      transition: all 0.175s cubic-bezier(0.8, -0.13, 0.45, 1.09);
+    }
+
+    &:hover::before,
+    &:focus-visible::before {
+      width: 100%;
+    }
+
+    &::after {
+      position: relative;
+    }
+
+    &:focus-visible {
+      border-radius: 1000vw;
+      outline: 2px solid $white;
+      outline-offset: 8px;
+    }
+
+    // styles the text different from the arrow
+    span {
+      font-size: 2rem;
+      text-transform: none;
+      position: relative;
+
+      @include small {
+        font-size: 1.8rem;
+      }
+
+      @include medium {
+        font-size: 2.2rem;
+      }
+
+      // logos for each link
+      &::before {
+        content: "";
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        @include small {
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+      }
+    }
+
+    // &--platinum span::before,
+    // &.platinum span::before {
+    //   @include bg-orgs-platinum;
+    // }
+    // &--gold span::before,
+    // &.gold span::before {
+    //   @include bg-orgs-gold;
+    // }
+    // &--silver span::before,
+    // &.silver span::before {
+    //   @include bg-orgs-silver;
+    // }
+    // &--bronze span::before,
+    // &.bronze span::before {
+    //   @include bg-orgs-completers;
+    // }
+  }
+}

@@ -1,0 +1,46 @@
+name: "Build and Commit CSS"
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build-and-commit-css:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run build
+        run: pnpm build
+
+      - name: Create dist directory
+        run: mkdir -p dist
+
+      - name: Copy compiled CSS to dist
+        run: |
+          CSS_FILE=$(ls .next/static/css/*.css)
+          cp $CSS_FILE dist/styles.css
+
+      - name: Commit compiled CSS
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add dist/styles.css
+          git diff --staged --quiet || git commit -m "Auto-compile CSS styles [skip ci]"
+          git push

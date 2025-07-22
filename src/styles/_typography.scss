@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+
+  @include small {
+    font-size: 1vw;
+  }
+
+  @include medium {
+    font-size: 0.75vw;
+  }
+
+  @include large {
+    font-size: 62.5%;
+  }
+
+  @include extra-large {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+@mixin display-xxl {
+  font-size: 20.5vw;
+  font-weight: 600;
+
+  @include small {
+    font-size: 20rem;
+  }
+
+  @include medium {
+    font-size: 27rem;
+  }
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.display-xxl {
+  @include display-xxl;
+}
+
+@mixin display-xl {
+  font-size: 4rem;
+  font-weight: 700;
+
+  @include small {
+    font-size: 5rem;
+  }
+
+  @include medium {
+    font-size: 6.4rem;
+  }
+  @media print {
+    font-size: 14pt;
+  }
+}
+.display-xl {
+  @include display-xl;
+}
+
+@mixin display-xl-alt {
+  font-size: 7rem;
+  font-weight: 700;
+
+  @include small {
+    font-size: 9rem;
+  }
+
+  @include medium {
+    font-size: 9rem;
+  }
+}
+.display-xl-alt {
+  @include display-xl-alt;
+}
+
+@mixin display-lg {
+  font-size: 4rem;
+  font-weight: 600;
+
+  @include small {
+    font-size: 5rem;
+  }
+
+  @include medium {
+    font-size: 6rem;
+  }
+}
+.display-lg {
+  @include display-lg;
+}
+
+@mixin display-md {
+  font-size: 3rem;
+  font-weight: 600;
+
+  @include small {
+    font-size: 3rem;
+  }
+
+  @include medium {
+    font-size: 5.5rem;
+  }
+}
+.display-md {
+  @include display-md;
+}
+
+@mixin heading-xxl {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-block-end: 0.8em;
+  text-wrap: balance;
+
+  @include small {
+    font-size: 3rem;
+  }
+
+  @include medium {
+    font-size: 5.2rem;
+    margin-block-end: 2rem;
+  }
+  @media print {
+    font-size: 14pt;
+  }
+}
+
+.heading-xxl {
+  @include heading-xxl;
+}
+
+@mixin heading-xl {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-block-end: 0.6em;
+  text-wrap: balance;
+
+  @include small {
+    font-size: 3rem;
+    margin-block-end: 0.8em;
+  }
+
+  @include medium {
+    font-size: 4rem;
+    margin-block-end: 2rem;
+  }
+  @media print {
+    font-size: 14pt;
+  }
+}
+
+.heading-xl {
+  @include heading-xl;
+}
+
+@mixin heading-xl--alt {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-block-end: 0.6em;
+  text-wrap: balance;
+
+  @include small {
+    font-size: 2.8rem;
+    margin-block-end: 0.8em;
+  }
+
+  @include medium {
+    font-size: 3.2rem;
+    margin-block-end: 2rem;
+  }
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.heading-xl--alt {
+  @include heading-xl--alt;
+}
+
+@mixin heading-xl--alt-2 {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-block-end: 0.6em;
+  text-wrap: balance;
+
+  @include small {
+    font-size: 3rem;
+    margin-block-end: 0.8em;
+  }
+
+  @include medium {
+    font-size: 3.2rem;
+    margin-block-end: 2rem;
+  }
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.heading-xl--alt-2 {
+  @include heading-xl--alt-2;
+}
+
+@mixin heading-lg {
+  display: block;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-weight: 500;
+  @media print {
+    font-size: 10pt;
+  }
+}
+
+.heading-lg {
+  @include heading-lg;
+}
+
+@mixin heading-lg--alt {
+  font-size: 2.2rem;
+  line-height: 1.18;
+  font-weight: 500;
+  @include small {
+    font-size: 2.4rem;
+    line-height: 1.22;
+    font-weight: 700;
+  }
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.heading-lg--alt {
+  @include heading-lg--alt;
+}
+
+@mixin heading-md {
+  display: block;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 2.25rem;
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.heading-md {
+  @include heading-md;
+}
+
+@mixin heading-sm {
+  display: block;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 2.25rem;
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.heading-sm {
+  @include heading-sm;
+}
+
+@mixin heading-xs {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  line-height: 1.5;
+
+  @include small {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+  @media print {
+    font-size: 6pt;
+  }
+}
+
+@mixin heading-xs--alt {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  @media print {
+    font-size: 8pt;
+  }
+}
+.heading-xs--alt {
+  @include heading-xs--alt;
+}
+
+@mixin heading-xxs {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.4;
+  @include small {
+    font-size: 1.35rem;
+  }
+}
+.heading-xxs {
+  @include heading-xxs;
+}
+
+@mixin badge-xs {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 1;
+  font-style: italic;
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.badge-xs {
+  @include badge-xs;
+}
+
+@mixin body-xl {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-wrap: pretty;
+  b,
+  strong {
+    font-weight: 600;
+  }
+  em,
+  i {
+    font-style: italic;
+  }
+
+  @include small {
+    font-size: 2.4rem;
+  }
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.body-xl {
+  @include body-xl;
+}
+
+@mixin body-lg {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-wrap: pretty;
+  b,
+  strong {
+    font-weight: 600;
+  }
+  em,
+  i {
+    font-style: italic;
+  }
+
+  @include small {
+    line-height: 1.5;
+    font-size: 1.8rem;
+  }
+  @media print {
+    font-size: 10pt;
+  }
+}
+
+.body-lg {
+  @include body-lg;
+}
+
+@mixin body-md {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-wrap: pretty;
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+  em,
+  i {
+    font-style: italic;
+  }
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.body-md {
+  @include body-md;
+}
+
+@mixin body-sm {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-wrap: pretty;
+  b,
+  strong {
+    font-weight: 600;
+  }
+  em,
+  i {
+    font-style: italic;
+  }
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+@mixin body-xs {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-wrap: pretty;
+  b,
+  strong {
+    font-weight: 600;
+  }
+  em,
+  i {
+    font-style: italic;
+  }
+}
+.body-xs {
+  @include body-xs;
+}
+
+@mixin blockquote {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 500;
+  font-style: italic;
+  text-wrap: pretty;
+
+  @include small {
+    font-weight: 600;
+    font-size: 3.2rem;
+  }
+  @media print {
+    font-size: 12pt;
+  }
+}
+
+.blockquote {
+  @include blockquote;
+}
+
+@mixin button-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.button-text {
+  @include button-text;
+}
+
+@mixin icon-link-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.22;
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.icon-link-text {
+  @include icon-link-text;
+}
+
+@mixin topnav-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.22;
+  color: $grey-dark;
+  @media print {
+    font-size: 8pt;
+  }
+}
+
+.topnav-text {
+  @include topnav-text;
+}

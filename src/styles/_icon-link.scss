@@ -1,0 +1,52 @@
+@mixin icon-link($color: $red, $hoverColor: $black) {
+  @include icon-link-text;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  gap: 1rem;
+  color: $color;
+  &:hover,
+  &:focus-visible {
+    color: $hoverColor;
+    text-decoration: underline;
+    &::after {
+      @include bg-arrow($hoverColor);
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 2em;
+    height: 2em;
+    @include bg-arrow($color);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &[href*="pdf"] {
+    &::after {
+      @include bg-pdf($color);
+    }
+    &:hover,
+    &:focus-visible {
+      &::after {
+        @include bg-pdf($hoverColor);
+      }
+    }
+  }
+}
+
+@mixin icon-link-white {
+  @include icon-link;
+  color: $white;
+  &:hover,
+  &:focus-visible {
+    color: $offwhite;
+    &::after {
+      @include bg-arrow($offwhite);
+    }
+  }
+  &::after {
+    @include bg-arrow($white);
+  }
+}

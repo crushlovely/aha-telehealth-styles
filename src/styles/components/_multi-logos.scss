@@ -1,0 +1,68 @@
+.c-multi-logos {
+  background-color: $red;
+  --title-color: #{$white};
+  --body-color: #{$white};
+  --border-color: #{$white};
+  &.h-theme--white {
+    background-color: $white;
+    --title-color: #{$red};
+    --body-color: #{$black};
+    --border-color: #{$grey-light};
+  }
+
+  &__container {
+    @include block;
+    @include container;
+    padding-block: 2rem;
+
+    .h-theme--white & {
+      padding-block-start: 0.5rem;
+      padding-block-end: 3rem;
+    }
+
+    @include small {
+      padding-block: 4rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block-end: 2rem;
+    margin-block-end: 3rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  &__heading {
+    color: var(--title-color);
+    @include heading-xs;
+    margin: 0;
+  }
+
+  &__cta {
+    @include icon-link-white;
+    .theme--white & {
+      @include icon-link;
+    }
+  }
+
+  &__logos {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    display: block;
+    img {
+      height: 8rem;
+      width: auto;
+      display: block;
+    }
+  }
+}

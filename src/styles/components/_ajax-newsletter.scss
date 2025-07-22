@@ -1,0 +1,136 @@
+// EMAIL NEWSLETTER PROMO
+.c-email-promo {
+  input[type="hidden"],
+  label.hidden,
+  input.hidden {
+    display: none !important;
+  }
+
+  overflow: hidden;
+  background: $red;
+  color: $white;
+  &__container {
+    @include block;
+    @include container;
+    position: relative;
+    > * {
+      position: relative;
+    }
+    &::before {
+      content: "";
+      @include bg-big-heart;
+      background-size: cover;
+      opacity: 1;
+      aspect-ratio: 570/762;
+      position: absolute;
+      top: 0;
+      left: -15.7rem;
+      width: 45.4rem;
+      height: 60.7rem;
+      pointer-events: none;
+
+      @include small {
+        width: 57rem;
+        height: 76.2rem;
+      }
+      @include medium {
+        left: -30rem;
+      }
+    }
+  }
+
+  .text-center {
+    @include body-md;
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  h2 {
+    @include heading-xl--alt-2;
+  }
+  p {
+    @include body-md;
+    em {
+      font-style: italic;
+      @include body-lg;
+      font-weight: 600;
+      display: inline-block;
+      padding-inline-start: 0.7rem;
+    }
+  }
+  div.row {
+    display: grid;
+    gap: 4rem;
+    & > span {
+      display: none !important;
+    }
+    div.col-md-6 {
+      display: block;
+    }
+    @include medium {
+      gap: 8rem;
+      grid-template-columns: 1.25fr 1fr;
+    }
+    .form-group {
+      margin-bottom: 3rem;
+      label:not(.custom-control-label) {
+        display: block;
+        @include heading-xs;
+        margin-bottom: 1rem;
+      }
+      label.custom-control-label {
+        @include body-md;
+        line-height: 2;
+        a {
+          color: $white;
+          text-decoration: underline;
+          &:hover,
+          &:focus {
+            color: #e8e8e8;
+          }
+        }
+      }
+      .invalid-feedback {
+        display: none;
+      }
+      select,
+      textarea {
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 16px;
+        border: 0;
+      }
+      &.custom-checkbox {
+        display: flex;
+        label {
+          line-height: 1.5;
+        }
+      }
+      input[type="checkbox"] {
+        margin-right: 1rem;
+        position: relative;
+        top: 0.25rem;
+        width: 2rem;
+        height: 2rem;
+      }
+      input:not([type="checkbox"]) {
+        width: 100%;
+        border: 0;
+        background: $white;
+        padding: 1.5rem;
+        font-size: 16px;
+      }
+    }
+    .btn {
+      @include button-secondary;
+      margin-bottom: 4rem;
+      &[disabled] {
+        background-color: $grey-dark;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    }
+  }
+}

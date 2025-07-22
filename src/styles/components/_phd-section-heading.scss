@@ -1,0 +1,30 @@
+.section-heading {
+  background: $white;
+  color: $black;
+  @include block;
+  @include block-start;
+  &__container {
+    @include container;
+  }
+  &__title {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include heading-xl;
+    }
+  }
+  &__by-line {
+    p,
+    ul,
+    li {
+      @include body-lg;
+    }
+  }
+  .row:last-child {
+    padding-bottom: 3rem;
+    border-bottom: 2px solid $red;
+  }
+}

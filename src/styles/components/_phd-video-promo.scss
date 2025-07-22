@@ -1,0 +1,97 @@
+.phd-video {
+  @include block;
+  .container {
+    @include container-lg;
+  }
+  .c-video__media {
+    position: relative;
+    display: block;
+    padding: 0;
+    border: none;
+    appearance: none;
+    border-radius: 0;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: $grey-light;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20%;
+      max-width: 10rem;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background-color: $white;
+      background-image: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 71 70" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" width="70" height="69.2308" rx="34.6154" fill="white"/><path opacity="0.2" d="M35.5 9.4231C30.3083 9.4231 25.2331 10.9457 20.9163 13.7984C16.5995 16.6511 13.235 20.7057 11.2482 25.4496C9.26137 30.1934 8.74154 35.4134 9.7544 40.4495C10.7673 45.4855 13.2673 50.1114 16.9385 53.7422C20.6096 57.373 25.2869 59.8456 30.3789 60.8473C35.4709 61.8491 40.7489 61.3349 45.5455 59.37C50.342 57.405 54.4417 54.0774 57.3261 49.8081C60.2105 45.5387 61.75 40.5193 61.75 35.3846C61.75 28.4992 58.9844 21.8958 54.0616 17.0271C49.1387 12.1583 42.4619 9.4231 35.5 9.4231ZM31.125 44.0385V26.7308L44.25 35.3846L31.125 44.0385Z" fill="%23C10E21"/><path d="M35.5 61.3462C49.9975 61.3462 61.75 49.7228 61.75 35.3846C61.75 21.0465 49.9975 9.4231 35.5 9.4231C21.0025 9.4231 9.25 21.0465 9.25 35.3846C9.25 49.7228 21.0025 61.3462 35.5 61.3462Z" stroke="%23C10E21" stroke-width="2" stroke-miterlimit="10"/><path d="M44.25 35.3847L31.125 26.7308V44.0385L44.25 35.3847Z" stroke="%23C10E21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover,
+    &:focus-visible {
+      &::after {
+        background-image: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 71 70" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" width="70" height="69.2308" rx="34.6154" fill="white"/><path opacity="0.8" d="M35.5 9.4231C30.3083 9.4231 25.2331 10.9457 20.9163 13.7984C16.5995 16.6511 13.235 20.7057 11.2482 25.4496C9.26137 30.1934 8.74154 35.4134 9.7544 40.4495C10.7673 45.4855 13.2673 50.1114 16.9385 53.7422C20.6096 57.373 25.2869 59.8456 30.3789 60.8473C35.4709 61.8491 40.7489 61.3349 45.5455 59.37C50.342 57.405 54.4417 54.0774 57.3261 49.8081C60.2105 45.5387 61.75 40.5193 61.75 35.3846C61.75 28.4992 58.9844 21.8958 54.0616 17.0271C49.1387 12.1583 42.4619 9.4231 35.5 9.4231ZM31.125 44.0385V26.7308L44.25 35.3846L31.125 44.0385Z" fill="%23C10E21"/><path d="M35.5 61.3462C49.9975 61.3462 61.75 49.7228 61.75 35.3846C61.75 21.0465 49.9975 9.4231 35.5 9.4231C21.0025 9.4231 9.25 21.0465 9.25 35.3846C9.25 49.7228 21.0025 61.3462 35.5 61.3462Z" stroke="%23C10E21" stroke-width="2" stroke-miterlimit="10"/><path d="M44.25 35.3847L31.125 26.7308V44.0385L44.25 35.3847Z" stroke="%23C10E21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+    }
+    img {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+  }
+  .c-video__title {
+    @include body-sm;
+    margin-top: 1rem;
+    color: $grey-medium;
+  }
+}
+
+.video-promo {
+  @include block;
+  .video-promo__container {
+    @include container-lg;
+  }
+  .video-promo__wrapper > .row {
+    display: grid;
+    gap: 2rem;
+    @include small {
+      grid-template-columns: 2fr 1fr;
+      gap: 7%;
+      align-items: center;
+    }
+    .video-promo__media {
+      @include small {
+        order: 2;
+      }
+    }
+  }
+  .video-promo__content-title {
+    @include heading-lg;
+    margin-bottom: 1rem;
+  }
+  .video-promo__content-text {
+    @include body-md;
+    margin-bottom: 2rem;
+  }
+  .video-promo__content-links {
+    display: flex;
+    gap: 1rem;
+    a {
+      color: $black;
+      font-weight: 700;
+      &:hover,
+      &:focus-visible {
+        color: $red;
+      }
+    }
+  }
+  .phd-video {
+    padding: 0;
+    margin: 0;
+    .container {
+      padding: 0;
+    }
+  }
+}

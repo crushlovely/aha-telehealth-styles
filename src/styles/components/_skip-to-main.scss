@@ -1,0 +1,26 @@
+.skip-to-main {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -1000;
+  &:focus {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    margin: 8px 0 4px 8px;
+    border-radius: 4px;
+    overflow: visible;
+    z-index: 1000;
+    background-color: $red;
+    color: $white;
+    padding: 1rem 2rem;
+    outline: 2px solid $red;
+    outline-offset: 2px;
+  }
+}

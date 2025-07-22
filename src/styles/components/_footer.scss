@@ -1,0 +1,159 @@
+.l-footer,
+footer {
+  color: $white;
+
+  .c-disclaimer-bar,
+  .c-support-bar {
+    display: none;
+  }
+
+  .l-footer__section {
+    background: $black;
+    .container {
+      @include container;
+      @include block;
+      padding-block-start: 2.5rem;
+      padding-block-end: 5rem;
+
+      @include small {
+        padding-block-start: 4.5rem;
+        padding-block-end: 7rem;
+      }
+    }
+    .row {
+      @include small {
+        display: flex;
+        gap: 4%;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__nav {
+    button {
+      display: none;
+    }
+    .collapse {
+      display: block !important;
+    }
+  }
+
+  &__nav-title {
+    @include heading-xs;
+    white-space: nowrap;
+    color: $grey-light;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    @include small {
+      margin-top: 0;
+    }
+  }
+  .nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-item a {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: $white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+    &:focus-visible {
+      outline: 1px solid white;
+      border-radius: 0.5rem;
+      outline-offset: 3px;
+    }
+
+    @include small {
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
+  }
+
+  .l-footer__copyright {
+    text-align: center;
+    p {
+      @include body-sm;
+      br {
+        display: none;
+      }
+    }
+    button#ot-sdk-btn {
+      font-size: 1.5rem !important;
+      &:focus-visible {
+        outline: 1px solid $red;
+        border-radius: 0.5rem;
+        outline-offset: 3px;
+        color: $red;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .l-footer__supplemental-nav {
+    text-align: center;
+    margin-bottom: 4rem;
+    li {
+      position: relative;
+      display: inline-block;
+      @include body-sm;
+      padding: 0.25rem 0.25rem 0.25rem 1.25rem;
+      & + li {
+        &:after {
+          content: "|";
+          display: block;
+          position: absolute;
+          top: 2px;
+          left: 0;
+        }
+      }
+      a {
+        color: $black;
+        text-decoration: none;
+        &:hover,
+        &:focus-visible {
+          color: $red;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .l-footer__section:has(.l-footer__supplemental-nav) {
+    background: #e9ecef;
+    color: $black;
+  }
+  .l-footer__compliance {
+    display: none;
+  }
+
+  &__logo {
+    padding-inline: 2rem;
+    margin-bottom: 5rem;
+    img {
+      max-width: 36.8rem;
+    }
+    & + button {
+      display: none;
+    }
+    & + button + .collapse {
+      display: none !important;
+    }
+    @include small {
+      padding-inline: 0;
+      margin-bottom: 0;
+      img {
+        max-height: none;
+      }
+    }
+  }
+  #contact-footer-collapse {
+    display: none;
+  }
+}

@@ -1,0 +1,65 @@
+.c-articles {
+  @include block;
+  background: $offwhite;
+
+  @include small {
+    padding-block: 8rem;
+  }
+
+  &__container {
+    @include container;
+  }
+  &__heading {
+    @include heading-xl;
+    text-align: center;
+    display: none;
+    @include small {
+      display: block;
+    }
+  }
+  &__cards {
+    @include small {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      margin-top: 9rem;
+    }
+  }
+  &__card {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+    @include extraextra-small {
+      gap: 2.4rem;
+    }
+
+    @include small {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      @include heading-lg;
+      margin-bottom: 1rem;
+    }
+    p {
+      @include body-md;
+      color: $grey-dark;
+    }
+  }
+  &__media {
+    flex: 0 0 34.3%;
+    @include small {
+      flex: 0 0 24.2%;
+    }
+  }
+  &__action {
+    margin-top: 1.3rem;
+    padding-top: 1.8rem;
+    border-top: 1px solid $grey-light;
+
+    a {
+      @include icon-link;
+    }
+  }
+}

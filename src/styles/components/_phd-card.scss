@@ -1,0 +1,196 @@
+body {
+  // prevents the giant resources heading from creating a scrollbar
+  overflow-x: hidden;
+}
+
+@mixin component__heading {
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -11vw);
+  @include display-xxl;
+  background: none;
+  color: $grey-light-alt;
+  opacity: 0.3;
+
+  @include small {
+    transform: translate(-50%, -10rem);
+  }
+  @include medium {
+    transform: translate(-50%, -12.5rem);
+  }
+}
+
+.component__heading {
+  @include component__heading;
+}
+
+// Basic grid layout for the phd card
+.container.container-fluid:has(.c-phd-card) {
+  @media print {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .l-generic {
+    position: relative;
+    @include container();
+    @include block;
+    display: grid;
+    gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    @include small {
+      gap: 2.75rem;
+    }
+    @media print {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// PHD Container standard spacing
+.container.container-fluid:has(.c-phd-card) {
+  // background: blue;
+  .l-generic {
+    @include extra-small {
+      padding-block-start: 2rem;
+    }
+    @include small {
+      padding-block-start: 4rem;
+    }
+    @include medium {
+      padding-block-start: 6rem;
+    }
+  }
+}
+
+// PHD Container consecutive spacing
+.container.container-fluid:has(.c-phd-card)
+  + .container.container-fluid:has(.c-phd-card) {
+  .l-generic {
+    // background: lightblue;
+    @include extra-small {
+      padding-block-start: 0;
+    }
+    @include small {
+      padding-block-start: 0;
+    }
+    @include medium {
+      padding-block-start: 12;
+    }
+  }
+}
+
+// PHD with image Container standard spacing
+.container.container-fluid:has(.c-phd-card img) {
+  .l-generic {
+    position: relative;
+    &:before {
+      content: "Resources";
+      @include component__heading;
+    }
+    padding-block-start: 2.5rem;
+    @include extra-small {
+      padding-block-start: 4rem;
+    }
+    @include small {
+      padding-block-start: 6rem;
+    }
+    @include medium {
+      padding-block-start: 12.5rem;
+    }
+  }
+}
+
+// PHD with image Container consecutive spacing (no 'Resources' heading)
+.container.container-fluid:has(.c-phd-card img)
+  + .container.container-fluid:has(.c-phd-card img) {
+  .l-generic {
+    &:before {
+      display: none;
+    }
+    @include extra-small {
+      padding-block-start: 0;
+    }
+    @include small {
+      padding-block-start: 0;
+    }
+    @include medium {
+      padding-block-start: 12;
+    }
+  }
+}
+
+.l-generic__col:has(.c-phd-card),
+.container__col:has(.c-phd-card) {
+  height: 100%;
+}
+
+.c-phd-card {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  a,
+  abbr {
+    color: $black;
+    text-decoration: none;
+  }
+
+  .c-phd-card__header {
+    .h-placeholder-image {
+      img {
+        aspect-ratio: 350 / 245;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .c-phd-card__heading {
+      @include heading-lg;
+      font-weight: 500;
+      margin-bottom: 1.6rem;
+      padding-block-start: 1rem;
+      @include small {
+        margin-bottom: 1.1rem;
+        padding-block-start: 1.946rem;
+        padding-inline-start: 2.839rem;
+      }
+    }
+  }
+  .c-phd-card__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include small {
+      padding-inline-start: 2.839rem;
+    }
+    hr {
+      display: none;
+    }
+    p {
+      @include body-sm;
+      color: $grey-medium;
+      margin-block-end: 0;
+    }
+    .c-phd-card__actions {
+      padding-top: 1.6rem;
+      @include small {
+        // padding-inline-start: 2.839rem;
+      }
+      .c-phd-card__action {
+        &:first-child {
+          border-top: 1px solid $grey-light;
+        }
+
+        .c-cta {
+          padding-block: 1.7rem;
+          border-bottom: 1px solid $grey-light;
+          @include icon-link;
+        }
+      }
+    }
+  }
+}
