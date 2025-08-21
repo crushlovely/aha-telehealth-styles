@@ -64,6 +64,17 @@
       }
     }
   }
+
+  .c-hero-card__actions,
+  .c-hero-card__action,
+  .c-hero-card__btn-side-by-side {
+    a {
+      @include button-primary;
+      & + a {
+        @include button-tertiary;
+      }
+    }
+  }
 }
 
 // Red Theme
@@ -71,249 +82,15 @@
 .l-section:has(.c-hero-full.h-theme--red) {
   background-color: $red;
   color: $white;
-
-  .c-hero-full {
-    position: relative;
-    padding-inline: 1px;
-    padding-block-end: 4rem !important;
-    padding-block-start: 0 !important;
-
-    @include medium {
-      @include container-lg;
-      display: grid;
-      grid-template-rows: auto auto 0;
-      --gutter-col: 7.5rem;
-      --gutter-col: 0;
-      grid-template-columns: var(--gutter-col) auto auto 1fr var(--gutter-col);
-    }
-  }
-  .c-hero-full__heading {
-    font-size: 3.4rem;
-    @include medium {
-      font-size: 4rem;
-    }
-  }
-
-  .c-hero-full__logo {
-    display: none;
-  }
-
-  .c-hero-full__media {
-    position: relative;
-    z-index: 2;
-    aspect-ratio: 390/269;
-    @include small {
-      aspect-ratio: 16/9;
-    }
-    @include medium {
-      aspect-ratio: 957/657;
-      grid-row: 1 / span 2;
-      grid-column: 3 / span 3;
-    }
-    img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      @include grid-mask;
-      object-fit: cover;
-      object-position: top center;
-    }
-  }
-
-  .c-hero-full__content-container {
-    padding-block-start: 4rem;
-    padding-inline: 2rem;
-    background-color: $red;
-    position: relative;
-    z-index: 1;
-    & > * {
-      position: relative;
-    }
-    // spiral background
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 90rem;
-      top: -47rem;
-      margin-inline-end: -18rem;
-      right: 100%;
-      @include bg-spiral;
-      background-repeat: no-repeat;
-      background-size: contain;
-      aspect-ratio: 736/798;
-    }
-    @include small {
-      padding-inline: 4rem;
-      max-width: 70rem;
-      &::before {
-        margin-inline-end: -22rem;
-      }
-    }
-    @include medium {
-      position: relative;
-      z-index: 2;
-      grid-row: 2 / span 2;
-      grid-column: 2 / span 2;
-      &::before {
-        margin-inline-end: -22rem;
-      }
-      h1,
-      h2 {
-        max-width: 10em;
-      }
-      p {
-        max-width: 20em;
-      }
-    }
-  }
-  .c-hero-card__actions,
-  .c-hero-card__action,
-  .c-hero-card__btn-side-by-side {
-    a {
-      @include button-secondary;
-      max-width: 40em;
-      white-space: normal;
-      & + a {
-        @include button-tertiary;
-      }
-    }
-  }
 }
 
-// Red Alt Theme
-// ------------------------------
-.l-section:has(.c-hero-full.h-theme--red-alt) {
-  background-color: $red;
-  color: $white;
-
-  .c-hero-full {
-    position: relative;
-    padding-inline: 1px;
-    padding-block-start: 0;
-    padding-block-end: 8rem !important;
-    @include medium {
-      @include container-lg;
-    }
-  }
-
-  .c-hero-full__heading {
-    @include heading-xxl;
-  }
-
-  .c-hero-full__media {
-    position: relative;
-    z-index: 2;
-    img {
-      @include grid-mask-small;
-      aspect-ratio: 840/460;
-      object-fit: cover;
-      object-position: top center;
-      width: 100%;
-      height: 100%;
-      @include small {
-        aspect-ratio: 840/450;
-      }
-    }
-    @include medium {
-      position: absolute;
-      top: 0;
-      right: -5rem;
-      width: 60.5%;
-    }
-  }
-
-  .c-hero-full__content-container {
-    padding-block-start: 4rem;
-    padding-inline: 2rem;
-    position: relative;
-    z-index: 1;
-    & > * {
-      position: relative;
-    }
-    p {
-      max-width: 27em;
-    }
-    // spiral background
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 90rem;
-      top: -47rem;
-      margin-inline-end: -18rem;
-      right: 100%;
-      @include bg-spiral;
-      background-repeat: no-repeat;
-      background-size: contain;
-      aspect-ratio: 736/798;
-    }
-    @include small {
-      padding-inline: 4rem;
-      max-width: 70rem;
-      &::before {
-        margin-inline-end: -22rem;
-      }
-    }
-    @include medium {
-      position: relative;
-      z-index: 2;
-      max-width: 100%;
-      padding-block-start: 14rem;
-      padding-inline-start: 7rem;
-      padding-inline-end: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      &::before {
-        display: none;
-      }
-      .c-hero-full__content {
-        background-color: $red;
-        width: 58%;
-        & > * {
-          position: relative;
-        }
-        // spiral background
-        &::before {
-          content: "";
-          position: absolute;
-          display: block;
-          width: 90rem;
-          top: -51rem;
-          margin-inline-end: -18rem;
-          right: 100%;
-          @include bg-spiral;
-          background-repeat: no-repeat;
-          background-size: contain;
-          aspect-ratio: 736/798;
-        }
-      }
-    }
-  }
-
-  .c-hero-card__actions,
-  .c-hero-card__action,
-  .c-hero-card__btn-side-by-side {
-    a {
-      @include button-secondary;
-      max-width: 40em;
-      white-space: normal;
-      & + a {
-        @include button-tertiary;
-      }
-    }
-  }
-}
-
-// Gray Theme and
+// Black, Gray Theme and
 // Gray-Dark Theme share a lot of styles
 // this is for gray-dark and then gray will include his
 // ------------------------------
-.l-section:has(.c-hero-full.h-theme--yellow-orange),
 .l-section:has(.c-hero-full.h-theme--gray-dark),
-.l-section:has(.c-hero-full.h-theme--gray) {
+.l-section:has(.c-hero-full.h-theme--gray),
+.l-section:has(.c-hero-full.h-theme--black) {
   color: $white;
   position: relative;
   background-color: #111111;
@@ -322,12 +99,11 @@
   }
 
   .c-hero-full {
-    padding-block-start: 2rem;
-    padding-block-end: 38rem;
+    padding-block-start: 3rem;
+    padding-block-end: 3rem;
     @include small {
-      padding-block-start: 8rem;
-      padding-block-end: 7rem;
-      min-height: 34rem;
+      padding-block-start: 13.25rem;
+      padding-block-end: 13.75rem;
     }
   }
 
@@ -338,85 +114,21 @@
     & > * {
       position: relative;
     }
-    // spiral background
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      right: 100%;
-      @include bg-spiral;
-      background-repeat: no-repeat;
-      background-size: contain;
-      aspect-ratio: 736/798;
-      width: 45rem;
-      top: -24rem;
-      margin-inline-end: -9rem;
-      @include small {
-        width: 90rem;
-        top: -49rem;
-        margin-inline-end: -18rem;
-      }
-    }
   }
   .c-hero-full__heading {
-    font-size: 2.6rem;
-    line-height: normal;
-    font-weight: 600;
-    text-wrap: balance;
-    @include small {
-      font-size: 4rem;
-      font-weight: 700;
-    }
-    @media print {
-      font-size: 14pt;
-    }
+    @include heading-xxl;
+  }
+  .c-hero-full__subheading {
+    margin: 0 auto;
+    max-width: 70rem;
   }
 
   .c-hero-full__media {
     position: absolute;
     z-index: 1;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 40rem;
+    inset: 0;
     opacity: 1;
-    &:before {
-      content: "";
-      z-index: 3;
-      position: absolute;
-      display: block;
-      top: 0;
-      height: 50%;
-      left: 0;
-      right: 0;
-      width: 100%;
-      background: linear-gradient(
-        to bottom,
-        rgba(17, 17, 17, 1) 0%,
-        rgba(17, 17, 17, 0) 100%
-      );
-    }
-    @include small {
-      inset: 0;
-      height: 100%;
-      &:before {
-        content: "";
-        z-index: 3;
-        position: absolute;
-        display: block;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: auto;
-        height: 100%;
-        width: 66%;
-        background: linear-gradient(
-          to right,
-          rgba(17, 17, 17, 1) 0%,
-          rgba(17, 17, 17, 0) 100%
-        );
-      }
-    }
+
     img {
       z-index: 2;
       position: absolute;
@@ -447,6 +159,24 @@
   }
 }
 
+// just for black theme
+.l-section:has(.c-hero-full.h-theme--black) {
+  .c-hero-full__content-container {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -2rem 2rem;
+      background-color: #1c202e;
+      opacity: 0.7;
+      border-radius: 100%;
+      filter: blur(40px);
+    }
+  }
+}
+
 // just for gray theme
 .l-section:has(.c-hero-full.h-theme--gray) {
   .c-hero-full__content-container {
@@ -454,27 +184,6 @@
     margin: 0 auto;
     @include small {
       text-align: center;
-    }
-    // spiral background
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 45rem;
-      top: -24rem;
-      margin-inline-end: -9rem;
-      @include bg-spiral;
-      background-repeat: no-repeat;
-      background-size: contain;
-      aspect-ratio: 736/798;
-      @include small {
-        transform: scaleX(-1);
-        right: auto;
-        left: 100%;
-        width: 80rem;
-        top: -43rem;
-        margin-inline-start: -40rem;
-      }
     }
   }
   .c-hero-card__actions,
@@ -525,464 +234,49 @@
   }
 }
 
-// Black Theme
-// ------------------------------
-.l-section:has(.c-hero-full.h-theme--black) {
-  @include block;
-  .c-hero-full__content-container {
-    max-width: 76.2rem;
-  }
-  .c-hero-full__content {
-    p {
-      color: $grey-medium;
-      @include body-md;
-    }
-  }
-  .c-hero-card__actions,
-  .c-hero-card__action,
-  .c-hero-card__btn-side-by-side {
-    a {
-      @include button-primary;
-      & + a {
-        @include button-tertiary;
-      }
-    }
-  }
-}
-
 // Aqua Theme
 // ------------------------------
 .l-section:has(.c-hero-full.h-theme--aqua) {
-  @include block;
-  .c-hero-full__media {
-    margin-inline: -1.6rem;
-    max-width: 200%;
-    @include small {
-      margin-inline: auto;
-    }
-  }
-  .c-hero-full__subheading {
-    padding-top: 2rem;
-    max-width: 70rem;
-    @include body-sm;
-    color: $grey-medium;
-  }
-}
-
-// Aqua-alt Theme
-// ------------------------------
-.l-section:has(.c-hero-full.h-theme--aqua-alt) {
-  color: $white;
-  position: relative;
-
   .c-hero-full {
-    padding-block-start: 2rem;
-    padding-block-end: 32rem;
-    @include small {
-      padding-block-start: 9rem;
-      padding-block-end: 9rem;
+    padding: 0;
+    max-width: 100%;
+    @media (min-width: 768px) {
+      padding-block-end: 6rem;
     }
   }
-
-  .c-hero-full__content-container {
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-    z-index: 2;
-    background-color: $red;
-    padding: 4rem 2rem;
-    @include small {
-      padding: 4rem 3.5rem;
-      max-width: fit-content;
-    }
-    & > * {
-      position: relative;
-    }
-    // spiral background
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      right: 100%;
-      @include bg-spiral;
-      background-repeat: no-repeat;
-      background-size: contain;
-      aspect-ratio: 736/798;
-      width: 45rem;
-      top: -24rem;
-      left: 100%;
-      right: auto;
-      margin-inline-start: -23rem;
-      transform: scaleX(-1) rotate(8deg);
-      @include small {
-        width: 65rem;
-        top: -35rem;
-        left: 100%;
-        right: auto;
-        margin-inline-start: -25rem;
-        transform: scaleX(-1) rotate(8deg);
-      }
-    }
-  }
-  .c-hero-full__content {
-    p {
-      @include body-md;
-      margin: 2rem auto 0;
-      max-width: 70rem;
-      text-wrap: pretty;
-    }
-    .c-hero-full__heading {
-      line-height: normal;
-      font-weight: 700;
-      text-wrap: balance;
-      @include display-xl;
-      margin: 0;
-      @include small {
-        padding: 0 4.5rem;
-      }
-    }
-    &:has(p) {
-      text-align: left;
-      @media (min-width: 650px) {
-        text-align: center;
-      }
-      .c-hero-full__heading {
-        @include heading-xxl;
-        margin: 0;
-        @include small {
-          font-size: 4.05rem;
-        }
-      }
-    }
-  }
-
-  .c-hero-full__kicker,
-  .c-hero-card__actions,
-  .c-hero-card__action,
-  .c-hero-card__btn-side-by-side {
-    display: none;
-  }
-
   .c-hero-full__media {
-    position: absolute;
+    position: relative;
     z-index: 1;
-    inset: 0;
-    height: 100%;
-    @include small {
-      inset: 0;
-      height: 100%;
-    }
-    img {
-      position: absolute;
-      inset: 0;
-      object-fit: cover;
-      object-position: bottom right;
-      width: 100%;
-      height: 100%;
-      @include small {
-        object-position: center;
-      }
-    }
-  }
-  .c-hero-card__actions,
-  .c-hero-card__action,
-  .c-hero-card__btn-side-by-side {
-    a {
-      @include button-primary;
-      & + a {
-        @include button-tertiary;
-      }
-    }
-  }
-  .c-hero-full__logo {
-    display: none;
-  }
-}
-
-// Orange Theme
-// ------------------------------
-.l-section:has(.c-hero-full.h-theme--orange) {
-  color: $white;
-  background: $red;
-  position: relative;
-  @include block;
-  // spiral background
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    right: 100%;
-    @include bg-spiral;
-    background-repeat: no-repeat;
-    background-size: contain;
-    aspect-ratio: 736/798;
-    width: 45rem;
-    top: -24rem;
-    left: 100%;
-    right: auto;
-    margin-inline-start: -23rem;
-    @include small {
-      width: 55%;
-      bottom: -75%;
-      top: auto;
-      left: auto;
-      right: -15%;
-      transform: rotate(90deg) scaleY(-1);
-    }
   }
   .c-hero-full__content-container {
     position: relative;
-    max-width: 76.2rem;
-    // spiral background
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      right: 100%;
-      @include bg-spiral;
-      background-repeat: no-repeat;
-      background-size: contain;
-      aspect-ratio: 736/798;
-      width: 68%;
-      bottom: -320%;
-      top: auto;
-      right: auto;
-      left: -55%;
-      @include small {
-        width: 100%;
-        bottom: -425%;
-        top: auto;
-        right: auto;
-        left: -80%;
-      }
-    }
-  }
-  .c-hero-full__content {
-    position: relative;
-    h1,
-    h2,
-    h3 {
-      @include display-xl;
-      margin: 0;
-    }
-    p {
-      color: $grey-medium;
-      @include body-md;
-    }
-  }
-  .c-hero-card__actions,
-  .c-hero-card__action,
-  .c-hero-card__btn-side-by-side {
-    &:empty {
-      display: none;
-    }
-    a {
-      @include button-primary;
-      & + a {
-        @include button-tertiary;
-      }
-    }
-  }
-}
-
-// Orange Alt Theme
-// ------------------------------
-.l-section:has(.c-hero-full.h-theme--orange-alt) {
-  color: $white;
-  background: $red;
-  position: relative;
-  // spiral background
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    right: 100%;
-    @include bg-spiral;
-    background-repeat: no-repeat;
-    background-size: contain;
-    aspect-ratio: 736/798;
-    width: 45rem;
-    top: -24rem;
-    left: 100%;
-    right: auto;
-    margin-inline-start: -23rem;
-    @include small {
-      width: 55%;
-      bottom: -72%;
-      top: auto;
-      left: auto;
-      right: -15%;
-      transform: rotate(90deg) scaleY(-1);
-    }
-  }
-  .c-hero-full {
-    @include block;
-    @include small {
-      padding-block-end: 4rem !important;
-    }
-  }
-  .c-hero-full__content-container {
-    position: relative;
-    // spiral background
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      right: 100%;
-      @include bg-spiral;
-      background-repeat: no-repeat;
-      background-size: contain;
-      aspect-ratio: 736/798;
-      width: 68%;
-      bottom: -320%;
-      top: auto;
-      right: auto;
-      left: -55%;
-      @include small {
-        width: 100%;
-        bottom: -387%;
-        top: auto;
-        right: auto;
-        left: -80%;
-      }
-    }
-  }
-  .c-hero-full__content {
-    position: relative;
-    h1,
-    h2,
-    h3 {
-      @include display-xl;
-      margin: 0;
-    }
-    p {
-      margin-top: 2rem;
-      @include body-md;
-    }
-  }
-  .c-hero-card__actions,
-  .c-hero-card__action,
-  .c-hero-card__btn-side-by-side {
-    &:empty {
-      display: none;
-    }
-    a {
-      @include button-primary;
-      & + a {
-        @include button-tertiary;
-      }
-    }
-  }
-}
-
-// Green, Green-light Themes
-// ------------------------------
-.l-section:has(.c-hero-full.h-theme--green-light),
-.l-section:has(.c-hero-full.h-theme--green) {
-  position: relative;
-  &::after {
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    display: block;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    @include bg-dots;
-    background-size: cover;
-  }
-  &::before {
-    content: "";
-    pointer-events: none;
-    position: absolute;
-    display: block;
-    left: 0;
-    top: 0;
-    width: 15rem;
-    height: 100%;
-    @include bg-big-heart;
-    background-size: 130% auto;
-    background-position: top right;
-    filter: grayscale(1);
-    display: none;
-    @media (min-width: 770px) {
-      display: block;
-    }
-  }
-  .c-hero-full {
-    padding-bottom: 5rem;
-    padding-block-start: 1.5rem;
-    @include small {
-      padding-block-start: 4rem;
-    }
-  }
-  .c-hero-full__content-container {
-    text-align: center;
+    z-index: 2;
+    max-width: 108rem;
     margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+    background: white;
+    @media (min-width: 1024px) {
+      padding: 3.5% 2rem;
+      margin-top: -11%;
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    }
   }
   .c-hero-full__content {
-    color: $black;
+    margin: 0 auto;
+    max-width: 84rem;
     .c-hero-full__heading {
-      @include heading-xl;
-      font-weight: 500;
-      strong,
-      b {
-        font-weight: 700;
+      @include heading-xxl;
+      em {
         color: $red;
       }
     }
-    p {
-      color: $grey-medium;
-      @include body-md;
-    }
   }
   .c-hero-card__actions,
   .c-hero-card__action,
   .c-hero-card__btn-side-by-side {
-    justify-content: center;
-  }
-  .c-hero-card__actions,
-  .c-hero-card__action,
-  .c-hero-card__btn-side-by-side {
-    a {
-      @include button-primary;
-      & + a {
-        @include button-tertiary;
-      }
-    }
-  }
-  .c-hero-card__action {
-    margin-top: 3rem;
-  }
-  .c-hero-full__media,
-  .c-hero-full__logo {
-    display: none;
-  }
-}
-.l-section:has(.c-hero-full.h-theme--green) {
-  background-color: $red;
-  &::before {
-    filter: brightness(1) contrast(5);
-  }
-  .c-hero-full__content {
-    color: $white;
-    .c-hero-full__heading {
-      @include heading-xl;
-      font-weight: 500;
-      strong,
-      b {
-        color: $white;
-      }
-    }
-  }
-  .c-hero-card__actions,
-  .c-hero-card__action,
-  .c-hero-card__btn-side-by-side {
-    a {
-      @include button-secondary;
-      & + a {
-        @include button-tertiary;
-      }
-    }
+    text-align: center;
+    margin: 3.5rem auto 1rem;
+    width: max-content;
   }
 }

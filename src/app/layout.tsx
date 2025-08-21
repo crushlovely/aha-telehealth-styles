@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "@/styles/styles.scss";
 
 export const metadata: Metadata = {
-  title: "Well-Being Works Better",
+  title: "AHA Telehealth",
   description: "",
 };
 

@@ -4,11 +4,7 @@
     margin: 1rem 0 2rem;
     display: block;
     width: 100%;
-    max-width: 17.3rem;
-    @include medium {
-      min-width: 10rem;
-      max-width: 24rem;
-    }
+    max-width: 13rem;
     img {
       display: block;
       width: 100%;
