@@ -3,7 +3,7 @@
   padding-inline: 2rem;
   @include small {
     padding-inline: 5rem;
-    max-width: 120rem;
+    max-width: 116rem;
   }
   @media print {
     padding-inline: 0;
@@ -28,8 +28,8 @@
   margin: 0 auto;
   padding-inline: 2rem;
   @include small {
-    padding-inline: 5rem;
-    max-width: 80rem;
+    padding-inline: 2rem;
+    max-width: 90rem;
   }
   @media print {
     padding-inline: 0;

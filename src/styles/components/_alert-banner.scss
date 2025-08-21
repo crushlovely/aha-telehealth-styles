@@ -1,0 +1,92 @@
+.c-alert-banner {
+  display: block;
+  position: relative;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid;
+  text-decoration: none;
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+
+  &--black {
+    background-color: $black;
+    border-color: $black;
+    color: $white;
+  }
+
+  &--red {
+    background-color: $red;
+    border-color: $red;
+    color: $white;
+  }
+
+  .container {
+    @include container;
+    display: block;
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1rem solid transparent;
+    @media (min-width: 768px) {
+      border: none;
+    }
+  }
+
+  &__labels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+
+  // &__label {
+  // }
+
+  // &__message {
+  // }
+
+  &__cta {
+    @include icon-link($color: $white, $hoverColor: $offwhite);
+    white-space: nowrap;
+    width: max-content;
+  }
+}

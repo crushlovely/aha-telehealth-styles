@@ -1,10 +1,6 @@
-import { AJAXNewsletter } from "@/components/ajax-newsletter";
 import { Header } from "@/components/header";
 import { HeroFullWidth } from "@/components/hero-full-width";
-import { MultiLinks } from "@/components/multi-links";
-import { MultiLogos } from "@/components/multi-logos";
 import { HowItWorks } from "@/components/how-it-works";
-import { PHDCard } from "@/components/phd-card";
 import { HalfImageHalfCopyPromoRight } from "@/components/half-image-half-copy-promo";
 import { FullWidthTestimonial } from "@/components/full-width-testimonial";
 import { Footer } from "@/components/footer";
@@ -15,27 +11,22 @@ export default function Home() {
     <>
       <Header />
       <HeroFullWidth
-        theme="red"
-        image="/images/homepage-hero.jpg"
-        overline="Workforce well-being"
-        title="Well-being Works Better"
-        body="Your business is only as healthy as your employees."
-        button1="Get Started with the Scorecard"
+        theme="aqua"
+        image="/images/hero-homepage.jpg"
+        overline="Center for telehealth"
+        title="Advancing the Science of Virtual Care"
+        body="Leading evidence-based research, convening healthcare experts, and advancing telehealth science through the trusted authority of the American Heart Association."
+        button1="Explore the Latest from the Field"
       />
-      <MultiLinks />
       <HowItWorks />
-      <PHDCard />
-      <PHDCard />
-      <PHDCard />
+
       <HeroFullWidth
         theme="white"
         title="Reach Goals with Resources"
         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
         button1="Link Text"
       />
-      <PHDCard image={false} />
-      <PHDCard image={false} />
-      <PHDCard image={false} />
+
       <HalfImageHalfCopyPromoRight />
       <FullWidthTestimonial />
       <HalfImageHalfCopyPromoRight />
@@ -53,8 +44,7 @@ export default function Home() {
         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
         button1="Link Text"
       />
-      <MultiLogos />
-      <AJAXNewsletter />
+
       <Footer />
       <SpeedBump open={false} />
     </>

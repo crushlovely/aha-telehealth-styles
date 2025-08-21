@@ -30,177 +30,41 @@ export const Header = ({ loggedIn = true }) => {
           </a>{" "}
           <ul className="c-top-nav__nav nav">
             <li className="c-top-nav__item">
-              <div
-                className="c-nav-dropdown__container"
-                id="__BVID__6__lxf2uk9n"
-              >
-                <button
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  className="c-top-nav__link c-cta c-cta--icon dropdown-toggle "
-                  id="__BVID__6___BV_toggle__lxf2uk9n"
-                >
-                  Solutions
-                </button>
-                <div
-                  className="c-nav-dropdown dropdown-menu"
-                  aria-labelledby="__BVID__6___BV_toggle__lxf2uk9n"
-                >
-                  <ul className="c-nav-dropdown__list">
-                    <li className="c-nav-dropdown__item">
-                      <a
-                        href="https://mygiving.heart.org/-/XVGZUKRZ?_gl=1*1yg5ddq*_gcl_au*MTQwNDgzOTAyMS4xNzEyMzI0Njgy*_ga*MTIwMDg5NjEwMi4xNzEyMzI0Njgy*_ga_QKRW9XMZP7*MTcxODM5MjEyOS4yLjEuMTcxODM5MzA0MS4wLjAuMA.."
-                        role="menuitem"
-                        className="c-nav-dropdown__link c-nav-dropdown__header"
-                      >
-                        Scorecard
-                      </a>
-                    </li>{" "}
-                    <li className="c-nav-dropdown__item">
-                      <a
-                        href="https://www.heart.org/en/volunteer/opportunities"
-                        role="menuitem"
-                        className="c-nav-dropdown__link c-nav-dropdown__header"
-                      >
-                        Health Equity
-                      </a>
-                    </li>{" "}
-                    <li className="c-nav-dropdown__item">
-                      <a
-                        href="https://www.heart.org/en/get-involved/advocate"
-                        role="menuitem"
-                        className="c-nav-dropdown__link c-nav-dropdown__header"
-                      >
-                        Mental Well-Being
-                      </a>
-                    </li>
-                  </ul>
-                  <span
-                    x-arrow=""
-                    className="c-nav-dropdown__arrow"
-                    style={{ left: 61 }}
-                  />
-                </div>
-              </div>
-            </li>{" "}
-            <li className="c-top-nav__item">
-              <div
-                className="c-nav-dropdown__container"
-                id="__BVID__6__lxf2uk9n"
-              >
-                <button
-                  aria-haspopup="true"
-                  aria-expanded="true"
-                  className="c-top-nav__link c-cta c-cta--icon dropdown-toggle "
-                  id="__BVID__6___BV_toggle__lxf2uk9n"
-                >
-                  Resources
-                </button>
-                <div
-                  className="c-nav-dropdown dropdown-menu"
-                  style={{ left: 800 }}
-                  aria-labelledby="__BVID__6___BV_toggle__lxf2uk9n"
-                >
-                  <ul className="c-nav-dropdown__list">
-                    <li className="c-nav-dropdown__item">
-                      <a
-                        href="https://mygiving.heart.org/-/XVGZUKRZ?_gl=1*1yg5ddq*_gcl_au*MTQwNDgzOTAyMS4xNzEyMzI0Njgy*_ga*MTIwMDg5NjEwMi4xNzEyMzI0Njgy*_ga_QKRW9XMZP7*MTcxODM5MjEyOS4yLjEuMTcxODM5MzA0MS4wLjAuMA.."
-                        role="menuitem"
-                        className="c-nav-dropdown__link c-nav-dropdown__header"
-                      >
-                        Leadership Resources
-                      </a>
-                    </li>{" "}
-                    <li className="c-nav-dropdown__item">
-                      <a
-                        href="https://www.heart.org/en/volunteer/opportunities"
-                        role="menuitem"
-                        className="c-nav-dropdown__link c-nav-dropdown__header"
-                      >
-                        Employee Resources
-                      </a>
-                    </li>{" "}
-                  </ul>
-                  <span
-                    x-arrow=""
-                    className="c-nav-dropdown__arrow"
-                    style={{ left: 61 }}
-                  />
-                </div>
-              </div>
-            </li>{" "}
-            <li className="c-top-nav__item">
               <a
-                href="/en/get-involved"
+                href="#"
                 target=""
                 className="c-top-nav__link c-cta c-cta--icon"
               >
-                <span className="c-underline-link">Get Involved</span>
+                <span className="c-underline-link">Courses</span>
               </a>
             </li>
             <li className="c-top-nav__item">
               <a
-                href="https://shopcpr.heart.org/?_gl=1*nglgxs*_gcl_au*MTg3MzUzNDY5MS4xNzE4NjM0NDQ4*_ga*MTIzNjEzODk0OS4xNzE4NjM0NDQ4*_ga_QKRW9XMZP7*MTcxODYzNDQ0OC4xLjAuMTcxODYzNDQ0OC4wLjAuMA.."
+                href="#"
                 target=""
-                className="c-top-nav__link c-cta c-cta--icon h-theme--red"
+                className="c-top-nav__link c-cta c-cta--icon"
               >
-                <span className="c-underline-link">
-                  Recognized Organizations
-                </span>
+                <span className="c-underline-link">Latest from the Field</span>
               </a>
             </li>
             <li className="c-top-nav__item">
-              {!loggedIn ? (
-                <div className="c-top-nav__account">
-                  <a href="#" className="c-top-nav__link c-cta c-cta--icon">
-                    <span className="c-underline-link">Sign In</span>
-                  </a>
-                </div>
-              ) : (
-                <div className="c-top-nav__account">
-                  <div
-                    className="c-nav-dropdown__container"
-                    id="__BVID__8__lyom3ki2"
-                  >
-                    <button
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      className="c-top-nav__link c-cta c-cta--icon c-underline-nav-link dropdown-toggle"
-                      id="__BVID__8___BV_toggle__lyom3ki2"
-                    >
-                      <span className="c-underline-link">
-                        <img
-                          src="https://www.wellbeingworksbetter.org/-/media/feature/navigation/topnav/login-signup.svg"
-                          alt=""
-                        />
-                        Welcome, Jeff
-                      </span>{" "}
-                    </button>
-                    <div
-                      className="c-nav-dropdown dropdown-menu"
-                      aria-labelledby="__BVID__8___BV_toggle__lyom3ki2"
-                      style={{}}
-                    >
-                      <ul className="c-nav-dropdown__list">
-                        <li className="c-nav-dropdown__item">
-                          <a
-                            href="/AhaAuthentication/Logout"
-                            className="c-nav-dropdown__link"
-                          >
-                            Sign Out
-                          </a>
-                        </li>
-                      </ul>
-                      <span
-                        x-arrow=""
-                        className="c-nav-dropdown__arrow"
-                        style={{ left: 56 }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-            </li>{" "}
+              <a
+                href="#"
+                target=""
+                className="c-top-nav__link c-cta c-cta--icon"
+              >
+                <span className="c-underline-link">Advisory Committee</span>
+              </a>
+            </li>
+            <li className="c-top-nav__item">
+              <a
+                href="#"
+                target=""
+                className="c-top-nav__link c-cta c-cta--icon"
+              >
+                <span className="c-underline-link">Patient Resources</span>
+              </a>
+            </li>
             <li>
               <button
                 type="button"
