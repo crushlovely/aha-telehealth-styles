@@ -6,7 +6,7 @@
     @include container;
     padding-block-start: 3rem;
     padding-block-end: 4rem;
-    @include small {
+    @include bp-small {
       padding-block-start: 3rem;
       padding-block-end: 6rem;
     }
@@ -21,7 +21,7 @@
     padding-block-end: 0.5rem;
     margin-block-end: 2rem;
 
-    @include small {
+    @include bp-small {
       padding-block-end: 2rem;
       margin-block-end: 2.15rem;
     }
@@ -56,7 +56,7 @@
     display: grid;
     gap: 2.5rem;
 
-    @include small {
+    @include bp-small {
       justify-content: space-between;
       display: flex;
     }
@@ -68,7 +68,7 @@
     position: relative;
     padding: 0 0.4rem;
 
-    @include small {
+    @include bp-small {
       padding: 0 1.2rem 0.3rem 0.4rem;
     }
 
@@ -107,11 +107,11 @@
       text-transform: none;
       position: relative;
 
-      @include small {
+      @include bp-small {
         font-size: 1.8rem;
       }
 
-      @include medium {
+      @include bp-medium {
         font-size: 2.2rem;
       }
 
@@ -126,7 +126,7 @@
         left: 0;
         bottom: 0;
 
-        @include small {
+        @include bp-small {
           width: 3.2rem;
           height: 3.2rem;
         }

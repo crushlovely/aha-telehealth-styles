@@ -24,7 +24,7 @@
   &__form {
     display: grid;
     gap: 2rem;
-    @include small {
+    @include bp-small {
       gap: 4rem;
       grid-template-columns: 1fr 1.3fr;
     }
@@ -33,7 +33,7 @@
     & > * + * {
       margin-block-start: 2rem;
     }
-    @include small {
+    @include bp-small {
       &:nth-child(2) {
         padding-top: 2rem;
       }

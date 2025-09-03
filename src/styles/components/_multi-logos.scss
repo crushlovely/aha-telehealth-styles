@@ -20,7 +20,7 @@
       padding-block-end: 3rem;
     }
 
-    @include small {
+    @include bp-small {
       padding-block: 4rem;
     }
   }

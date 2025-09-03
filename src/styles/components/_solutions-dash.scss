@@ -25,7 +25,7 @@
   &__container {
     @include container;
 
-    @include small {
+    @include bp-small {
       display: flex;
       flex-direction: row-reverse;
       align-items: flex-start;
@@ -34,7 +34,7 @@
 
     &:has(.c-solutions-dashboard__content-logos) {
       .c-solutions-dashboard__widgets-container {
-        @include small {
+        @include bp-small {
           padding-top: 24rem;
         }
       }
@@ -44,7 +44,7 @@
   &__content {
     margin-top: 6rem;
 
-    @include small {
+    @include bp-small {
       margin: 0 auto;
       max-width: 87.6rem;
     }
@@ -127,7 +127,7 @@
   }
 
   &__widgets-container:has(*) {
-    @include small {
+    @include bp-small {
       flex: 1 0 39%;
       align-items: flex-start;
       min-width: 350px;
@@ -151,7 +151,7 @@
     @include body-sm;
     color: $white;
 
-    @include small {
+    @include bp-small {
       margin-bottom: 6rem;
     }
 
@@ -202,7 +202,7 @@
   // LOGOS
 
   &__content:has(.c-solutions-dashboard__content-logos) {
-    @include small {
+    @include bp-small {
       position: relative;
       margin: 0 auto 0 0;
       max-width: 100%;
@@ -218,7 +218,7 @@
     border-top: 1px solid $grey-light;
     padding: 2rem 0 6rem 0;
     max-width: 30rem;
-    @include small {
+    @include bp-small {
       position: absolute;
       left: 100%;
       top: 0;
@@ -331,12 +331,12 @@
   }
 
   &__events-container {
-    @include extraextra-small {
+    @include bp-extraextra-small {
       display: flex;
       gap: 2rem;
     }
 
-    @include small {
+    @include bp-small {
       display: block;
     }
   }
@@ -349,11 +349,11 @@
       margin-bottom: 0;
     }
 
-    @include extraextra-small {
+    @include bp-extraextra-small {
       margin-bottom: 0;
     }
 
-    @include small {
+    @include bp-small {
       margin-bottom: 3rem;
     }
   }
@@ -366,7 +366,7 @@
     color: $white;
     position: relative;
 
-    @include small {
+    @include bp-small {
       gap: 4rem;
     }
 
@@ -382,10 +382,10 @@
       left: 40%;
       transform: translateY(-50%);
 
-      @include extraextra-small {
+      @include bp-extraextra-small {
         left: 35%;
       }
-      @include extra-small {
+      @include bp-extra-small {
         left: 40%;
       }
     }
@@ -404,14 +404,14 @@
     position: relative;
     overflow: hidden;
 
-    @include extraextra-small {
+    @include bp-extraextra-small {
       padding-inline: 1rem;
       flex: 0 1 11rem;
     }
-    @include extra-small {
+    @include bp-extra-small {
       padding-inline: 2rem;
     }
-    @include small {
+    @include bp-small {
       flex: 0 1 17.6rem;
     }
 
@@ -427,11 +427,11 @@
       background-repeat: no-repeat;
       background-position-y: bottom;
 
-      @include extraextra-small {
+      @include bp-extraextra-small {
         right: 0.5rem;
       }
 
-      @include small {
+      @include bp-small {
         right: 6.1rem;
         bottom: -0.9rem;
       }
@@ -457,7 +457,7 @@
     font-weight: 300;
     line-height: 1.2;
 
-    @include small {
+    @include bp-small {
       font-size: 8rem;
     }
   }
@@ -466,7 +466,7 @@
     font-size: 1.5rem;
     line-height: 1.2;
 
-    @include small {
+    @include bp-small {
       font-size: 2rem;
     }
   }

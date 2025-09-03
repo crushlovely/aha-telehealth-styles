@@ -1,7 +1,7 @@
 .page-error {
   @include container;
   @include block;
-  @include medium {
+  @include bp-medium {
     min-height: calc(100vh - 50rem);
   }
   h1,
@@ -10,18 +10,18 @@
     @include heading-xl;
     font-size: 2.6rem !important; // override inline styles from the CMS
 
-    @include small {
+    @include bp-small {
       font-size: 3rem !important;
     }
 
-    @include medium {
+    @include bp-medium {
       font-size: 4rem !important;
     }
   }
   p {
     @include body-lg;
     font-size: 1.5rem !important; // override inline styles from the CMS
-    @include small {
+    @include bp-small {
       font-size: 1.8rem !important;
     }
     & + p {

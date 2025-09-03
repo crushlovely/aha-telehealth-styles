@@ -1,40 +1,75 @@
 .c-testimonial {
-  background-color: $red;
+  background-color: $grey-medium-light;
   overflow: hidden;
   .c-testimonial__container {
     position: relative;
-    @include container;
+    margin: 0 auto;
     @include block;
-    // spiral background
-    &::before {
+    @include container;
+    @include bp-small {
+      max-width: 80rem;
+    }
+    @include bp-medium {
+      max-width: 108rem;
+    }
+    &::before,
+    &::after {
       content: "";
+      @include bg-quote;
       position: absolute;
-      display: block;
-      top: -20%;
-      bottom: -85%;
-      margin-inline-end: -15rem;
+      top: 0;
+      translate: 4rem 2rem;
       right: 100%;
-      @include bg-spiral;
-      background-repeat: no-repeat;
-      background-size: contain;
-      aspect-ratio: 736/798;
+      width: 5rem;
+      aspect-ratio: 247 / 231;
+      z-index: 10;
+      @include bp-small {
+        width: 15rem;
+        top: 50%;
+        translate: 5rem -50%;
+        z-index: 1;
+      }
+      @include bp-medium {
+        width: 25rem;
+      }
+    }
+    &::after {
+      left: 100%;
+      right: auto;
+      rotate: 180deg;
+      top: 100%;
+      translate: -5rem -8rem;
+      @include bp-small {
+        top: 50%;
+        translate: -5rem -50%;
+      }
     }
   }
   img {
     display: none;
   }
+
   .c-testimonial__content {
     position: relative;
+    background-color: $white;
+    z-index: 2;
+    padding: 3rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    @include bp-small {
+      padding: 5.5rem 7.5rem;
+    }
+
     blockquote {
+      color: $black;
       display: flex;
       flex-direction: column-reverse;
+      color: $black;
       gap: 2.5rem;
-      color: $white;
+      @include bp-small {
+        gap: 5rem;
+      }
       .h3,
       span {
-        &::before {
-          content: "- ";
-        }
         @include body-md;
         font-style: normal;
       }

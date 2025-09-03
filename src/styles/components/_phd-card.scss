@@ -13,10 +13,10 @@ body {
   color: $grey-light-alt;
   opacity: 0.3;
 
-  @include small {
+  @include bp-small {
     transform: translate(-50%, -10rem);
   }
-  @include medium {
+  @include bp-medium {
     transform: translate(-50%, -12.5rem);
   }
 }
@@ -38,7 +38,7 @@ body {
     display: grid;
     gap: 6rem;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    @include small {
+    @include bp-small {
       gap: 2.75rem;
     }
     @media print {
@@ -51,13 +51,13 @@ body {
 .container.container-fluid:has(.c-phd-card) {
   // background: blue;
   .l-generic {
-    @include extra-small {
+    @include bp-extra-small {
       padding-block-start: 2rem;
     }
-    @include small {
+    @include bp-small {
       padding-block-start: 4rem;
     }
-    @include medium {
+    @include bp-medium {
       padding-block-start: 6rem;
     }
   }
@@ -68,13 +68,13 @@ body {
   + .container.container-fluid:has(.c-phd-card) {
   .l-generic {
     // background: lightblue;
-    @include extra-small {
+    @include bp-extra-small {
       padding-block-start: 0;
     }
-    @include small {
+    @include bp-small {
       padding-block-start: 0;
     }
-    @include medium {
+    @include bp-medium {
       padding-block-start: 12;
     }
   }
@@ -89,13 +89,13 @@ body {
       @include component__heading;
     }
     padding-block-start: 2.5rem;
-    @include extra-small {
+    @include bp-extra-small {
       padding-block-start: 4rem;
     }
-    @include small {
+    @include bp-small {
       padding-block-start: 6rem;
     }
-    @include medium {
+    @include bp-medium {
       padding-block-start: 12.5rem;
     }
   }
@@ -108,13 +108,13 @@ body {
     &:before {
       display: none;
     }
-    @include extra-small {
+    @include bp-extra-small {
       padding-block-start: 0;
     }
-    @include small {
+    @include bp-small {
       padding-block-start: 0;
     }
-    @include medium {
+    @include bp-medium {
       padding-block-start: 12;
     }
   }
@@ -152,7 +152,7 @@ body {
       font-weight: 500;
       margin-bottom: 1.6rem;
       padding-block-start: 1rem;
-      @include small {
+      @include bp-small {
         margin-bottom: 1.1rem;
         padding-block-start: 1.946rem;
         padding-inline-start: 2.839rem;
@@ -164,7 +164,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include small {
+    @include bp-small {
       padding-inline-start: 2.839rem;
     }
     hr {
@@ -177,7 +177,7 @@ body {
     }
     .c-phd-card__actions {
       padding-top: 1.6rem;
-      @include small {
+      @include bp-small {
         // padding-inline-start: 2.839rem;
       }
       .c-phd-card__action {

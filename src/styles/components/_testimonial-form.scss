@@ -14,7 +14,7 @@
   }
   div.row {
     display: block;
-    @include medium {
+    @include bp-medium {
       display: block;
     }
     .btn,
@@ -54,7 +54,7 @@
     margin-top: 5rem;
     display: grid;
     gap: 2rem;
-    @include small {
+    @include bp-small {
       gap: 4rem;
       grid-template-columns: 1fr 1.3fr;
       > *:nth-child(2) {

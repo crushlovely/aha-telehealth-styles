@@ -19,16 +19,16 @@
 
   .l-promo__col:nth-child(2):has(.c-promo__media) {
     order: -1;
-    @include small {
+    @include bp-small {
       order: 2;
     }
   }
 
-  @include small {
+  @include bp-small {
     grid-template-columns: 1fr 1fr;
   }
 
-  @include medium {
+  @include bp-medium {
     grid-template-columns: 1.47fr 1fr;
     gap: 6rem;
   }
@@ -102,7 +102,7 @@
   background-color: $offwhite !important;
 }
 .l-promo.h-theme--gray {
-  @include small() {
+  @include bp-small() {
     grid-template-columns: 1fr 1.47fr;
     &:has(.l-promo__col:nth-child(1) .c-promo__media) {
       grid-template-columns: 1.47fr 1fr;

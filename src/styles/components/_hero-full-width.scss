@@ -94,14 +94,14 @@
   color: $white;
   position: relative;
   background-color: #111111;
-  @include small {
+  @include bp-small {
     background-color: $black;
   }
 
   .c-hero-full {
     padding-block-start: 3rem;
     padding-block-end: 3rem;
-    @include small {
+    @include bp-small {
       padding-block-start: 13.25rem;
       padding-block-end: 13.75rem;
     }
@@ -182,14 +182,14 @@
   .c-hero-full__content-container {
     max-width: 95rem;
     margin: 0 auto;
-    @include small {
+    @include bp-small {
       text-align: center;
     }
   }
   .c-hero-card__actions,
   .c-hero-card__action,
   .c-hero-card__btn-side-by-side {
-    @include small {
+    @include bp-small {
       justify-content: center;
     }
   }
@@ -240,7 +240,7 @@
   .c-hero-full {
     padding: 0;
     max-width: 100%;
-    @media (min-width: 768px) {
+    @include bp-small {
       padding-block-end: 6rem;
     }
   }
@@ -256,7 +256,7 @@
     padding: 4rem 2rem;
     text-align: center;
     background: white;
-    @media (min-width: 1024px) {
+    @include bp-medium {
       padding: 3.5% 2rem;
       margin-top: -11%;
       box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);

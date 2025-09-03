@@ -1,9 +1,9 @@
 @mixin container() {
   margin: 0 auto;
   padding-inline: 2rem;
-  @include small {
+  @include bp-small {
     padding-inline: 5rem;
-    max-width: 116rem;
+    max-width: 120rem;
   }
   @media print {
     padding-inline: 0;
@@ -14,7 +14,7 @@
 @mixin container-lg() {
   margin: 0 auto;
   padding-inline: 2rem;
-  @include small {
+  @include bp-small {
     padding-inline: 5rem;
     max-width: 134.5rem;
   }
@@ -27,9 +27,22 @@
 @mixin container-sm() {
   margin: 0 auto;
   padding-inline: 2rem;
-  @include small {
+  @include bp-small {
     padding-inline: 2rem;
     max-width: 90rem;
+  }
+  @media print {
+    padding-inline: 0;
+    max-width: 100%;
+  }
+}
+
+@mixin container-xs() {
+  margin: 0 auto;
+  padding-inline: 2rem;
+  @include bp-small {
+    padding-inline: 2rem;
+    max-width: 65.875rem;
   }
   @media print {
     padding-inline: 0;

@@ -15,7 +15,7 @@
     height: auto;
     max-width: 17.3rem;
 
-    @include small {
+    @include bp-small {
       max-width: 59rem;
     }
   }
@@ -72,7 +72,7 @@
     }
   }
 
-  @include medium {
+  @include bp-medium {
     display: none;
   }
 }
@@ -89,7 +89,7 @@
   background: $white;
   min-height: calc(100vh - 4rem);
 
-  @include medium {
+  @include bp-medium {
     min-height: auto;
     display: flex !important;
     position: static;
@@ -108,7 +108,7 @@
   li {
     position: relative;
     padding: 1rem 0;
-    @include medium {
+    @include bp-medium {
       &:hover {
         .wbwb-header__sub-menu {
           display: block !important;
@@ -116,7 +116,7 @@
       }
     }
   }
-  @include medium {
+  @include bp-medium {
     margin-left: auto;
     display: flex;
     align-items: center;
@@ -197,7 +197,7 @@
   li {
     display: block;
   }
-  @include medium {
+  @include bp-medium {
     position: absolute;
     z-index: 1000;
     top: 100%;
@@ -219,7 +219,7 @@
   display: block;
   white-space: nowrap;
   padding: 0.25rem 0;
-  @include medium {
+  @include bp-medium {
     padding: 0.75rem 1rem;
   }
 

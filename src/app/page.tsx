@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { HeroFullWidth } from "@/components/hero-full-width";
+import { NavCards } from "@/components/nav-cards";
 import { HowItWorks } from "@/components/how-it-works";
 import { HalfImageHalfCopyPromoRight } from "@/components/half-image-half-copy-promo";
 import { FullWidthTestimonial } from "@/components/full-width-testimonial";
@@ -18,33 +19,16 @@ export default function Home() {
         body="Leading evidence-based research, convening healthcare experts, and advancing telehealth science through the trusted authority of the American Heart Association."
         button1="Explore the Latest from the Field"
       />
+      <NavCards title="" content="p" num={3} withRedBox={true} />
+      <FullWidthTestimonial />
       <HowItWorks />
-
-      <HeroFullWidth
-        theme="white"
-        title="Reach Goals with Resources"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-        button1="Link Text"
-      />
-
-      <HalfImageHalfCopyPromoRight />
-      <FullWidthTestimonial />
-      <HalfImageHalfCopyPromoRight />
-      <FullWidthTestimonial />
-      <HeroFullWidth
-        theme="white"
-        title="Reach Goals with Resources"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-        button1="Link Text"
-      />
       <HeroFullWidth
         theme="gray"
         image="/images/homepage-hero.jpg"
-        title="Benefits & Recognition"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-        button1="Link Text"
+        title="Ready to Apply This Science?"
+        body="Transform research into practice with our evidence-based training courses designed for healthcare professionals."
+        button1="Explore Training Courses"
       />
-
       <Footer />
       <SpeedBump open={false} />
     </>
