@@ -2,7 +2,6 @@ import { Header } from "@/components/header";
 import { HeroFullWidth } from "@/components/hero-full-width";
 import { NavCards } from "@/components/nav-cards";
 import { HowItWorks } from "@/components/how-it-works";
-import { HalfImageHalfCopyPromoRight } from "@/components/half-image-half-copy-promo";
 import { FullWidthTestimonial } from "@/components/full-width-testimonial";
 import { Footer } from "@/components/footer";
 import { SpeedBump } from "@/components/speed-bump";

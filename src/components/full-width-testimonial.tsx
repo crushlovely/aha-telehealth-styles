@@ -20,9 +20,9 @@ export const FullWidthTestimonial = () => (
               <h2 className="h3">Name Goes Here, Title</h2>
               <p>
                 Lorem ipsum dolor sit amet, conse ctetu adip iscing elit, sed do
-                eius mod tempor incididunt ut labore et dolore magna aliqua. 
+                eius mod tempor incididunt ut labore et dolore magna aliqua.
                 Conse ctetu adip iscing elit, sed do eius mod tempor incididunt
-                ut labore et dolore magna aliqua. 
+                ut labore et dolore magna aliqua.
               </p>
             </blockquote>{" "}
             <a href="#" className="c-cta c-cta--arrow h-theme--aqua-alt">

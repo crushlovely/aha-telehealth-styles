@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-export const Header = ({ loggedIn = true }) => {
+export const Header = ({ loggedIn: _loggedIn = true }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="l-header__top">
@@ -152,7 +152,7 @@ export const Header = ({ loggedIn = true }) => {
                                       <div
                                         className="CoveoOmnibox coveo-query-syntax-disabled magic-box"
                                         role="search"
-                                        aria-haspopup="listbox"
+                                        aria-expanded="false"
                                       >
                                         <div className="magic-box-input">
                                           <div className="magic-box-underlay">

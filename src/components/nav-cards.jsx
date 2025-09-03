@@ -4,7 +4,7 @@ import React from "react";
 
 const NavCard = ({ links, linkText, content }) => (
   <a className="c-nav-card" href="#">
-    <span class="c-nav-card__content">
+    <span className="c-nav-card__content">
       <h3 className="c-nav-card__title">Title Goes Here</h3>
 
       <span className="c-nav-card__description">
@@ -19,7 +19,7 @@ const NavCard = ({ links, linkText, content }) => (
             <li>
               Test your technology (camera, microphone, internet connection)
             </li>
-            <li>Download and test your healthcare provider's telehealth app</li>
+            <li>Download and test your healthcare providers telehealth app</li>
             <li>Prepare a list of current medications and dosages</li>
             <li>Gather relevant medical documents or test results</li>
             <li>
