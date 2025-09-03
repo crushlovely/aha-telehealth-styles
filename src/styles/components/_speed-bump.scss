@@ -19,7 +19,7 @@
     margin: auto;
     padding: 2rem;
     min-height: 0 !important;
-    @include medium {
+    @include bp-medium {
       padding: 3rem 4rem;
     }
     background: white;

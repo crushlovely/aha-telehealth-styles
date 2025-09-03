@@ -2,13 +2,12 @@ export const HowItWorks = () => (
   <div className="c-how-it-works">
     <div className="c-how-it-works__container">
       <div className="c-how-it-works__header">
-        <h2>Assess & Get Stronger</h2>
+        <h2>Telehealth Spans the Spectrum of Health Care</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam.
+          From preventive care to community health, telehealth transforms every
+          aspect of healthcare delivery
         </p>
-        <a href="#">Learn More</a>
+        {/* <a href="#">Learn More</a> */}
       </div>
       <div className="c-how-it-works__main">
         <div className="c-how-it-works__media">
@@ -16,34 +15,20 @@ export const HowItWorks = () => (
         </div>
         <ol className="c-how-it-works__steps">
           <li className="c-how-it-works__step">
-            <h3>Well-Being Works Better Scorecard</h3>
-            <p>
-              Evaluate the current state using science-based best practices.
-              Receive a complimentary, detailed benchmarking report.
-            </p>
+            <h3>Ambulatory Corporate Health & Wellness</h3>
+            <p>Replacing a range of preventative care and general visits</p>
           </li>
           <li className="c-how-it-works__step">
-            <h3>Knowledge Hub</h3>
-            <p>
-              Access employer resources to address policy and program gaps to
-              improve quality and performance. Access employee resources to
-              promote health and well-being.
-            </p>
+            <h3>Acute & Disease Management</h3>
+            <p>Specialty care, diagnostics and health routing</p>
           </li>
           <li className="c-how-it-works__step">
-            <h3>National Recognition</h3>
-            <p>
-              Receive digital and print recognition featured in Forbes Magazine.
-              Aspire to become a Platinum company to attract more top talent.
-            </p>
+            <h3>Healthcare Transition</h3>
+            <p>Post-acute care, rehabilitation, remote patient monitoring</p>
           </li>
           <li className="c-how-it-works__step">
-            <h3>Peer Learning</h3>
-            <p>
-              Evolve and improve performance through an annual calendar of
-              webinars, podcast, and other resources to earn from industry
-              experts and peer companies.
-            </p>
+            <h3>Community & Home Health</h3>
+            <p>Virtual health engagement and hospital-at-home</p>
           </li>
         </ol>
       </div>

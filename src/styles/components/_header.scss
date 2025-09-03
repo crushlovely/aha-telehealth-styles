@@ -28,7 +28,7 @@
   // Search
   li:has(.global-search-section) {
     display: none;
-    @include medium {
+    @include bp-medium {
       display: block;
     }
   }
@@ -170,7 +170,7 @@
       }
     }
 
-    @include medium {
+    @include bp-medium {
       display: none;
     }
   }
@@ -200,7 +200,7 @@
     &:has(.c-top-nav__account) {
       display: block;
     }
-    @include medium {
+    @include bp-medium {
       display: block;
       padding: 1rem 0;
     }
@@ -217,7 +217,7 @@
       text-decoration: underline;
     }
 
-    @include medium {
+    @include bp-medium {
       display: flex;
     }
 
@@ -354,7 +354,7 @@
   right: -2rem;
   z-index: 1000;
 
-  @include small {
+  @include bp-small {
     left: -5rem;
     right: -5rem;
   }
@@ -368,14 +368,14 @@
       overflow: auto;
       display: block;
 
-      @include medium {
+      @include bp-medium {
         display: none !important;
       }
     }
 
     padding: 0 3rem !important;
 
-    @include small {
+    @include bp-small {
       padding: 3rem 6rem !important;
     }
   }
@@ -482,7 +482,7 @@ body {
   &.modal-open {
     overflow: hidden;
 
-    @include medium {
+    @include bp-medium {
       overflow: auto !important;
     }
   }

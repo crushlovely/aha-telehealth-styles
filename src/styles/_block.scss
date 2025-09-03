@@ -1,18 +1,18 @@
 @mixin block() {
   position: relative;
   padding-block: 4rem;
-  @include small {
+  @include bp-small {
     padding-block: 8rem;
   }
   &:has(~ div) {
     padding-block-end: 2rem;
-    @include small {
+    @include bp-small {
       padding-block-end: 4rem;
     }
   }
   & + * {
     padding-block: 2rem !important;
-    @include small {
+    @include bp-small {
       padding-block: 4rem !important;
     }
     @media print {
@@ -23,10 +23,20 @@
 
 @mixin block-start {
   padding-block-start: 4rem !important;
-  @include small {
+  @include bp-small {
     padding-block-start: 8rem !important;
   }
   @media print {
     padding-block-start: 0 !important;
+  }
+}
+
+@mixin block-end {
+  padding-block-end: 4rem !important;
+  @include bp-small {
+    padding-block-end: 8rem !important;
+  }
+  @media print {
+    padding-block-end: 0 !important;
   }
 }

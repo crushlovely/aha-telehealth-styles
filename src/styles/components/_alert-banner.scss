@@ -24,7 +24,7 @@
   .container {
     @include container;
     display: block;
-    @media (min-width: 768px) {
+    @include bp-small {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -38,7 +38,7 @@
     align-items: center;
     gap: 1rem;
     border-bottom: 1rem solid transparent;
-    @media (min-width: 768px) {
+    @include bp-small {
       border: none;
     }
   }
@@ -71,7 +71,7 @@
     flex-direction: column;
     gap: 0.75rem;
 
-    @media (min-width: 768px) {
+    @include bp-small {
       flex-direction: row;
       align-items: center;
       gap: 1.5rem;

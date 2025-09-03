@@ -56,13 +56,13 @@
   .video-promo__wrapper > .row {
     display: grid;
     gap: 2rem;
-    @include small {
+    @include bp-small {
       grid-template-columns: 2fr 1fr;
       gap: 7%;
       align-items: center;
     }
     .video-promo__media {
-      @include small {
+      @include bp-small {
         order: 2;
       }
     }

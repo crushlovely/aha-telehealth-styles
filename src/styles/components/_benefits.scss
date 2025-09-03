@@ -2,7 +2,7 @@
   @include container;
   @include block;
 
-  @include small {
+  @include bp-small {
     display: flex;
     align-items: flex-start;
     gap: 10rem;
@@ -33,7 +33,7 @@
     list-style-type: none;
     padding-top: 3rem;
 
-    @include small {
+    @include bp-small {
       padding-top: 2.2rem;
     }
 

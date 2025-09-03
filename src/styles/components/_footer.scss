@@ -15,13 +15,13 @@ footer {
       padding-block-start: 2.5rem;
       padding-block-end: 5rem;
 
-      @include small {
+      @include bp-small {
         padding-block-start: 4.5rem;
         padding-block-end: 7rem;
       }
     }
     .row {
-      @include small {
+      @include bp-small {
         display: flex;
         gap: 4%;
         justify-content: space-between;
@@ -44,7 +44,7 @@ footer {
     color: $grey-light;
     margin-top: 4rem;
     margin-bottom: 1rem;
-    @include small {
+    @include bp-small {
       margin-top: 0;
     }
   }
@@ -71,7 +71,7 @@ footer {
       outline-offset: 3px;
     }
 
-    @include small {
+    @include bp-small {
       font-size: 1.8rem;
       line-height: 1.5;
     }
@@ -145,7 +145,7 @@ footer {
     & + button + .collapse {
       display: none !important;
     }
-    @include small {
+    @include bp-small {
       padding-inline: 0;
       margin-bottom: 0;
       img {

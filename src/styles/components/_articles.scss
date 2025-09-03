@@ -2,7 +2,7 @@
   @include block;
   background: $offwhite;
 
-  @include small {
+  @include bp-small {
     padding-block: 8rem;
   }
 
@@ -13,12 +13,12 @@
     @include heading-xl;
     text-align: center;
     display: none;
-    @include small {
+    @include bp-small {
       display: block;
     }
   }
   &__cards {
-    @include small {
+    @include bp-small {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 6rem;
@@ -30,11 +30,11 @@
     gap: 1rem;
     margin-bottom: 3rem;
 
-    @include extraextra-small {
+    @include bp-extraextra-small {
       gap: 2.4rem;
     }
 
-    @include small {
+    @include bp-small {
       margin-bottom: 0;
     }
 
@@ -49,7 +49,7 @@
   }
   &__media {
     flex: 0 0 34.3%;
-    @include small {
+    @include bp-small {
       flex: 0 0 24.2%;
     }
   }

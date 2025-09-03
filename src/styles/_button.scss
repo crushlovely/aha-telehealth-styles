@@ -12,7 +12,7 @@
   white-space: nowrap;
   cursor: pointer;
 
-  @include small {
+  @include bp-small {
     padding-inline: 3.6rem;
   }
   @media print {

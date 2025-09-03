@@ -29,11 +29,11 @@
       height: 60.7rem;
       pointer-events: none;
 
-      @include small {
+      @include bp-small {
         width: 57rem;
         height: 76.2rem;
       }
-      @include medium {
+      @include bp-medium {
         left: -30rem;
       }
     }
@@ -69,7 +69,7 @@
     div.col-md-6 {
       display: block;
     }
-    @include medium {
+    @include bp-medium {
       gap: 8rem;
       grid-template-columns: 1.25fr 1fr;
     }
