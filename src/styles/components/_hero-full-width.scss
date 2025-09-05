@@ -82,6 +82,67 @@
 .l-section:has(.c-hero-full.h-theme--red) {
   background-color: $red;
   color: $white;
+  .c-hero-full {
+    padding-block-start: 3rem;
+    padding-block-end: 3rem;
+    @include bp-small {
+      padding-block-start: 13.25rem;
+      padding-block-end: 22rem;
+    }
+  }
+
+  // Video As direct Sibling
+  &:has(+ .phd-video) {
+    .c-hero-full {
+      @include bp-small {
+        padding-block-start: 8rem;
+        padding-block-end: 30rem;
+      }
+    }
+    & + .phd-video {
+      @include bp-small {
+        margin-top: -36rem;
+        .container {
+          max-width: 120rem;
+        }
+      }
+    }
+  }
+
+  .c-hero-full__content-container {
+    max-width: 72rem;
+    position: relative;
+    margin-inline: auto;
+    z-index: 2;
+    & > * {
+      position: relative;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 51rem;
+      height: 68.3rem;
+      translate: -50% -25%;
+      @include bg-big-heart;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  .c-hero-full__heading {
+    @include heading-xxl;
+    @include bp-small {
+      text-align: center;
+    }
+  }
+  .c-hero-full__subheading {
+    margin: 0 auto;
+    max-width: 70rem;
+    @include bp-small {
+      text-align: center;
+    }
+  }
 }
 
 // Black, Gray Theme and

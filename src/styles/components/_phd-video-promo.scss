@@ -3,6 +3,7 @@
   .container {
     @include container-lg;
   }
+
   .c-video__media {
     position: relative;
     display: block;
@@ -12,7 +13,7 @@
     border-radius: 0;
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: $grey-light;
+    background: $black;
     &::after {
       content: "";
       position: absolute;
@@ -23,22 +24,28 @@
       max-width: 10rem;
       aspect-ratio: 1/1;
       border-radius: 50%;
-      background-color: $white;
-      background-image: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 71 70" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" width="70" height="69.2308" rx="34.6154" fill="white"/><path opacity="0.2" d="M35.5 9.4231C30.3083 9.4231 25.2331 10.9457 20.9163 13.7984C16.5995 16.6511 13.235 20.7057 11.2482 25.4496C9.26137 30.1934 8.74154 35.4134 9.7544 40.4495C10.7673 45.4855 13.2673 50.1114 16.9385 53.7422C20.6096 57.373 25.2869 59.8456 30.3789 60.8473C35.4709 61.8491 40.7489 61.3349 45.5455 59.37C50.342 57.405 54.4417 54.0774 57.3261 49.8081C60.2105 45.5387 61.75 40.5193 61.75 35.3846C61.75 28.4992 58.9844 21.8958 54.0616 17.0271C49.1387 12.1583 42.4619 9.4231 35.5 9.4231ZM31.125 44.0385V26.7308L44.25 35.3846L31.125 44.0385Z" fill="%23C10E21"/><path d="M35.5 61.3462C49.9975 61.3462 61.75 49.7228 61.75 35.3846C61.75 21.0465 49.9975 9.4231 35.5 9.4231C21.0025 9.4231 9.25 21.0465 9.25 35.3846C9.25 49.7228 21.0025 61.3462 35.5 61.3462Z" stroke="%23C10E21" stroke-width="2" stroke-miterlimit="10"/><path d="M44.25 35.3847L31.125 26.7308V44.0385L44.25 35.3847Z" stroke="%23C10E21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-image: url('data:image/svg+xml,<svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.2" d="M44 11C37.4732 11 31.093 12.9354 25.6662 16.5615C20.2394 20.1876 16.0097 25.3415 13.512 31.3714C11.0143 37.4014 10.3608 44.0366 11.6341 50.438C12.9074 56.8394 16.0504 62.7194 20.6655 67.3345C25.2806 71.9497 31.1607 75.0926 37.562 76.3659C43.9634 77.6392 50.5986 76.9857 56.6286 74.488C62.6585 71.9903 67.8124 67.7606 71.4385 62.3338C75.0646 56.907 77 50.5268 77 44C77 35.2479 73.5232 26.8542 67.3345 20.6655C61.1458 14.4768 52.7522 11 44 11ZM38.5 55V33L55 44L38.5 55Z" fill="white"/><path d="M44 77C62.2254 77 77 62.2254 77 44C77 25.7746 62.2254 11 44 11C25.7746 11 11 25.7746 11 44C11 62.2254 25.7746 77 44 77Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/><path d="M55 44L38.5 33V55L55 44Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
       transition: all 0.2s ease-in-out;
-    }
-    &:hover,
-    &:focus-visible {
-      &::after {
-        background-image: url('data:image/svg+xml,<svg width="100%" height="100%" viewBox="0 0 71 70" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" width="70" height="69.2308" rx="34.6154" fill="white"/><path opacity="0.8" d="M35.5 9.4231C30.3083 9.4231 25.2331 10.9457 20.9163 13.7984C16.5995 16.6511 13.235 20.7057 11.2482 25.4496C9.26137 30.1934 8.74154 35.4134 9.7544 40.4495C10.7673 45.4855 13.2673 50.1114 16.9385 53.7422C20.6096 57.373 25.2869 59.8456 30.3789 60.8473C35.4709 61.8491 40.7489 61.3349 45.5455 59.37C50.342 57.405 54.4417 54.0774 57.3261 49.8081C60.2105 45.5387 61.75 40.5193 61.75 35.3846C61.75 28.4992 58.9844 21.8958 54.0616 17.0271C49.1387 12.1583 42.4619 9.4231 35.5 9.4231ZM31.125 44.0385V26.7308L44.25 35.3846L31.125 44.0385Z" fill="%23C10E21"/><path d="M35.5 61.3462C49.9975 61.3462 61.75 49.7228 61.75 35.3846C61.75 21.0465 49.9975 9.4231 35.5 9.4231C21.0025 9.4231 9.25 21.0465 9.25 35.3846C9.25 49.7228 21.0025 61.3462 35.5 61.3462Z" stroke="%23C10E21" stroke-width="2" stroke-miterlimit="10"/><path d="M44.25 35.3847L31.125 26.7308V44.0385L44.25 35.3847Z" stroke="%23C10E21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-        transform: translate(-50%, -50%) scale(1.2);
-      }
+      filter: grayscale(1);
+      background-repeat: no-repeat;
+      background-position: center;
     }
     img {
       position: relative;
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
+      opacity: 0.35;
+      transition: opacity 0.2s ease-in-out;
+    }
+    &:hover,
+    &:focus-visible {
+      img {
+        opacity: 0.65;
+      }
+      &::after {
+        transform: translate(-50%, -50%) scale(1.05);
+      }
     }
   }
   .c-video__title {

@@ -4,7 +4,7 @@ import { AlertBanner } from "@/components/alert-banner";
 import { Stats } from "@/components/stats";
 import { Profiles } from "@/components/profiles";
 
-export default function CoursesPage() {
+export default function AdvisoryCommitteePage() {
   return (
     <>
       <Header />
