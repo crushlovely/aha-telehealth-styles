@@ -40,7 +40,7 @@ export const Header = ({ loggedIn: _loggedIn = true }) => {
             </li>
             <li className="c-top-nav__item">
               <a
-                href="#"
+                href="/insights"
                 target=""
                 className="c-top-nav__link c-cta c-cta--icon"
               >
@@ -49,7 +49,7 @@ export const Header = ({ loggedIn: _loggedIn = true }) => {
             </li>
             <li className="c-top-nav__item">
               <a
-                href="#"
+                href="/advisory-committee"
                 target=""
                 className="c-top-nav__link c-cta c-cta--icon"
               >
@@ -58,7 +58,7 @@ export const Header = ({ loggedIn: _loggedIn = true }) => {
             </li>
             <li className="c-top-nav__item">
               <a
-                href="#"
+                href="/patient-resources"
                 target=""
                 className="c-top-nav__link c-cta c-cta--icon"
               >

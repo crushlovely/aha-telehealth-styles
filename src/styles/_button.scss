@@ -83,3 +83,13 @@
     outline-offset: 3px;
   }
 }
+
+@mixin tag-base {
+  @include icon-link-text;
+  display: inline-block;
+  border-radius: 10000vw; // rounds only the ends
+  padding-block: 0.65rem;
+  padding-inline: 1.55rem;
+  color: $grey-dark;
+  border: 1px solid #636466;
+}
