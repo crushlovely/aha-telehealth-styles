@@ -1,3 +1,4 @@
+$xxx-small: 400px;
 $extraextra-small: 500px;
 $extra-small: 578px;
 $small: 768px;
@@ -5,6 +6,15 @@ $medium: 1024px;
 $large: 1310px;
 $extra-large: 1550px;
 $xx-large: 1660px;
+
+@mixin bp-xxx-small {
+  @media (min-width: $xxx-small) {
+    @content;
+  }
+  @media print {
+    @content;
+  }
+}
 
 @mixin bp-extraextra-small {
   @media (min-width: $extraextra-small) {

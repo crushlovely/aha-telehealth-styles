@@ -1,0 +1,120 @@
+.c-profiles {
+  background: $white;
+
+  .container {
+    @include container;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @include bp-small {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__title {
+    @include heading-xl;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    @include body-lg;
+    color: $grey-medium;
+  }
+}
+
+.c-profile {
+  @include block;
+  &__container {
+    @include container;
+
+    @include bp-xxx-small {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      grid-template-areas:
+        "image header"
+        "main main";
+      gap: 1.5rem;
+    }
+    @include bp-small {
+      grid-template-columns: 350px 1fr;
+      grid-template-areas:
+        "image header"
+        "image main";
+      gap: 0 10%;
+    }
+    @include bp-medium {
+      grid-template-columns: 450px 1fr;
+    }
+  }
+  &:nth-child(even) {
+    background: $grey-extra-light;
+    @include bp-small {
+      .c-profile__container {
+        grid-template-areas:
+          "header image"
+          "main image";
+        grid-template-columns: 1fr 350px;
+      }
+    }
+    @include bp-medium {
+      .c-profile__container {
+        grid-template-columns: 1fr 450px;
+      }
+    }
+  }
+
+  &__image {
+    grid-area: image;
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  &__header {
+    grid-area: header;
+    align-content: end;
+  }
+
+  &__name {
+    @include heading-xl;
+  }
+
+  &__main {
+    grid-area: main;
+    align-content: start;
+  }
+
+  &__meta {
+    margin-block-end: 1rem;
+    @include bp-small {
+      margin-block-end: 1.5rem;
+      &:last-child {
+        margin-block-end: 2rem;
+      }
+    }
+  }
+
+  &__tags {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-block-end: 2rem;
+  }
+
+  &__tag {
+    @include tag-base;
+  }
+
+  &__description {
+    @include body-lg;
+  }
+}
