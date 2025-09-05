@@ -7,7 +7,7 @@ export const PHDVideo = () => (
             <div className="c-video__media-container">
               <button className="c-video__media h-video-play h-placeholder-image h-placeholder-image--5-3">
                 <img
-                  src="/images/event-card-1.jpg"
+                  src="/images/hero-homepage.jpg"
                   alt=""
                   data-lazy-img-loading="//placeimg.com/1200/600/any?0"
                   className="is-loading"
