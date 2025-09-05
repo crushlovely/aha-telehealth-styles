@@ -231,6 +231,7 @@
 // ------------------------------
 .l-section:has(.c-hero-full.h-theme--white) {
   @include block;
+  background-color: $offwhite;
   .c-hero-full__content-container {
     text-align: center;
     max-width: 91rem;

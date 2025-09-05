@@ -31,7 +31,7 @@ export const Header = ({ loggedIn: _loggedIn = true }) => {
           <ul className="c-top-nav__nav nav">
             <li className="c-top-nav__item">
               <a
-                href="#"
+                href="/courses"
                 target=""
                 className="c-top-nav__link c-cta c-cta--icon"
               >
