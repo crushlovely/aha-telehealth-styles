@@ -1,0 +1,52 @@
+<!--
+
+NavCards
+
+props
+- title: string (optional)
+- withRedBox: boolean (optional, default: false) Adds decorative red box in cards
+- navCards
+  - title: string (required)
+  - content: string (rich text) (required)
+  - linkText: string (optional)
+  - linkURL: string (optional)
+-->
+
+<!-- NOTE: Add 'with-red-box class only if withRedBox is true -->
+<div class="c-nav-cards with-red-box">
+  <div class="c-nav-cards__container">
+    <!-- Only render title if title is provided -->
+    <h2 class="c-nav-cards__title">{title}</h2>
+    <!-- end title -->
+
+    <div class="c-nav-cards__list">
+      <!-- navCards -->
+
+      <!-- Only render card as an <a> if linkURL is provided -->
+      <a class="c-nav-card" href="{linkURL}">
+        <span class="c-nav-card__content">
+          <h3 class="c-nav-card__title">{title}</h3>
+
+          <span class="c-nav-card__description"> {content} </span>
+        </span>
+        <!-- Only show link if linkText is provided -->
+        <span class="c-nav-card__link">{linkText}</span>
+        <!-- end linkText -->
+      </a>
+      <!-- end if linkURL -->
+
+      <!-- render as a <div> if no linkURL is provided -->
+      <div class="c-nav-card">
+        <span class="c-nav-card__content">
+          <h3 class="c-nav-card__title">{title}</h3>
+
+          <span class="c-nav-card__description"> {content} </span>
+        </span>
+        <!-- NOTE: if no linkURL, then there won't be a linkText -->
+      </div>
+      <!-- end if linkURL -->
+
+      <!-- end navCards -->
+    </div>
+  </div>
+</div>

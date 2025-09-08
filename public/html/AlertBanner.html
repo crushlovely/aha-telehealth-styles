@@ -1,0 +1,33 @@
+<!--
+
+AlertBanner
+
+props
+- theme: string (optional, default: "black") Theme variant - "black" or "red"
+- icon: string (optional) Image source for icon
+- label: string (optional) Bold label text
+- text: string (required) Main message text
+- ctaUrl: string (required) Link URL
+- ctaText: string (required) CTA button text
+-->
+
+<!-- NOTE: Theme classes are c-alert-banner--black or c-alert-banner--red -->
+<a href="{ctaUrl}" class="c-alert-banner c-alert-banner--{theme}">
+  <span class="container">
+    <span class="c-alert-banner__content body-lg">
+      <span class="c-alert-banner__labels">
+        <!-- Only show icon if icon is provided -->
+        <span class="c-alert-banner__icon">
+          <img src="{icon}" alt="" />
+        </span>
+        <!-- end icon -->
+
+        <!-- Only show label if label is provided -->
+        <b class="c-alert-banner__label">{label}</b>
+        <!-- end label -->
+      </span>
+      <span class="c-alert-banner__message">{text}</span>
+    </span>
+    <span class="c-alert-banner__cta c-cta">{ctaText}</span>
+  </span>
+</a>
