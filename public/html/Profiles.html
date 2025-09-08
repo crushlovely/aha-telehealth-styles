@@ -1,0 +1,69 @@
+<!--
+
+Profiles
+
+props
+- title: string (optional)
+- description: string (optional)
+- profiles: array (required)
+  - image: string (required) Profile image source
+  - name: string (required) Profile name
+  - title: string (optional) Job title or role
+  - location: string (optional) Location information
+  - tags: array (optional) Array of tag strings
+  - description: string (optional) Profile description
+-->
+
+<div class="c-profiles">
+  <!-- Only render header if title or description is provided -->
+  <div class="c-profiles__header container">
+    <!-- Only render title if title is provided -->
+    <h2 class="c-profiles__title">{title}</h2>
+    <!-- end title -->
+    
+    <!-- Only render description if description is provided -->
+    <p class="c-profiles__description">{description}</p>
+    <!-- end description -->
+  </div>
+  <!-- end header -->
+
+  <div class="c-profiles__list">
+    <!-- profiles -->
+    
+    <div class="c-profile">
+      <div class="c-profile__container">
+        <div class="c-profile__image">
+          <img src="{image}" alt="{name}" />
+        </div>
+        <div class="c-profile__header">
+          <h2 class="c-profile__name">{name}</h2>
+          
+          <!-- Only show title if title is provided -->
+          <div class="c-profile__meta icn-person">{title}</div>
+          <!-- end title -->
+          
+          <!-- Only show location if location is provided -->
+          <div class="c-profile__meta icn-calendar">{location}</div>
+          <!-- end location -->
+        </div>
+        <div class="c-profile__main">
+          <!-- Only show tags if tags array has items -->
+          <ul class="c-profile__tags">
+            <!-- tags -->
+            <li>
+              <span class="c-profile__tag">{tag}</span>
+            </li>
+            <!-- end tags -->
+          </ul>
+          <!-- end tags list -->
+          
+          <!-- Only show description if description is provided -->
+          <p class="c-profile__description">{description}</p>
+          <!-- end description -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- end profiles -->
+  </div>
+</div>

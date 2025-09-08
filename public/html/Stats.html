@@ -1,0 +1,38 @@
+<!--
+
+Stats
+
+props
+- title: string (optional)
+- description: string (optional)
+- stats: (required, probably 3)
+  - number: string (required)
+  - description: string (required)
+  
+-->
+
+<div class="c-stats">
+  <div class="container">
+    <!-- Only render header if title or description is provided -->
+    <div class="c-stats__header">
+      <!-- Only render title if title is provided -->
+      <h2 class="c-stats__title">{title}</h2>
+      <!-- end title -->
+
+      <!-- Only render description if description is provided -->
+      <p class="c-stats__description">{description}</p>
+      <!-- end description -->
+    </div>
+    <!-- end header -->
+
+    <div class="c-stats__list-label">Statistics</div>
+    <div class="c-stats__list">
+      <!-- stats (probably 3)-->
+      <div class="c-stats__item">
+        <div class="c-stats__number">{stat.number}</div>
+        <div class="c-stats__text">{stat.description}</div>
+      </div>
+      <!-- end stats -->
+    </div>
+  </div>
+</div>
