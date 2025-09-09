@@ -32,14 +32,19 @@ interface ResourceCardsProps {
   resources: ResourceCard[];
 }
 
-const ResourceCardItem: React.FC<{ resource: ResourceCard }> = ({ resource }) => (
+const ResourceCardItem: React.FC<{ resource: ResourceCard }> = ({
+  resource,
+}) => (
   <div
     className={
-      `c-resource-card` + (resource.featured ? " c-resource-card--featured" : "")
+      `c-resource-card` +
+      (resource.featured ? " c-resource-card--featured" : "")
     }
   >
     <div className="c-resource-card__header">
-      {resource.thumbnail && <img src={resource.thumbnail} alt={resource.title} />}
+      {resource.thumbnail && (
+        <img src={resource.thumbnail} alt={resource.title} />
+      )}
       {resource.label && (
         <div className="c-resource-card__label">{resource.label}</div>
       )}
@@ -50,7 +55,9 @@ const ResourceCardItem: React.FC<{ resource: ResourceCard }> = ({ resource }) =>
       )}
       <h3 className="c-resource-card__title">{resource.title}</h3>
       {resource.description && (
-        <div className="c-resource-card__description">{resource.description}</div>
+        <div className="c-resource-card__description">
+          {resource.description}
+        </div>
       )}
       <div className="c-resource-card__meta">
         {resource.duration && (
@@ -88,7 +95,9 @@ const ResourceCardItem: React.FC<{ resource: ResourceCard }> = ({ resource }) =>
         {resource.secondaryDescription && (
           <div className="c-resource-card__secondary-description">
             <div
-              dangerouslySetInnerHTML={{ __html: resource.secondaryDescription }}
+              dangerouslySetInnerHTML={{
+                __html: resource.secondaryDescription,
+              }}
             />
           </div>
         )}
