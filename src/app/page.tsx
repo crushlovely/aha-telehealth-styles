@@ -5,7 +5,7 @@ import { HowItWorks } from "@/components/how-it-works";
 import { FullWidthTestimonial } from "@/components/full-width-testimonial";
 import { Footer } from "@/components/footer";
 import { Stats } from "@/components/stats";
-import { CourseCards } from "@/components/course-cards";
+import { ResourceCards } from "@/components/resource-cards";
 import { SpeedBump } from "@/components/speed-bump";
 
 export default function Home() {
@@ -43,12 +43,12 @@ export default function Home() {
         }}
         stat3={{ number: "20M", description: "People trained annually in CPR" }}
       />
-      <CourseCards
+      <ResourceCards
         title="Leading Research & Expert Convening"
         description="Discover groundbreaking research and connect with healthcare's foremost telehealth experts"
         ctaText="View All Courses"
         ctaUrl="/courses"
-        courses={[
+        resources={[
           {
             thumbnail: "/images/homepage-hero.jpg",
             label: "Beginner",

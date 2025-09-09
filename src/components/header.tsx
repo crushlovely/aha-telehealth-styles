@@ -58,6 +58,15 @@ export const Header = ({ loggedIn: _loggedIn = true }) => {
             </li>
             <li className="c-top-nav__item">
               <a
+                href="/certifications"
+                target=""
+                className="c-top-nav__link c-cta c-cta--icon"
+              >
+                <span className="c-underline-link">Certifications</span>
+              </a>
+            </li>
+            <li className="c-top-nav__item">
+              <a
                 href="/patient-resources"
                 target=""
                 className="c-top-nav__link c-cta c-cta--icon"

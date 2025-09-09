@@ -1,0 +1,132 @@
+<!--
+
+ResourceCards
+
+props
+- title: string (optional)
+- titleIcon: string (optional) Icon for title
+- description: string (optional)
+- ctaText: string (optional)
+- ctaUrl: string (optional)
+- resources: 
+  - featured: boolean (optional, default: false) Adds featured styling to card
+  - thumbnail: string (optional) Image path
+  - label: string (optional) Label overlay on thumbnail
+  - title: string (required)
+  - description: string (optional)
+  - duration: string (optional)
+  - price: string (optional)
+  - credits: string (optional)
+  - date: string (optional)
+  - person: string (optional)
+  - secondaryTitle: string (optional)
+  - secondaryDescription: string (optional) Rich HTML content
+  - secondaryCtaText: string (optional)
+  - secondaryCtaUrl: string (optional)
+  - ctaText: string (required)
+  - ctaUrl: string (required)
+  - cta2Text: string (optional)
+  - cta2Url: string (optional)
+-->
+
+<div class="c-resource-cards">
+  <div class="container">
+    <!-- Only render header if title or description is provided -->
+    <div class="c-resource-cards__header">
+      <!-- Only render title if title is provided -->
+      <h2 class="c-resource-cards__title">
+        <!-- Only show title icon if titleIcon is provided -->
+        <img src="{titleIcon}" alt="" class="c-resource-cards__title-icon" />
+        <!-- end title icon -->
+        {title}
+      </h2>
+      <!-- end title -->
+
+      <!-- Only render description if description is provided -->
+      <p class="c-resource-cards__description">{description}</p>
+      <!-- end description -->
+    </div>
+    <!-- end header -->
+
+    <div class="c-resource-cards__grid">
+      <!-- resources -->
+
+      <!-- NOTE: Add 'c-resource-card--featured' class only if featured is true -->
+      <div class="c-resource-card c-resource-card--featured">
+        <div class="c-resource-card__header">
+          <!-- Only show thumbnail if thumbnail is provided -->
+          <img src="{thumbnail}" alt="{title}" />
+          <!-- end thumbnail -->
+          
+          <!-- Only show label if label is provided -->
+          <div class="c-resource-card__label">{label}</div>
+          <!-- end label -->
+        </div>
+        <div class="c-resource-card__content">
+          <!-- Only show featured label if featured is true -->
+          <div class="c-resource-card__featured-label">Featured</div>
+          <!-- end featured label -->
+
+          <h3 class="c-resource-card__title">{title}</h3>
+          
+          <!-- Only show description if description is provided -->
+          <div class="c-resource-card__description">{description}</div>
+          <!-- end description -->
+
+          <div class="c-resource-card__meta">
+            <!-- Only show duration if duration is provided -->
+            <span class="c-resource-card__meta-item icn-duration">{duration}</span>
+            <!-- end duration -->
+
+            <!-- Only show price if price is provided -->
+            <span class="c-resource-card__meta-item icn-price">{price}</span>
+            <!-- end price -->
+
+            <!-- Only show credits if credits is provided -->
+            <span class="c-resource-card__meta-item icn-credits">{credits}</span>
+            <!-- end credits -->
+
+            <!-- Only show date if date is provided -->
+            <span class="c-resource-card__meta-item icn-calendar">{date}</span>
+            <!-- end date -->
+
+            <!-- Only show person if person is provided -->
+            <span class="c-resource-card__meta-item icn-person">{person}</span>
+            <!-- end person -->
+          </div>
+          
+          <div class="c-resource-card__secondary">
+            <!-- Only show secondary title if secondaryTitle is provided -->
+            <h4 class="c-resource-card__secondary-title">{secondaryTitle}</h4>
+            <!-- end secondary title -->
+            
+            <!-- Only show secondary description if secondaryDescription is provided -->
+            <div class="c-resource-card__secondary-description">
+              {secondaryDescription}
+            </div>
+            <!-- end secondary description -->
+            
+            <!-- Only show secondary CTA if secondaryCtaText and secondaryCtaUrl are provided -->
+            <a href="{secondaryCtaUrl}" class="c-resource-card__secondary-cta">{secondaryCtaText}</a>
+            <!-- end secondary CTA -->
+          </div>
+        </div>
+        <div class="c-resource-card__ctas">
+          <a href="{ctaUrl}" class="c-resource-card__cta">{ctaText}</a>
+          
+          <!-- Only show second CTA if cta2Text and cta2Url are provided -->
+          <a href="{cta2Url}" class="c-resource-card__cta">{cta2Text}</a>
+          <!-- end second CTA -->
+        </div>
+      </div>
+
+      <!-- end resources -->
+    </div>
+
+    <!-- Only show main CTA if ctaText and ctaUrl are provided -->
+    <div class="c-resource-cards__cta">
+      <a href="{ctaUrl}" class="btn">{ctaText}</a>
+    </div>
+    <!-- end main CTA -->
+  </div>
+</div>

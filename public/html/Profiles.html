@@ -5,7 +5,7 @@ Profiles
 props
 - title: string (optional)
 - description: string (optional)
-- profiles: array (required)
+- profiles: (required)
   - image: string (required) Profile image source
   - name: string (required) Profile name
   - title: string (optional) Job title or role
@@ -20,7 +20,7 @@ props
     <!-- Only render title if title is provided -->
     <h2 class="c-profiles__title">{title}</h2>
     <!-- end title -->
-    
+
     <!-- Only render description if description is provided -->
     <p class="c-profiles__description">{description}</p>
     <!-- end description -->
@@ -29,7 +29,7 @@ props
 
   <div class="c-profiles__list">
     <!-- profiles -->
-    
+
     <div class="c-profile">
       <div class="c-profile__container">
         <div class="c-profile__image">
@@ -37,11 +37,11 @@ props
         </div>
         <div class="c-profile__header">
           <h2 class="c-profile__name">{name}</h2>
-          
+
           <!-- Only show title if title is provided -->
           <div class="c-profile__meta icn-person">{title}</div>
           <!-- end title -->
-          
+
           <!-- Only show location if location is provided -->
           <div class="c-profile__meta icn-calendar">{location}</div>
           <!-- end location -->
@@ -56,14 +56,14 @@ props
             <!-- end tags -->
           </ul>
           <!-- end tags list -->
-          
+
           <!-- Only show description if description is provided -->
           <p class="c-profile__description">{description}</p>
           <!-- end description -->
         </div>
       </div>
     </div>
-    
+
     <!-- end profiles -->
   </div>
 </div>

@@ -11,8 +11,8 @@ Merging to `main` branch will compile the `scss` files to `/dist/styles.css` and
 Documented HTML files are created for new components with details on how to integrate into new Sitecore components.
 
 - [Alert Banner](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/AlertBanner.html)
-- [Course Cards](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/CourseCards.html)
+- [Resource Cards](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/ResourceCards.html)
 - [Nav Cards](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/NavCards.html)
 - [Profiles](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/Profiles.html)
 - [Stats](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/Stats.html)
-- [Webinar Cards](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/WebinarCards.html) (not ready just yet)
+- [Webinar Cards](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/WebinarCards.html)

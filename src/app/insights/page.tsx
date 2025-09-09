@@ -2,11 +2,9 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { AlertBanner } from "@/components/alert-banner";
 import { HeroFullWidth } from "@/components/hero-full-width";
-import { HalfImageHalfCopyPromoRight } from "@/components/half-image-half-copy-promo";
-import { PHDRichText } from "@/components/phd-rich-text";
 import { ResourceCards } from "@/components/resource-cards";
 
-export default function CoursesPage() {
+export default function InsightsPage() {
   return (
     <>
       <Header />
@@ -21,11 +19,39 @@ export default function CoursesPage() {
       <HeroFullWidth
         theme="black"
         image="/images/hero-courses.jpg"
-        overline="Center for Telehealth"
-        title="Telehealth Training Courses"
-        body="Evidence-based education that transforms healthcare practice and drives better patient outcomes"
+        title="Latest from the field"
+        body="Stay current with cutting-edge research, expert insights, webinars, and convening opportunities that advance telehealth science and clinical practice."
       />
-      <PHDRichText />
+      <ResourceCards
+        resources={[
+          {
+            label: "Live Webinar",
+            title: "Mental Health Innovation in Digital Platforms",
+            date: "January 18, 2025 at 2:00 PM ET",
+            person: "Dr. John Doe, MD",
+            ctaText: "Register",
+            ctaUrl: "/courses/intro-telehealth",
+          },
+          {
+            label: "Live Webinar",
+            title: "Rural Healthcare Access Through Virtual Care",
+            date: "January 18, 2025 at 2:00 PM ET",
+            person: "Dr. John Doe, MD",
+            ctaText: "Register",
+            ctaUrl: "/courses/intro-telehealth",
+          },
+          // {
+          //   label: "Live Webinar",
+          //   title: "Mental Health Innovation in Digital Platforms",
+          //   duration: "1 hour",
+          //   credits: "1 CME",
+          //   date: "January 18, 2025 at 2:00 PM ET",
+          //   person: "Dr. John Doe, MD",
+          //   ctaText: "Register",
+          //   ctaUrl: "/courses/intro-telehealth",
+          // },
+        ]}
+      />
       <ResourceCards
         title="Latest Content"
         resources={[
@@ -111,13 +137,59 @@ export default function CoursesPage() {
         ]}
       />
 
-      <HalfImageHalfCopyPromoRight />
-      <HeroFullWidth
-        theme="white"
-        title="Questions? We're Here to Help"
-        body="Our team is ready to discuss your organization's specific training needs and help you create a customized learning solution."
-        button1="Email: sales@heart.org"
+      <ResourceCards
+        resources={[
+          {
+            thumbnail: "/images/homepage-hero.jpg",
+            label: "Beginner",
+            title: "Introduction to Telehealth",
+            description:
+              "Learn the fundamentals of virtual care delivery and patient engagement. Learn the fundamentals of virtual care delivery and patient engagement.",
+            duration: "4 hours",
+            date: "January 18, 2025",
+            person: "Dr. John Doe, MD",
+            ctaText: "Learn More",
+            ctaUrl: "/courses/intro-telehealth",
+          },
+        ]}
       />
+
+      <ResourceCards
+        title="Leading Research & Expert Convening"
+        description="Discover groundbreaking research and connect with healthcare's foremost telehealth experts"
+        ctaText="View All Courses"
+        ctaUrl="/courses"
+        resources={[
+          {
+            thumbnail: "/images/homepage-hero.jpg",
+            label: "Beginner",
+            title: "Introduction to Telehealth",
+            description:
+              "Learn the fundamentals of virtual care delivery and patient engagement. Learn the fundamentals of virtual care delivery and patient engagement.",
+            ctaText: "Learn More",
+            ctaUrl: "/courses/intro-telehealth",
+          },
+          {
+            thumbnail: "/images/homepage-hero.jpg",
+            label: "Advanced",
+            title: "Clinical Best Practices",
+            description:
+              "Master advanced techniques for effective remote patient care.",
+            ctaText: "Learn More",
+            ctaUrl: "/courses/clinical-practices",
+          },
+          {
+            thumbnail: "/images/homepage-hero.jpg",
+            label: "Advanced",
+            title: "Clinical Best Practices",
+            description:
+              "Master advanced techniques for effective remote patient care.",
+            ctaText: "Learn More",
+            ctaUrl: "/courses/clinical-practices",
+          },
+        ]}
+      />
+
       <Footer />
     </>
   );
