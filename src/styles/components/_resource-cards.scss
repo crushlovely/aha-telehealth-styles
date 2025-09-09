@@ -1,4 +1,4 @@
-.c-course-cards {
+.c-resource-cards {
   background: $white;
   @include block;
 
@@ -43,13 +43,13 @@
     display: grid;
     gap: 5rem 2rem;
 
-    &:has(.c-course-card:nth-child(2)) {
+    &:has(.c-resource-card:nth-child(2)) {
       @include bp-small {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    &:has(.c-course-card:nth-child(3)) {
+    &:has(.c-resource-card:nth-child(3)) {
       @include bp-medium {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -68,7 +68,7 @@
   }
 }
 
-.c-course-card {
+.c-resource-card {
   background: $white;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -90,7 +90,7 @@
       object-fit: cover;
     }
 
-    &:has(img) .c-course-card__label {
+    &:has(img) .c-resource-card__label {
       @include body-sm;
       font-size: 1.25rem;
       color: $white;
@@ -106,7 +106,7 @@
       padding: 0.4rem 0.8rem;
     }
 
-    &:not(:has(img)) .c-course-card__label {
+    &:not(:has(img)) .c-resource-card__label {
       @include heading-xs;
       color: $red;
       display: flex;
@@ -145,12 +145,12 @@
   }
 
   // title if header does not have image
-  &:not(:has(.c-course-card__header img)) .c-course-card__title {
+  &:not(:has(.c-resource-card__header img)) .c-resource-card__title {
     @include heading-lg;
   }
 
   // border and max-width if header does not have image
-  &:not(:has(.c-course-card__header img)) {
+  &:not(:has(.c-resource-card__header img)) {
     border-bottom: 1rem solid $red;
   }
 
@@ -213,15 +213,15 @@
     max-width: 30rem;
   }
 
-  &:not(.c-course-card--featured) {
-    .c-course-card__ctas {
+  &:not(.c-resource-card--featured) {
+    .c-resource-card__ctas {
       grid-area: ctas;
       margin: 3.5rem 3.5rem 0;
     }
   }
 
-  &:not(.c-course-card--featured) {
-    .c-course-card__cta {
+  &:not(.c-resource-card--featured) {
+    .c-resource-card__cta {
       @include icon-link($red, $red-dark);
       align-self: flex-start;
       margin-top: auto;
@@ -232,12 +232,12 @@
 }
 
 // Featured Course Card
-.c-course-card--featured {
+.c-resource-card--featured {
   grid-column: 1 / -1;
-  .c-course-card__ctas {
+  .c-resource-card__ctas {
     margin: 3.5rem 3.5rem 4rem;
   }
-  .c-course-card__cta {
+  .c-resource-card__cta {
     @include button-primary;
   }
   @include bp-small {
@@ -250,12 +250,12 @@
       "header content"
       "header ctas";
     padding-bottom: 4rem;
-    &:has(~ .c-course-card) {
+    &:has(~ .c-resource-card) {
       padding-bottom: 6rem;
       margin-bottom: 4rem;
       border-bottom: 1px solid $grey-medium-alt;
     }
-    .c-course-card__header {
+    .c-resource-card__header {
       aspect-ratio: auto;
       height: 100%;
       img {
@@ -263,34 +263,34 @@
         height: 100%;
       }
     }
-    .c-course-card__content {
+    .c-resource-card__content {
       padding-top: 0.5rem;
     }
-    .c-course-card__title {
+    .c-resource-card__title {
       @include heading-xl--alt;
       margin-bottom: 3rem;
     }
-    .c-course-card__description {
+    .c-resource-card__description {
       @include body-lg;
       margin-bottom: 2rem;
     }
-    .c-course-card__ctas {
+    .c-resource-card__ctas {
       margin: 0 3.5rem;
     }
   }
 }
 
 // if only one course-card
-.c-course-cards .c-course-card:only-child {
+.c-resource-cards .c-resource-card:only-child {
   @include bp-small {
-    &:has(.c-course-card__header img) {
+    &:has(.c-resource-card__header img) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr auto;
       grid-template-areas:
         "content header"
         "ctas header";
-      .c-course-card__header {
+      .c-resource-card__header {
         aspect-ratio: auto;
         height: 100%;
         img {
@@ -299,10 +299,10 @@
         }
       }
     }
-    &:not(:has(.c-course-card__header img)) {
+    &:not(:has(.c-resource-card__header img)) {
       max-width: 77rem;
       margin: 0 auto;
-      .c-course-card__title {
+      .c-resource-card__title {
         @include heading-xl--alt;
         margin-bottom: 3rem;
       }
@@ -312,19 +312,19 @@
 // heading-xl--alt
 
 @container meta (min-width: 250px) {
-  .c-course-card__meta-item {
+  .c-resource-card__meta-item {
     width: max-content;
     max-width: none;
   }
 }
 @container meta (min-width: 350px) {
-  .c-course-card__meta-item {
+  .c-resource-card__meta-item {
     min-width: calc(50% - 1rem);
   }
 }
 
 // pulled up if after a hero
-.l-section:has(.c-hero-full) + .c-course-cards {
+.l-section:has(.c-hero-full) + .c-resource-cards {
   @include bp-small {
     position: relative;
     z-index: 2;
@@ -333,7 +333,7 @@
     .container {
       margin-top: -6rem;
     }
-    .c-course-cards__header {
+    .c-resource-cards__header {
       background-color: $white;
       border-bottom: 1rem solid $red;
       padding: 4rem;

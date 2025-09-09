@@ -2,7 +2,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { AlertBanner } from "@/components/alert-banner";
 import { HeroFullWidth } from "@/components/hero-full-width";
-import { CourseCards } from "@/components/course-cards";
+import { ResourceCards } from "@/components/resource-cards";
 
 export default function InsightsPage() {
   return (
@@ -22,8 +22,8 @@ export default function InsightsPage() {
         title="Latest from the field"
         body="Stay current with cutting-edge research, expert insights, webinars, and convening opportunities that advance telehealth science and clinical practice."
       />
-      <CourseCards
-        courses={[
+      <ResourceCards
+        resources={[
           {
             label: "Live Webinar",
             title: "Mental Health Innovation in Digital Platforms",
@@ -52,9 +52,9 @@ export default function InsightsPage() {
           // },
         ]}
       />
-      <CourseCards
+      <ResourceCards
         title="Latest Content"
-        courses={[
+        resources={[
           {
             thumbnail: "/images/homepage-hero.jpg",
             label: "Beginner",
@@ -137,8 +137,8 @@ export default function InsightsPage() {
         ]}
       />
 
-      <CourseCards
-        courses={[
+      <ResourceCards
+        resources={[
           {
             thumbnail: "/images/homepage-hero.jpg",
             label: "Beginner",
@@ -154,12 +154,12 @@ export default function InsightsPage() {
         ]}
       />
 
-      <CourseCards
+      <ResourceCards
         title="Leading Research & Expert Convening"
         description="Discover groundbreaking research and connect with healthcare's foremost telehealth experts"
         ctaText="View All Courses"
         ctaUrl="/courses"
-        courses={[
+        resources={[
           {
             thumbnail: "/images/homepage-hero.jpg",
             label: "Beginner",

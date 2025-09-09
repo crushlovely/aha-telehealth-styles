@@ -4,7 +4,7 @@ import { AlertBanner } from "@/components/alert-banner";
 import { HeroFullWidth } from "@/components/hero-full-width";
 import { HalfImageHalfCopyPromoRight } from "@/components/half-image-half-copy-promo";
 import { PHDRichText } from "@/components/phd-rich-text";
-import { CourseCards } from "@/components/course-cards";
+import { ResourceCards } from "@/components/resource-cards";
 
 export default function CoursesPage() {
   return (
@@ -26,9 +26,9 @@ export default function CoursesPage() {
         body="Evidence-based education that transforms healthcare practice and drives better patient outcomes"
       />
       <PHDRichText />
-      <CourseCards
+      <ResourceCards
         title="Latest Content"
-        courses={[
+        resources={[
           {
             thumbnail: "/images/homepage-hero.jpg",
             label: "Beginner",

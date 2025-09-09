@@ -2,7 +2,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { AlertBanner } from "@/components/alert-banner";
 import { HeroFullWidth } from "@/components/hero-full-width";
-import { CourseCards } from "@/components/course-cards";
+import { ResourceCards } from "@/components/resource-cards";
 
 export default function CertificationsPage() {
   return (
@@ -22,11 +22,11 @@ export default function CertificationsPage() {
         title="AHA Telehealth Certifications"
         body="Earn professional recognition with American Heart Association telehealth certifications that validate your expertise and distinguish you in the field of virtual healthcare."
       />
-      <CourseCards
+      <ResourceCards
         title="Professional Recognition That Sets You Apart"
         titleIcon="/images/icon-medal.png"
         description="Unlike training courses, our certifications provide formal recognition of your telehealth expertise. Backed by the American Heart Association's authority, these credentials distinguish you as a qualified telehealth professional in your field."
-        courses={[
+        resources={[
           {
             title: "Digital Health in Cardiac Care",
             description:
@@ -80,9 +80,9 @@ export default function CertificationsPage() {
           },
         ]}
       />
-      <CourseCards
+      <ResourceCards
         title="Latest Content"
-        courses={[
+        resources={[
           {
             thumbnail: "/images/homepage-hero.jpg",
             label: "Beginner",
@@ -165,8 +165,8 @@ export default function CertificationsPage() {
         ]}
       />
 
-      <CourseCards
-        courses={[
+      <ResourceCards
+        resources={[
           {
             thumbnail: "/images/homepage-hero.jpg",
             label: "Beginner",
@@ -182,12 +182,12 @@ export default function CertificationsPage() {
         ]}
       />
 
-      <CourseCards
+      <ResourceCards
         title="Leading Research & Expert Convening"
         description="Discover groundbreaking research and connect with healthcare's foremost telehealth experts"
         ctaText="View All Courses"
         ctaUrl="/courses"
-        courses={[
+        resources={[
           {
             thumbnail: "/images/homepage-hero.jpg",
             label: "Beginner",
