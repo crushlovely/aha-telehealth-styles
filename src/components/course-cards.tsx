@@ -4,20 +4,28 @@ import React from "react";
 
 interface CourseCard {
   featured?: boolean;
-  thumbnail: string;
+  thumbnail?: string;
   label?: string;
   title: string;
-  description: string;
+  description?: string;
   duration?: string;
   credits?: string;
+  price?: string;
   date?: string;
   person?: string;
+  secondaryTitle?: string;
+  secondaryDescription?: string;
+  secondaryCtaText?: string;
+  secondaryCtaUrl?: string;
   ctaText: string;
   ctaUrl: string;
+  cta2Text?: string;
+  cta2Url?: string;
 }
 
 interface CourseCardsProps {
   title?: string;
+  titleIcon?: string;
   description?: string;
   ctaText?: string;
   ctaUrl?: string;
@@ -30,8 +38,8 @@ const CourseCardItem: React.FC<{ course: CourseCard }> = ({ course }) => (
       `c-course-card` + (course.featured ? " c-course-card--featured" : "")
     }
   >
-    <div className="c-course-card__thumbnail">
-      <img src={course.thumbnail} alt={course.title} />
+    <div className="c-course-card__header">
+      {course.thumbnail && <img src={course.thumbnail} alt={course.title} />}
       {course.label && (
         <div className="c-course-card__label">{course.label}</div>
       )}
@@ -41,12 +49,18 @@ const CourseCardItem: React.FC<{ course: CourseCard }> = ({ course }) => (
         <div className="c-course-card__featured-label">Featured</div>
       )}
       <h3 className="c-course-card__title">{course.title}</h3>
-      <p className="c-course-card__description">{course.description}</p>
-
+      {course.description && (
+        <div className="c-course-card__description">{course.description}</div>
+      )}
       <div className="c-course-card__meta">
         {course.duration && (
           <span className="c-course-card__meta-item icn-duration">
             {course.duration}
+          </span>
+        )}
+        {course.price && (
+          <span className="c-course-card__meta-item icn-price">
+            {course.price}
           </span>
         )}
         {course.credits && (
@@ -65,17 +79,45 @@ const CourseCardItem: React.FC<{ course: CourseCard }> = ({ course }) => (
           </span>
         )}
       </div>
+      <div className="c-course-card__secondary">
+        {course.secondaryTitle && (
+          <h4 className="c-course-card__secondary-title">
+            {course.secondaryTitle}
+          </h4>
+        )}
+        {course.secondaryDescription && (
+          <div className="c-course-card__secondary-description">
+            <div
+              dangerouslySetInnerHTML={{ __html: course.secondaryDescription }}
+            />
+          </div>
+        )}
+        {course.secondaryCtaText && course.secondaryCtaUrl && (
+          <a
+            href={course.secondaryCtaUrl}
+            className="c-course-card__secondary-cta"
+          >
+            {course.secondaryCtaText}
+          </a>
+        )}
+      </div>
     </div>
     <div className="c-course-card__ctas">
       <a href={course.ctaUrl} className="c-course-card__cta">
         {course.ctaText}
       </a>
+      {course.cta2Text && course.cta2Url && (
+        <a href={course.cta2Url} className="c-course-card__cta">
+          {course.cta2Text}
+        </a>
+      )}
     </div>
   </div>
 );
 
 export const CourseCards: React.FC<CourseCardsProps> = ({
   title,
+  titleIcon,
   description,
   ctaText,
   ctaUrl,
@@ -85,7 +127,18 @@ export const CourseCards: React.FC<CourseCardsProps> = ({
     <div className="container">
       {(title || description || (ctaText && ctaUrl)) && (
         <div className="c-course-cards__header">
-          {title && <h2 className="c-course-cards__title">{title}</h2>}
+          {title && (
+            <h2 className="c-course-cards__title">
+              {titleIcon && (
+                <img
+                  src={titleIcon}
+                  alt=""
+                  className="c-course-cards__title-icon"
+                />
+              )}
+              {title}
+            </h2>
+          )}
           {description && (
             <p className="c-course-cards__description">{description}</p>
           )}

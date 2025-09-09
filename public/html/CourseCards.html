@@ -4,22 +4,29 @@ CourseCards
 
 props
 - title: string (optional)
+- titleIcon: string (optional) Icon for title
 - description: string (optional)
 - ctaText: string (optional)
 - ctaUrl: string (optional)
 - courses: 
   - featured: boolean (optional, default: false) Adds featured styling to card
-  - thumbnail: string (image path) (required)
-  - thumbnail_alt: string (required)
+  - thumbnail: string (optional) Image path
   - label: string (optional) Label overlay on thumbnail
   - title: string (required)
-  - description: string (required)
+  - description: string (optional)
   - duration: string (optional)
+  - price: string (optional)
   - credits: string (optional)
   - date: string (optional)
   - person: string (optional)
+  - secondaryTitle: string (optional)
+  - secondaryDescription: string (optional) Rich HTML content
+  - secondaryCtaText: string (optional)
+  - secondaryCtaUrl: string (optional)
   - ctaText: string (required)
   - ctaUrl: string (required)
+  - cta2Text: string (optional)
+  - cta2Url: string (optional)
 -->
 
 <div class="c-course-cards">
@@ -27,7 +34,12 @@ props
     <!-- Only render header if title or description is provided -->
     <div class="c-course-cards__header">
       <!-- Only render title if title is provided -->
-      <h2 class="c-course-cards__title">{title}</h2>
+      <h2 class="c-course-cards__title">
+        <!-- Only show title icon if titleIcon is provided -->
+        <img src="{titleIcon}" alt="" class="c-course-cards__title-icon" />
+        <!-- end title icon -->
+        {title}
+      </h2>
       <!-- end title -->
 
       <!-- Only render description if description is provided -->
@@ -41,8 +53,11 @@ props
 
       <!-- NOTE: Add 'c-course-card--featured' class only if featured is true -->
       <div class="c-course-card c-course-card--featured">
-        <div class="c-course-card__thumbnail">
-          <img src="{thumbnail}" alt="{thumbnail_alt}" />
+        <div class="c-course-card__header">
+          <!-- Only show thumbnail if thumbnail is provided -->
+          <img src="{thumbnail}" alt="{title}" />
+          <!-- end thumbnail -->
+          
           <!-- Only show label if label is provided -->
           <div class="c-course-card__label">{label}</div>
           <!-- end label -->
@@ -53,14 +68,19 @@ props
           <!-- end featured label -->
 
           <h3 class="c-course-card__title">{title}</h3>
-          <p class="c-course-card__description">{description}</p>
+          
+          <!-- Only show description if description is provided -->
+          <div class="c-course-card__description">{description}</div>
+          <!-- end description -->
 
           <div class="c-course-card__meta">
             <!-- Only show duration if duration is provided -->
-            <span class="c-course-card__meta-item icn-duration"
-              >{duration}</span
-            >
+            <span class="c-course-card__meta-item icn-duration">{duration}</span>
             <!-- end duration -->
+
+            <!-- Only show price if price is provided -->
+            <span class="c-course-card__meta-item icn-price">{price}</span>
+            <!-- end price -->
 
             <!-- Only show credits if credits is provided -->
             <span class="c-course-card__meta-item icn-credits">{credits}</span>
@@ -74,9 +94,29 @@ props
             <span class="c-course-card__meta-item icn-person">{person}</span>
             <!-- end person -->
           </div>
+          
+          <div class="c-course-card__secondary">
+            <!-- Only show secondary title if secondaryTitle is provided -->
+            <h4 class="c-course-card__secondary-title">{secondaryTitle}</h4>
+            <!-- end secondary title -->
+            
+            <!-- Only show secondary description if secondaryDescription is provided -->
+            <div class="c-course-card__secondary-description">
+              {secondaryDescription}
+            </div>
+            <!-- end secondary description -->
+            
+            <!-- Only show secondary CTA if secondaryCtaText and secondaryCtaUrl are provided -->
+            <a href="{secondaryCtaUrl}" class="c-course-card__secondary-cta">{secondaryCtaText}</a>
+            <!-- end secondary CTA -->
+          </div>
         </div>
         <div class="c-course-card__ctas">
           <a href="{ctaUrl}" class="c-course-card__cta">{ctaText}</a>
+          
+          <!-- Only show second CTA if cta2Text and cta2Url are provided -->
+          <a href="{cta2Url}" class="c-course-card__cta">{cta2Text}</a>
+          <!-- end second CTA -->
         </div>
       </div>
 

@@ -15,4 +15,4 @@ Documented HTML files are created for new components with details on how to inte
 - [Nav Cards](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/NavCards.html)
 - [Profiles](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/Profiles.html)
 - [Stats](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/Stats.html)
-- [Webinar Cards](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/WebinarCards.html) (not ready just yet)
+- [Webinar Cards](https://github.com/crushlovely/aha-telehealth-styles/blob/main/public/html/WebinarCards.html)
