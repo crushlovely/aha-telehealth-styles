@@ -5,8 +5,8 @@
     @include container();
   }
   .c-nav-cards__title {
-    @include heading-xl;
-    padding-bottom: 2rem;
+    @include heading-xl--alt;
+    padding: 4rem 0 2rem;
     text-align: center;
   }
   .c-nav-cards__list {
@@ -20,6 +20,10 @@
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: $black;
+    border: none;
+    &.accent {
+      border-bottom: 0.8725rem solid $red;
+    }
   }
   .c-nav-card__content {
     display: grid;
@@ -84,7 +88,5 @@
   .c-nav-card__link {
     margin: 0;
     padding: 1.625rem 2.25rem;
-    border: none;
-    border-bottom: 0.8725rem solid $red;
   }
 }

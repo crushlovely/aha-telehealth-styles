@@ -16,10 +16,10 @@
   }
 
   &__title {
-    @include heading-xl;
+    @include heading-lg--alt;
     margin-bottom: 1rem;
     &:has(img) {
-      @include heading-lg--alt;
+      @include heading-xl;
     }
   }
 
@@ -90,7 +90,7 @@
       object-fit: cover;
     }
 
-    &:has(img) .c-resource-card__label {
+    .c-resource-card__label {
       @include body-sm;
       font-size: 1.25rem;
       color: $white;
@@ -106,7 +106,7 @@
       padding: 0.4rem 0.8rem;
     }
 
-    &:not(:has(img)) .c-resource-card__label {
+    &.featured .c-resource-card__label {
       @include heading-xs;
       color: $red;
       display: flex;
@@ -145,12 +145,12 @@
   }
 
   // title if header does not have image
-  &:not(:has(.c-resource-card__header img)) .c-resource-card__title {
+  &.accent .c-resource-card__title {
     @include heading-lg;
   }
 
   // border and max-width if header does not have image
-  &:not(:has(.c-resource-card__header img)) {
+  &.accent {
     border-bottom: 1rem solid $red;
   }
 
@@ -179,11 +179,11 @@
   }
 
   &__secondary {
+  }
+  &__secondary-title {
     margin-top: 3rem;
     padding-top: 3rem;
     border-top: 1px solid $grey-medium-alt;
-  }
-  &__secondary-title {
     @include body-md;
     margin-bottom: 1rem;
     font-weight: 600;
@@ -213,14 +213,14 @@
     max-width: 30rem;
   }
 
-  &:not(.c-resource-card--featured) {
+  &:not(.featured) {
     .c-resource-card__ctas {
       grid-area: ctas;
       margin: 3.5rem 3.5rem 0;
     }
   }
 
-  &:not(.c-resource-card--featured) {
+  &:not(.featured) {
     .c-resource-card__cta {
       @include icon-link($red, $red-dark);
       align-self: flex-start;
@@ -232,7 +232,7 @@
 }
 
 // Featured Course Card
-.c-resource-card--featured {
+.c-resource-card.featured {
   grid-column: 1 / -1;
   .c-resource-card__ctas {
     margin: 3.5rem 3.5rem 4rem;
@@ -283,23 +283,21 @@
 // if only one course-card
 .c-resource-cards .c-resource-card:only-child {
   @include bp-small {
-    &:has(.c-resource-card__header img) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr auto;
-      grid-template-areas:
-        "content header"
-        "ctas header";
-      .c-resource-card__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "content header"
+      "ctas header";
+    .c-resource-card__header {
+      aspect-ratio: auto;
+      height: 100%;
+      img {
         aspect-ratio: auto;
         height: 100%;
-        img {
-          aspect-ratio: auto;
-          height: 100%;
-        }
       }
     }
-    &:not(:has(.c-resource-card__header img)) {
+    &.accent {
       max-width: 77rem;
       margin: 0 auto;
       .c-resource-card__title {

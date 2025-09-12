@@ -93,6 +93,9 @@
 
   // Video As direct Sibling
   &:has(+ .phd-video) {
+    & + .phd-video {
+      z-index: 2;
+    }
     .c-hero-full {
       @include bp-small {
         padding-block-start: 8rem;
@@ -121,10 +124,11 @@
       content: "";
       position: absolute;
       top: 0;
+      right: auto;
       left: 0;
-      width: 51rem;
-      height: 68.3rem;
-      translate: -50% -25%;
+      width: 87rem;
+      height: 112rem;
+      translate: -70% -11%;
       @include bg-big-heart;
       background-repeat: no-repeat;
       background-size: contain;
@@ -208,7 +212,9 @@
   .c-hero-card__actions,
   .c-hero-card__action,
   .c-hero-card__btn-side-by-side {
+    justify-content: center;
     a {
+      max-width: fit-content;
       @include button-primary;
       & + a {
         @include button-tertiary;
@@ -220,8 +226,9 @@
   }
 }
 
-// just for black theme
-.l-section:has(.c-hero-full.h-theme--black) {
+// black and gray-dark theme
+.l-section:has(.c-hero-full.h-theme--black),
+.l-section:has(.c-hero-full.h-theme--gray-dark) {
   .c-hero-full__content-container {
     position: relative;
     text-align: center;
@@ -235,6 +242,29 @@
       border-radius: 100%;
       filter: blur(40px);
     }
+  }
+}
+
+// gray-dark theme
+.l-section:has(.c-hero-full.h-theme--gray-dark) {
+  .c-hero-full {
+    @include bp-small {
+      padding-block-start: 6rem;
+      padding-block-end: 6rem;
+    }
+  }
+  .c-hero-full__media {
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: #1c202e;
+      opacity: 0.7;
+      z-index: 2;
+    }
+  }
+  .c-hero-full__heading {
+    @include heading-xl;
   }
 }
 
@@ -254,6 +284,11 @@
       padding-block-end: 3rem;
     }
   }
+
+  .c-hero-full__content {
+    max-width: 70rem;
+  }
+
   .c-hero-full__content-container {
     position: relative;
     max-width: 120rem;
@@ -301,7 +336,10 @@
   .c-hero-full__content {
     p {
       color: $grey-medium;
-      @include body-md;
+      @include body-sm;
+    }
+    .c-hero-full__heading {
+      @include heading-md;
     }
   }
   .c-hero-card__actions,

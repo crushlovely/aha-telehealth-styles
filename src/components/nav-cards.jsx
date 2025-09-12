@@ -2,8 +2,8 @@
 
 import React from "react";
 
-const NavCard = ({ links, linkText, content }) => (
-  <a className="c-nav-card" href="#">
+const NavCard = ({ links, linkText, content, accent = false }) => (
+  <a className={`c-nav-card ${accent ? "accent" : ""}`} href="#">
     <span className="c-nav-card__content">
       <h3 className="c-nav-card__title">Title Goes Here</h3>
 
@@ -41,6 +41,7 @@ export const NavCards = ({
   linkText = "Learn More",
   content = "p",
   withRedBox = false,
+  accent = false,
 }) => {
   const cardsArray = Array.from({ length: num });
 
@@ -55,6 +56,7 @@ export const NavCards = ({
               links={links}
               linkText={linkText}
               content={content}
+              accent={accent}
             />
           ))}
         </div>
