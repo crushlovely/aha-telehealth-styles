@@ -53,8 +53,26 @@
     position: relative;
     background-color: $white;
     z-index: 2;
-    padding: 3rem;
+    padding: 4rem 3rem 3rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+    &:before {
+      content: "Success Story";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      background-color: $red;
+      color: $white;
+      @include heading-xs;
+      padding: 1rem 2rem;
+      border-radius: 1000000vw;
+      translate: -50% -1.5rem;
+      @include bp-small {
+        // translate: 2.5rem 2.5rem;
+        translate: -50% -1.5rem;
+      }
+    }
+
     @include bp-small {
       padding: 5.5rem 7.5rem;
     }

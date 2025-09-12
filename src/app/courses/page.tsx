@@ -27,21 +27,7 @@ export default function CoursesPage() {
       />
       <PHDRichText />
       <ResourceCards
-        title="Latest Content"
         resources={[
-          {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Beginner",
-            title: "The Future of Remote Patient Monitoring in Cardiology",
-            description:
-              "New research reveals how continuous monitoring technologies are transforming cardiovascular care delivery and improving patient outcomes in rural communities.",
-            duration: "4 hours",
-            date: "January 18, 2025",
-            person: "Dr. John Doe, MD",
-            ctaText: "Learn More",
-            ctaUrl: "/courses/intro-telehealth",
-            featured: true,
-          },
           {
             thumbnail: "/images/homepage-hero.jpg",
             label: "Beginner",

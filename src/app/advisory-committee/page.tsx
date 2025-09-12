@@ -17,8 +17,8 @@ export default function AdvisoryCommitteePage() {
         theme="black"
       />
       <Stats
-        title="Advisory Committee"
-        description="Our esteemed Advisory Committee comprises leading experts in telehealth and cardiovascular care, guiding our mission to advance virtual healthcare."
+        title="Distinguished Advisory Committee"
+        description="Our esteemed advisory committee comprises the nation's most distinguished healthcare leaders, researchers, and innovators who guide our mission to advance telehealth science and practice through their unparalleled expertise."
         stat1={{
           number: "6",
           description: "Distinguished Advisors",

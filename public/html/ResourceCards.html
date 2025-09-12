@@ -10,6 +10,7 @@ props
 - ctaUrl: string (optional)
 - resources: 
   - featured: boolean (optional, default: false) Adds featured styling to card
+  = accent: boolean (optional, default: false) Adds accent styling to card
   - thumbnail: string (optional) Image path
   - label: string (optional) Label overlay on thumbnail
   - title: string (required)
@@ -43,7 +44,7 @@ props
       <!-- end title -->
 
       <!-- Only render description if description is provided -->
-      <p class="c-resource-cards__description">{description}</p>
+      <div class="c-resource-cards__description">{description}</div>
       <!-- end description -->
     </div>
     <!-- end header -->
@@ -51,13 +52,14 @@ props
     <div class="c-resource-cards__grid">
       <!-- resources -->
 
-      <!-- NOTE: Add 'c-resource-card--featured' class only if featured is true -->
-      <div class="c-resource-card c-resource-card--featured">
+      <!-- NOTE: Add 'featured' class only if featured is true -->
+      <!-- NOTE: Add 'accent' class only if accent is true -->
+      <div class="c-resource-card featured accent">
         <div class="c-resource-card__header">
           <!-- Only show thumbnail if thumbnail is provided -->
           <img src="{thumbnail}" alt="{title}" />
           <!-- end thumbnail -->
-          
+
           <!-- Only show label if label is provided -->
           <div class="c-resource-card__label">{label}</div>
           <!-- end label -->
@@ -68,14 +70,16 @@ props
           <!-- end featured label -->
 
           <h3 class="c-resource-card__title">{title}</h3>
-          
+
           <!-- Only show description if description is provided -->
           <div class="c-resource-card__description">{description}</div>
           <!-- end description -->
 
           <div class="c-resource-card__meta">
             <!-- Only show duration if duration is provided -->
-            <span class="c-resource-card__meta-item icn-duration">{duration}</span>
+            <span class="c-resource-card__meta-item icn-duration"
+              >{duration}</span
+            >
             <!-- end duration -->
 
             <!-- Only show price if price is provided -->
@@ -83,7 +87,9 @@ props
             <!-- end price -->
 
             <!-- Only show credits if credits is provided -->
-            <span class="c-resource-card__meta-item icn-credits">{credits}</span>
+            <span class="c-resource-card__meta-item icn-credits"
+              >{credits}</span
+            >
             <!-- end credits -->
 
             <!-- Only show date if date is provided -->
@@ -94,26 +100,28 @@ props
             <span class="c-resource-card__meta-item icn-person">{person}</span>
             <!-- end person -->
           </div>
-          
+
           <div class="c-resource-card__secondary">
             <!-- Only show secondary title if secondaryTitle is provided -->
             <h4 class="c-resource-card__secondary-title">{secondaryTitle}</h4>
             <!-- end secondary title -->
-            
+
             <!-- Only show secondary description if secondaryDescription is provided -->
             <div class="c-resource-card__secondary-description">
               {secondaryDescription}
             </div>
             <!-- end secondary description -->
-            
+
             <!-- Only show secondary CTA if secondaryCtaText and secondaryCtaUrl are provided -->
-            <a href="{secondaryCtaUrl}" class="c-resource-card__secondary-cta">{secondaryCtaText}</a>
+            <a href="{secondaryCtaUrl}" class="c-resource-card__secondary-cta"
+              >{secondaryCtaText}</a
+            >
             <!-- end secondary CTA -->
           </div>
         </div>
         <div class="c-resource-card__ctas">
           <a href="{ctaUrl}" class="c-resource-card__cta">{ctaText}</a>
-          
+
           <!-- Only show second CTA if cta2Text and cta2Url are provided -->
           <a href="{cta2Url}" class="c-resource-card__cta">{cta2Text}</a>
           <!-- end second CTA -->

@@ -4,16 +4,16 @@ NavCards
 
 props
 - title: string (optional)
-- withRedBox: boolean (optional, default: false) Adds decorative red box in cards
 - navCards
-  - title: string (required)
-  - content: string (rich text) (required)
-  - linkText: string (optional)
   - linkURL: string (optional)
+  - linkText: string (optional)
+  - title: string (optional)
+  - content: string, rich text (optional)
+  - withRedBox: boolean (optional) Adds decorative red box in cards
+  - accent: boolean (optional) Adds accent styling to cards
 -->
 
-<!-- NOTE: Add 'with-red-box class only if withRedBox is true -->
-<div class="c-nav-cards with-red-box">
+<div class="c-nav-cards">
   <div class="c-nav-cards__container">
     <!-- Only render title if title is provided -->
     <h2 class="c-nav-cards__title">{title}</h2>
@@ -22,8 +22,10 @@ props
     <div class="c-nav-cards__list">
       <!-- navCards -->
 
-      <!-- Only render card as an <a> if linkURL is provided -->
-      <a class="c-nav-card" href="{linkURL}">
+      <!-- NOTE: Only render card as an <a> if linkURL is provided -->
+      <!-- NOTE: Add 'accent' class only if accent is true -->
+      <!-- NOTE: Add 'with-red-box' class only if withRedBox is true -->
+      <a class="c-nav-card accent with-red-box" href="{linkURL}">
         <span class="c-nav-card__content">
           <h3 class="c-nav-card__title">{title}</h3>
 
@@ -35,7 +37,9 @@ props
       </a>
       <!-- end if linkURL -->
 
-      <!-- render as a <div> if no linkURL is provided -->
+      <!-- NOTE: render as a <div> if no linkURL is provided -->
+      <!-- NOTE: Add 'accent' class only if accent is true -->
+      <!-- NOTE: Add 'with-red-box' class only if withRedBox is true -->
       <div class="c-nav-card">
         <span class="c-nav-card__content">
           <h3 class="c-nav-card__title">{title}</h3>

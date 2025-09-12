@@ -4,6 +4,7 @@ import React from "react";
 
 interface ResourceCard {
   featured?: boolean;
+  accent?: boolean;
   thumbnail?: string;
   label?: string;
   title: string;
@@ -38,7 +39,8 @@ const ResourceCardItem: React.FC<{ resource: ResourceCard }> = ({
   <div
     className={
       `c-resource-card` +
-      (resource.featured ? " c-resource-card--featured" : "")
+      (resource.featured ? " featured" : "") +
+      (resource.accent ? " accent" : "")
     }
   >
     <div className="c-resource-card__header">
@@ -134,7 +136,7 @@ export const ResourceCards: React.FC<ResourceCardsProps> = ({
 }) => (
   <div className="c-resource-cards">
     <div className="container">
-      {(title || description || (ctaText && ctaUrl)) && (
+      {(title || description) && (
         <div className="c-resource-cards__header">
           {title && (
             <h2 className="c-resource-cards__title">
