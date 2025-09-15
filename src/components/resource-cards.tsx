@@ -31,6 +31,7 @@ interface ResourceCardsProps {
   ctaText?: string;
   ctaUrl?: string;
   resources: ResourceCard[];
+  filters?: string[];
 }
 
 const ResourceCardItem: React.FC<{ resource: ResourceCard }> = ({
@@ -132,6 +133,7 @@ export const ResourceCards: React.FC<ResourceCardsProps> = ({
   description,
   ctaText,
   ctaUrl,
+  filters,
   resources,
 }) => (
   <div className="c-resource-cards">
@@ -154,6 +156,15 @@ export const ResourceCards: React.FC<ResourceCardsProps> = ({
             <p className="c-resource-cards__description">{description}</p>
           )}
         </div>
+      )}
+      {filters && filters.length > 0 && (
+        <ul className="c-resource-cards__filters">
+          {filters.map((filter, index) => (
+            <li key={index}>
+              <button className="c-resource-cards__filter">{filter}</button>
+            </li>
+          ))}
+        </ul>
       )}
       <div className="c-resource-cards__grid">
         {resources.map((resource, index) => (
