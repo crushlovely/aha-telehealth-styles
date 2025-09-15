@@ -15,20 +15,22 @@ export const HowItWorks = () => (
         </div>
         <ol className="c-how-it-works__steps">
           <li className="c-how-it-works__step">
-            <h3>Ambulatory Corporate Health & Wellness</h3>
-            <p>Replacing a range of preventative care and general visits</p>
+            <h3>Outpatient & Corporate Wellness</h3>
+            <p>Enhancing a range of preventative care</p>
           </li>
           <li className="c-how-it-works__step">
             <h3>Acute & Disease Management</h3>
-            <p>Specialty care, diagnostics and health routing</p>
+            <p>
+              Specialty care, virtual consults, diagnostics and patient routing
+            </p>
           </li>
           <li className="c-how-it-works__step">
             <h3>Healthcare Transition</h3>
-            <p>Post-acute care, rehabilitation, remote patient monitoring</p>
+            <p>Virtual health engagement and hospital-at-home</p>
           </li>
           <li className="c-how-it-works__step">
             <h3>Community & Home Health</h3>
-            <p>Virtual health engagement and hospital-at-home</p>
+            <p>Post-acute care, rehabilitation, remote patient monitoring</p>
           </li>
         </ol>
       </div>

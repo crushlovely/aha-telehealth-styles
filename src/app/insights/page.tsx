@@ -23,8 +23,11 @@ export default function InsightsPage() {
         body="Stay current with cutting-edge research, expert insights, webinars, and convening opportunities that advance telehealth science and clinical practice."
       />
       <ResourceCards
+        ctaText="View All Webinars"
+        ctaUrl="#"
         resources={[
           {
+            accent: true,
             label: "Live Webinar",
             title: "Mental Health Innovation in Digital Platforms",
             date: "January 18, 2025 at 2:00 PM ET",
@@ -33,6 +36,7 @@ export default function InsightsPage() {
             ctaUrl: "/courses/intro-telehealth",
           },
           {
+            accent: true,
             label: "Live Webinar",
             title: "Rural Healthcare Access Through Virtual Care",
             date: "January 18, 2025 at 2:00 PM ET",
@@ -40,24 +44,24 @@ export default function InsightsPage() {
             ctaText: "Register",
             ctaUrl: "/courses/intro-telehealth",
           },
-          // {
-          //   label: "Live Webinar",
-          //   title: "Mental Health Innovation in Digital Platforms",
-          //   duration: "1 hour",
-          //   credits: "1 CME",
-          //   date: "January 18, 2025 at 2:00 PM ET",
-          //   person: "Dr. John Doe, MD",
-          //   ctaText: "Register",
-          //   ctaUrl: "/courses/intro-telehealth",
-          // },
+          {
+            accent: true,
+            label: "Live Webinar",
+            title: "Mental Health Innovation in Digital Platforms",
+
+            date: "January 18, 2025 at 2:00 PM ET",
+            person: "Dr. John Doe, MD",
+            ctaText: "Register",
+            ctaUrl: "/courses/intro-telehealth",
+          },
         ]}
       />
       <ResourceCards
         title="Latest Content"
         resources={[
           {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Beginner",
+            // thumbnail: "/images/homepage-hero.jpg",
+            label: "Policy",
             title: "The Future of Remote Patient Monitoring in Cardiology",
             description:
               "New research reveals how continuous monitoring technologies are transforming cardiovascular care delivery and improving patient outcomes in rural communities.",
@@ -69,8 +73,8 @@ export default function InsightsPage() {
             featured: true,
           },
           {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Beginner",
+            // thumbnail: "/images/homepage-hero.jpg",
+            label: "Policy",
             title: "Introduction to Telehealth",
             description:
               "Master remote cardiac monitoring, ECG interpretation via telehealth, and virtual cardiovascular assessments. Learn evidence-based protocols for managing cardiac patients remotely.",
@@ -80,8 +84,8 @@ export default function InsightsPage() {
             ctaUrl: "/courses/intro-telehealth",
           },
           {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Beginner",
+            // thumbnail: "/images/homepage-hero.jpg",
+            label: "Policy",
             title: "Introduction to Telehealth",
             description:
               "Master remote cardiac monitoring, ECG interpretation via telehealth, and virtual cardiovascular assessments. Learn evidence-based protocols for managing cardiac patients remotely.",
@@ -91,8 +95,8 @@ export default function InsightsPage() {
             ctaUrl: "/courses/intro-telehealth",
           },
           {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Beginner",
+            // thumbnail: "/images/homepage-hero.jpg",
+            label: "Policy",
             title: "Introduction to Telehealth",
             description:
               "Master remote cardiac monitoring, ECG interpretation via telehealth, and virtual cardiovascular assessments. Learn evidence-based protocols for managing cardiac patients remotely.",
@@ -102,8 +106,8 @@ export default function InsightsPage() {
             ctaUrl: "/courses/intro-telehealth",
           },
           {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Beginner",
+            // thumbnail: "/images/homepage-hero.jpg",
+            label: "Policy",
             title: "Introduction to Telehealth",
             description:
               "Master remote cardiac monitoring, ECG interpretation via telehealth, and virtual cardiovascular assessments. Learn evidence-based protocols for managing cardiac patients remotely.",
@@ -113,8 +117,8 @@ export default function InsightsPage() {
             ctaUrl: "/courses/intro-telehealth",
           },
           {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Beginner",
+            // thumbnail: "/images/homepage-hero.jpg",
+            label: "Policy",
             title: "Introduction to Telehealth",
             description:
               "Master remote cardiac monitoring, ECG interpretation via telehealth, and virtual cardiovascular assessments. Learn evidence-based protocols for managing cardiac patients remotely.",
@@ -124,8 +128,8 @@ export default function InsightsPage() {
             ctaUrl: "/courses/intro-telehealth",
           },
           {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Beginner",
+            // thumbnail: "/images/homepage-hero.jpg",
+            label: "Policy",
             title: "Introduction to Telehealth",
             description:
               "Master remote cardiac monitoring, ECG interpretation via telehealth, and virtual cardiovascular assessments. Learn evidence-based protocols for managing cardiac patients remotely.",
@@ -133,59 +137,6 @@ export default function InsightsPage() {
             credits: "6 CE",
             ctaText: "Learn More",
             ctaUrl: "/courses/intro-telehealth",
-          },
-        ]}
-      />
-
-      <ResourceCards
-        resources={[
-          {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Beginner",
-            title: "Introduction to Telehealth",
-            description:
-              "Learn the fundamentals of virtual care delivery and patient engagement. Learn the fundamentals of virtual care delivery and patient engagement.",
-            duration: "4 hours",
-            date: "January 18, 2025",
-            person: "Dr. John Doe, MD",
-            ctaText: "Learn More",
-            ctaUrl: "/courses/intro-telehealth",
-          },
-        ]}
-      />
-
-      <ResourceCards
-        title="Leading Research & Expert Convening"
-        description="Discover groundbreaking research and connect with healthcare's foremost telehealth experts"
-        ctaText="View All Courses"
-        ctaUrl="/courses"
-        resources={[
-          {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Beginner",
-            title: "Introduction to Telehealth",
-            description:
-              "Learn the fundamentals of virtual care delivery and patient engagement. Learn the fundamentals of virtual care delivery and patient engagement.",
-            ctaText: "Learn More",
-            ctaUrl: "/courses/intro-telehealth",
-          },
-          {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Advanced",
-            title: "Clinical Best Practices",
-            description:
-              "Master advanced techniques for effective remote patient care.",
-            ctaText: "Learn More",
-            ctaUrl: "/courses/clinical-practices",
-          },
-          {
-            thumbnail: "/images/homepage-hero.jpg",
-            label: "Advanced",
-            title: "Clinical Best Practices",
-            description:
-              "Master advanced techniques for effective remote patient care.",
-            ctaText: "Learn More",
-            ctaUrl: "/courses/clinical-practices",
           },
         ]}
       />

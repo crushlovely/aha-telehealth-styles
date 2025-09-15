@@ -17,12 +17,18 @@ export const FullWidthTestimonial = () => (
         <div className="col-md-7 d-flex">
           <div className="c-testimonial__content">
             <blockquote className="blockquote">
-              <h2 className="h3">Name Goes Here, Title</h2>
+              <h2 className="h3">
+                Associate Professor Stacy Stelflung PhD, ARPN, FNP-BC
+                <br />
+                Montana State University-Bozeman
+              </h2>
               <p>
-                Lorem ipsum dolor sit amet, conse ctetu adip iscing elit, sed do
-                eius mod tempor incididunt ut labore et dolore magna aliqua.
-                Conse ctetu adip iscing elit, sed do eius mod tempor incididunt
-                ut labore et dolore magna aliqua.
+                The CORE Concepts course offers pertinent information that my
+                students can use; it isn’t fluff. Students have a reasonable
+                time to complete the coursework, which is one year. From a
+                learning perspective, the content is organized in seven modules
+                that presents information in the different ways that people
+                learn.
               </p>
             </blockquote>{" "}
             <a href="#" className="c-cta c-cta--arrow h-theme--aqua-alt">
