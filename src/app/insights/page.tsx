@@ -58,9 +58,20 @@ export default function InsightsPage() {
       />
       <ResourceCards
         title="Latest Content"
+        filters={[
+          "All",
+          "Research",
+          "Implementation",
+          "Patient Care",
+          "Policy",
+          "Mental Health",
+          "Convening",
+          "Webinars",
+          "Podcasts",
+        ]}
         resources={[
           {
-            // thumbnail: "/images/homepage-hero.jpg",
+            thumbnail: "/images/homepage-hero.jpg",
             label: "Policy",
             title: "The Future of Remote Patient Monitoring in Cardiology",
             description:

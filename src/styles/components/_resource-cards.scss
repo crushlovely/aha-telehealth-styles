@@ -23,6 +23,17 @@
     }
   }
 
+  &:has(.c-resource-cards__filters) &__header {
+    @include bp-small {
+      margin-bottom: 3rem;
+      text-align: left;
+    }
+  }
+  &:has(.c-resource-cards__filters) &__title {
+    text-align: left;
+    @include heading-xl;
+  }
+
   &__title-icon {
     margin-right: 0.5rem;
     width: 3rem;
@@ -36,6 +47,22 @@
     max-width: 80rem;
     @include body-md;
     color: $grey-medium;
+  }
+
+  &__filters {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-block-end: 3rem;
+    @include bp-small {
+      margin-block-end: 6rem;
+    }
+  }
+
+  &__filter {
+    @include tag-base;
+    @include tag-toggle;
   }
 
   // if more than one card in grid
@@ -89,39 +116,38 @@
       aspect-ratio: 16 / 9.75;
       object-fit: cover;
     }
+  }
+  &:not(.accent) .c-resource-card__label {
+    @include body-sm;
+    font-size: 1.25rem;
+    color: $white;
+    position: absolute;
+    border-radius: 0.5rem;
+    bottom: 1rem;
+    right: 2rem;
+    background: $red;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    padding: 0.4rem 0.8rem;
+  }
 
-    .c-resource-card__label {
-      @include body-sm;
-      font-size: 1.25rem;
-      color: $white;
-      position: absolute;
-      border-radius: 0.5rem;
-      bottom: 1rem;
-      right: 2rem;
+  &.accent .c-resource-card__label {
+    @include heading-xs;
+    color: $red;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem 2.5rem 0;
+    &::before {
+      content: "";
+      display: block;
+      width: 2rem;
+      aspect-ratio: 1;
       background: $red;
-      text-transform: uppercase;
-      font-weight: 600;
-      font-style: italic;
-      letter-spacing: 0.05em;
-      padding: 0.4rem 0.8rem;
-    }
-
-    &.featured .c-resource-card__label {
-      @include heading-xs;
-      color: $red;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      padding: 2.5rem 2.5rem 0;
-      &::before {
-        content: "";
-        display: block;
-        width: 2rem;
-        aspect-ratio: 1;
-        background: $red;
-        @include bp-small {
-          width: 4rem;
-        }
+      @include bp-small {
+        width: 4rem;
       }
     }
   }
