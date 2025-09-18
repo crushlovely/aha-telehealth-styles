@@ -36,7 +36,8 @@ export default function CoursesPage() {
               "Master remote cardiac monitoring, ECG interpretation via telehealth, and virtual cardiovascular assessments. Learn evidence-based protocols for managing cardiac patients remotely.",
             duration: "4 hours",
             credits: "6 CE",
-            ctaText: "Learn More",
+            ctaText:
+              "Virtual Prescribing in Acute Care: Navigating Controlled Substances with Confidence",
             ctaUrl: "/courses/intro-telehealth",
           },
           {

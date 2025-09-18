@@ -74,6 +74,33 @@ export const Header = ({ loggedIn: _loggedIn = true }) => {
                 <span className="c-underline-link">Patient Resources</span>
               </a>
             </li>
+            <li className="c-top-nav__item">
+              <a
+                href="/infographics-checklist"
+                target=""
+                className="c-top-nav__link c-cta c-cta--icon"
+              >
+                <span className="c-underline-link">[i]1</span>
+              </a>
+            </li>
+            <li className="c-top-nav__item">
+              <a
+                href="/infographics-privacy"
+                target=""
+                className="c-top-nav__link c-cta c-cta--icon"
+              >
+                <span className="c-underline-link">[i]2</span>
+              </a>
+            </li>
+            <li className="c-top-nav__item">
+              <a
+                href="/infographics-what-to-expect"
+                target=""
+                className="c-top-nav__link c-cta c-cta--icon"
+              >
+                <span className="c-underline-link">[i]3</span>
+              </a>
+            </li>
             <li>
               <button
                 type="button"
