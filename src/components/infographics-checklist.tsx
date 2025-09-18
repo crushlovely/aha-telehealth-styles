@@ -40,14 +40,14 @@ export const InfographicsChecklist = () => (
           </label>
           <ul>
             <li>
-              You'll need a smartphone, tablet or computer with a webcam and a
-              good internet connection.
+              You&apos;ll need a smartphone, tablet or computer with a webcam
+              and a good internet connection.
             </li>
             <li>Make sure the device is fully charged or plugged in.</li>
             <li>
-              If you haven't used video on the device before your appointment,
-              test it to make sure the camera works well for the face-to-face
-              conversation.
+              If you haven&apos;t used video on the device before your
+              appointment, test it to make sure the camera works well for the
+              face-to-face conversation.
             </li>
             <li>
               For your telehealth appointment, you may need to use a patient
@@ -66,8 +66,9 @@ export const InfographicsChecklist = () => (
           </label>
           <ul>
             <li>
-              Make sure there's enough light for your health care provider to
-              clearly see your face and any physical issues you want to discuss.
+              Make sure there&apos;s enough light for your health care provider
+              to clearly see your face and any physical issues you want to
+              discuss.
             </li>
           </ul>
         </li>
