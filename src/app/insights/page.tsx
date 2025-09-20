@@ -29,7 +29,8 @@ export default function InsightsPage() {
           {
             accent: true,
             label: "Live Webinar",
-            title: "Mental Health Innovation in Digital Platforms",
+            title:
+              "The Next Generation of Telehealth Super Long Title Example Here",
             date: "January 18, 2025 at 2:00 PM ET",
             person: "Dr. John Doe, MD",
             ctaText: "Register",
@@ -38,16 +39,7 @@ export default function InsightsPage() {
           {
             accent: true,
             label: "Live Webinar",
-            title: "Rural Healthcare Access Through Virtual Care",
-            date: "January 18, 2025 at 2:00 PM ET",
-            person: "Dr. John Doe, MD",
-            ctaText: "Register",
-            ctaUrl: "/courses/intro-telehealth",
-          },
-          {
-            accent: true,
-            label: "Live Webinar",
-            title: "Mental Health Innovation in Digital Platforms",
+            title: "Search 2026",
 
             date: "January 18, 2025 at 2:00 PM ET",
             person: "Dr. John Doe, MD",
