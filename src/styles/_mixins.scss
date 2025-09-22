@@ -110,3 +110,23 @@ $xx-large: 1660px;
   clip: auto !important;
   white-space: normal !important;
 }
+
+// Sequential Delay
+
+@mixin sequential-delay(
+  $delay-increment,
+  $max-items: 50,
+  $start-delay: 0s,
+  $multiplier: 1
+) {
+  @for $i from 1 through $max-items {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$start-delay +
+        (($i - 1) * $delay-increment * $multiplier)};
+      * {
+        animation-delay: #{$start-delay +
+          (($i - 1) * $delay-increment * $multiplier)};
+      }
+    }
+  }
+}
