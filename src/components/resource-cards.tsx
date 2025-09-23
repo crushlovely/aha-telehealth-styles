@@ -174,6 +174,9 @@ export const ResourceCards: React.FC<ResourceCardsProps> = ({
 
       {ctaText && ctaUrl && (
         <div className="c-resource-cards__cta">
+          {filters && filters.length > 0 && (
+            <span className="c-resource-cards__count">Showing 00 of 100</span>
+          )}
           <a href={ctaUrl} className="btn">
             {ctaText}
           </a>
