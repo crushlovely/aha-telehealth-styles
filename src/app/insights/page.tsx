@@ -29,8 +29,7 @@ export default function InsightsPage() {
           {
             accent: true,
             label: "Live Webinar",
-            title:
-              "The Next Generation of Telehealth Super Long Title Example Here",
+            title: "The Next Generation of Telehealth",
             date: "January 18, 2025 at 2:00 PM ET",
             person: "Dr. John Doe, MD",
             ctaText: "Register",
@@ -50,17 +49,9 @@ export default function InsightsPage() {
       />
       <ResourceCards
         title="Latest Content"
-        filters={[
-          "All",
-          "Research",
-          "Implementation",
-          "Patient Care",
-          "Policy",
-          "Mental Health",
-          "Convening",
-          "Webinars",
-          "Podcasts",
-        ]}
+        filters={["All", "Policy", "Articles", "Webinars"]}
+        ctaText="Load More"
+        ctaUrl="#"
         resources={[
           {
             thumbnail: "/images/homepage-hero.jpg",

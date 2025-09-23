@@ -93,7 +93,8 @@
   &__cta {
     text-align: center;
     margin-top: 3rem;
-    a {
+    a,
+    button {
       @include button-primary;
     }
     @include bp-small {
@@ -128,16 +129,22 @@
     @include body-sm;
     font-size: 1.25rem;
     color: $white;
-    position: absolute;
+    position: relative;
     border-radius: 0.5rem;
-    bottom: 1rem;
-    right: 2rem;
     background: $red;
     text-transform: uppercase;
     font-weight: 600;
     font-style: italic;
     letter-spacing: 0.05em;
     padding: 0.4rem 0.8rem;
+    margin: 3.5rem 3.5rem 0;
+    width: max-content;
+  }
+  &:not(.accent) img + .c-resource-card__label {
+    margin: 0;
+    bottom: 1rem;
+    right: 2rem;
+    position: absolute;
   }
 
   &.accent .c-resource-card__label {
