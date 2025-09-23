@@ -2,7 +2,9 @@ export const InfographicsWhatToExpect = () => (
   <div className="c-infographic">
     <div className="c-infographic__header">
       <a
-        href="/pdfs/telehealth-checklist.pdf"
+        href="/pdf/what-to-expect.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
         className="c-infographic__pdf-link"
         aria-label="download pdf"
       >

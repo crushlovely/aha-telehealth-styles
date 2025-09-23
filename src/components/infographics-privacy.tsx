@@ -2,7 +2,9 @@ export const InfographicsPrivacy = () => (
   <div className="c-infographic">
     <div className="c-infographic__header">
       <a
-        href="/pdfs/telehealth-privacy.pdf"
+        href="/pdf/privacy.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
         className="c-infographic__pdf-link"
         aria-label="download pdf"
       >

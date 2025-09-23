@@ -12,10 +12,7 @@ export const Header = ({ loggedIn: _loggedIn = true }) => {
           aria-label="Top Navigation"
           className="c-top-nav js-mobile-nav-positioning"
         >
-          <a
-            href="https://cpr.heart.org/en/"
-            className="c-top-nav__logo does-fade-out"
-          >
+          <a href="/" className="c-top-nav__logo does-fade-out">
             <img
               src="/images/logo.svg"
               alt="American Heart Association CPR & ECC"
