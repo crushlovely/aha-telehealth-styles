@@ -45,6 +45,7 @@ export default function CertificationsPage() {
             ctaUrl: "#",
             cta2Text: "Candidate Handbook",
             cta2Url: "#",
+            accent: true,
           },
           {
             title: "Digital Health in Cardiac Care",
@@ -62,6 +63,7 @@ export default function CertificationsPage() {
             ctaUrl: "#",
             cta2Text: "Candidate Handbook",
             cta2Url: "#",
+            accent: true,
           },
           {
             title: "Digital Health in Cardiac Care",
@@ -79,40 +81,7 @@ export default function CertificationsPage() {
             ctaUrl: "#",
             cta2Text: "Candidate Handbook",
             cta2Url: "#",
-          },
-          {
-            title: "Digital Health in Cardiac Care",
-            description:
-              "For professionals who use digital heath technology to help patients manage and prevent heart conditions.",
-            duration: "3-hour exam",
-            price: "$575",
-            credits: "15 CE required",
-            secondaryTitle: "What You'll Master:",
-            secondaryDescription:
-              "<ul><li>Advanced cardiac telehealth protocols</li><li>Remote ECG interpretation and monitoring</li><li>Digital cardiovascular risk assessment</li><li>Patient engagement in cardiac care</li><li>Technology integration for heart health</li></ul>",
-            secondaryCtaText: "Learn More",
-            secondaryCtaUrl: "#",
-            ctaText: "FAQ",
-            ctaUrl: "#",
-            cta2Text: "Candidate Handbook",
-            cta2Url: "#",
-          },
-          {
-            title: "Digital Health in Cardiac Care",
-            description:
-              "For professionals who use digital heath technology to help patients manage and prevent heart conditions.",
-            duration: "3-hour exam",
-            price: "$575",
-            credits: "15 CE required",
-            secondaryTitle: "What You'll Master:",
-            secondaryDescription:
-              "<ul><li>Advanced cardiac telehealth protocols</li><li>Remote ECG interpretation and monitoring</li><li>Digital cardiovascular risk assessment</li><li>Patient engagement in cardiac care</li><li>Technology integration for heart health</li></ul>",
-            secondaryCtaText: "Learn More",
-            secondaryCtaUrl: "#",
-            ctaText: "FAQ",
-            ctaUrl: "#",
-            cta2Text: "Candidate Handbook",
-            cta2Url: "#",
+            accent: true,
           },
         ]}
       />
