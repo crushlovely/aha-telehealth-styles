@@ -301,12 +301,15 @@
     box-shadow: none;
     display: grid;
     gap: 4rem 2rem;
-    grid-template-columns: 1.15fr 1fr;
+    grid-template-columns: 1fr auto;
     grid-template-rows: auto 1fr;
     grid-template-areas:
-      "header content"
-      "header ctas";
+      "content header "
+      "ctas header ";
     padding-bottom: 4rem;
+    &:has(.c-resource-card__header img) {
+      grid-template-columns: 1.15fr 1fr;
+    }
     &:has(~ .c-resource-card) {
       padding-bottom: 6rem;
       margin-bottom: 4rem;
@@ -315,13 +318,15 @@
     .c-resource-card__header {
       aspect-ratio: auto;
       height: 100%;
+      padding-inline: 0;
       img {
         aspect-ratio: auto;
         height: 100%;
       }
     }
     .c-resource-card__content {
-      padding-top: 0.5rem;
+      padding-block-start: 0.5rem;
+      padding-inline: 0;
     }
     .c-resource-card__title {
       @include heading-xl--alt;
@@ -332,13 +337,13 @@
       margin-bottom: 2rem;
     }
     .c-resource-card__ctas {
-      margin: 0 3.5rem;
+      margin: 0;
     }
   }
 }
 
 // if only one course-card
-.c-resource-cards .c-resource-card:only-child {
+.c-resource-cards .c-resource-card:only-child:not(.featured) {
   @include bp-small {
     display: grid;
     grid-template-columns: 1fr 1fr;
